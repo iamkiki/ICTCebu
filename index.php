@@ -48,7 +48,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#"><span class="red">ICTCebu</span><span class="gray">.com</span></a>
+          <a class="brand" href="#"><span class="red"><strong>ICTCebu</strong></span><span class="gray">.com</span></a>
           <div class="nav-collapse">
             <ul class="nav">
               <li class="active"><a href="#">Home</a></li>
@@ -102,34 +102,64 @@
           <div class="row-fluid">
             <div class="span4">
               <h2>Company 1</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			  <div class="span2 m-right5">
+				  <a href="#" class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+				  </a>
+			  </div>
+              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
               <p><a class="btn" href="#">View Profile &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>Company 2</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			  <div class="span2 m-right5">
+				  <a href="#" class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+				  </a>
+			  </div>
+              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
               <p><a class="btn" href="#">View Profile &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>Company 3</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			  <div class="span2 m-right5">
+				  <a href="#" class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+				  </a>
+			  </div>
+              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
               <p><a class="btn" href="#">View Profile &raquo;</a></p>
             </div><!--/span-->
           </div><!--/row-->
           <div class="row-fluid">
             <div class="span4">
               <h2>Company 4</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			  <div class="span2 m-right5">
+				  <a href="#" class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+				  </a>
+			  </div>
+              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
               <p><a class="btn" href="#">View Profile &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>Company 5</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			  <div class="span2 m-right5">
+				  <a href="#" class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+				  </a>
+			  </div>
+              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
               <p><a class="btn" href="#">View Profile &raquo;</a></p>
             </div><!--/span-->
             <div class="span4">
               <h2>Company 6</h2>
-              <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui. </p>
+			  <div class="span2 m-right5">
+				  <a href="#" class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+				  </a>
+			  </div>
+              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
               <p><a class="btn" href="#">View Profile &raquo;</a></p>
             </div><!--/span-->
           </div><!--/row-->

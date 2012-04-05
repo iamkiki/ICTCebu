@@ -160,13 +160,17 @@ a:hover {
 }
 [class*="span"] {
   float: left;
-  margin-left: 20px;
 }
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
   width: 940px;
 }
+
+.m-right5{
+  margin-right: 5px;
+}
+
 .span12 {
   width: 940px;
 }
