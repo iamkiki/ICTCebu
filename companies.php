@@ -51,8 +51,8 @@
           <a class="brand" href="#"><span class="red"><strong>ICTCebu</strong></span><span class="gray">.com</span></a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="index.php">Home</a></li>
-			  <li><a href="companies.php">Companies</a></li>
+              <li><a href="index.php">Home</a></li>
+			  <li class="active"><a href="companies.php">Companies</a></li>
 			  <li><a href="jobs.php">Jobs</a></li>
               <li><a href="about.php">About</a></li>
               <li><a href="contact.php">Contact</a></li>
@@ -94,11 +94,21 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-          <div class="hero-unit">
-            <h1>Offering you the BEST Companies and Jobs in the IT and BPO Industry.</h1>
-            <p>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</p>
-            <p><a class="btn btn-danger btn-large">Learn more &raquo;</a></p>
-          </div>
+		  <div class="row-fluid">
+			<h1 class="d-inline f-left">Companies</h1>
+			<div class="btn-group d-inline f-left m-left10 m-bottom5 m-top3">
+			  <button class="btn btn-danger">All Categories</button>
+			  <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+			  <ul class="dropdown-menu">
+				<li><a href="#">All Categories</a></li>
+				<li><a href="#">BPO/ Call Centers</a></li>
+				<li><a href="#">Web/ Mobile Development</a></li>
+                <li><a href="#">Software Applications</a></li>
+                <li><a href="#">Hardware/ Peripherals</a></li>
+			    <li><a href="#">Others</a></li>
+			  </ul>
+			</div>
+		  </div>
           <div class="row-fluid">
 			<ul class="thumbnails">
 				<li class="span2">
@@ -153,9 +163,73 @@
 				</li>
 			  </ul>
           </div><!--/row-->
+          <div class="row-fluid">
+			  <ul class="thumbnails">
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+			  </ul>
+          </div><!--/row-->
         </div><!--/span-->
       </div><!--/row-->
-	  <div class="view-all-companies"><a class="btn btn-danger" href="companies.php">View All Companies</a></div>
+	  <div class="pagination f-right">
+		  <ul>
+			<li><a href="#">&larr;</a></li>
+			<li class="active">
+			  <a href="#">1</a>
+			</li>
+			<li><a href="#">2</a></li>
+			<li><a href="#">3</a></li>
+			<li><a href="#">&rarr;</a></li>
+		  </ul>
+	  </div>
       <hr>
 
       <footer>

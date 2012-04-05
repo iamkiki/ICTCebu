@@ -171,6 +171,26 @@ a:hover {
   margin-right: 5px;
 }
 
+.m-left10 {
+  margin-left: 10px;
+}
+
+.m-top3 {
+	margin-top: 3px;
+}
+
+.m-bottom5 {
+	margin-bottom: 5px;
+}
+
+.f-left {
+	float: left;
+}
+
+.f-right {
+	float: right;
+}
+
 .span12 {
   width: 940px;
 }
@@ -364,6 +384,7 @@ h6 small {
 h1 {
   font-size: 30px;
   line-height: 36px;
+  padding-bottom: 5px;
 }
 h1 small {
   font-size: 18px;
@@ -409,6 +430,11 @@ h6 {
 .page-header h1 {
   line-height: 1;
 }
+
+.d-inline {
+	display: inline;
+}
+
 ul,
 ol {
   padding: 0;
@@ -3973,7 +3999,7 @@ a.thumbnail:hover {
 }
 .hero-unit h1 {
   margin-bottom: 0;
-  font-size: 40px;
+  font-size: 37px;
   line-height: 1.2;
   color: inherit;
   letter-spacing: -1px;
