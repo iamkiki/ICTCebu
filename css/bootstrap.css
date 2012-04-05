@@ -100,6 +100,7 @@ input[type="search"]::-webkit-search-cancel-button {
 textarea {
   overflow: auto;
   vertical-align: top;
+  resize: vertical; 
 }
 .clearfix {
   *zoom: 1;

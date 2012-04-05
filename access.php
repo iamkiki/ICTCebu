@@ -202,6 +202,7 @@
 					<input type="checkbox"> Remember me
 				  </label>
 				  <button type="submit" class="btn btn-danger">Login</button>
+				  <button type="submit" class="btn">Forgot Password</button>
 			</form>
 			<blockquote>
 			  <p>Cupcake ipsum dolor sit amet lemon drops. Marzipan topping topping. Muffin tootsie roll sweet wafer wafer danish jelly beans. Halvah I love candy I love tart oat cake ice cream macaroon. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. I love pudding oat cake sweet roll.</p>
