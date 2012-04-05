@@ -60,7 +60,7 @@
 			<form class="navbar-search pull-left">
 			  <input type="text" class="search-query" placeholder="Search">
 			</form>
-			<p class="navbar-text pull-right"><a href="#">Register Company</a> | <a href="#">Login</a></p>
+			<p class="navbar-text pull-right"><a href="access.php">Register Company</a> | <a href="access.php">Login</a></p>
             <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
           </div><!--/.nav-collapse -->
         </div>
