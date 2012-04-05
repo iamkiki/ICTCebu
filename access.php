@@ -154,7 +154,7 @@
 					  <input type="text" class="input-small" id="input02">
 					</div>
 				  </div>
-				  <div class="">
+				  <div class="control-group">
 					<label class="control-label" for="select01">Category</label>
 					<div class="controls">
 					  <select id="select01">
@@ -164,6 +164,12 @@
 						<option>Hardware/ Peripherals</option>
 						<option>Others</option>
 					  </select>
+					</div>
+				  </div>
+				  <div class="control-group">
+					<label class="control-label" for="fileInput">Company Logo</label>
+					<div class="controls">
+					  <input class="input-file" id="fileInput" type="file">
 					</div>
 				  </div>
 				  <div class="control-group">
