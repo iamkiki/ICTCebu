@@ -95,38 +95,58 @@
         </div><!--/span-->
         <div class="span9">
           <div class="hero-unit">
-            <h1>Offering you the best companies and jobs in the IT and BPO Industry.</h1>
+            <h1>Offering you the BEST Companies and Jobs in the IT and BPO Industry.</h1>
             <p>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</p>
             <p><a class="btn btn-danger btn-large">Learn more &raquo;</a></p>
           </div>
           <div class="row-fluid">
 			<ul class="thumbnails">
-				<li class="span3">
+				<li class="span2">
 				  <div class="thumbnail">
-					<img src="http://placehold.it/260x180" alt="">
+					<img src="http://placehold.it/160x120" alt="">
 					<div class="caption">
 					  <h5>Company Name</h5>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
 					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
-				<li class="span3">
+				<li class="span2">
 				  <div class="thumbnail">
-					<img src="http://placehold.it/260x180" alt="">
+					<img src="http://placehold.it/160x120" alt="">
 					<div class="caption">
 					  <h5>Company Name</h5>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
 					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
-				<li class="span3">
+				<li class="span2">
 				  <div class="thumbnail">
-					<img src="http://placehold.it/260x180" alt="">
+					<img src="http://placehold.it/160x120" alt="">
 					<div class="caption">
 					  <h5>Company Name</h5>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
 					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
 					</div>
 				  </div>
@@ -134,33 +154,53 @@
 			  </ul>
           </div><!--/row-->
           <div class="row-fluid">
-				<ul class="thumbnails">
-				<li class="span3">
+			  <ul class="thumbnails">
+				<li class="span2">
 				  <div class="thumbnail">
-					<img src="http://placehold.it/260x180" alt="">
+					<img src="http://placehold.it/160x120" alt="">
 					<div class="caption">
 					  <h5>Company Name</h5>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
 					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
-				<li class="span3">
+				<li class="span2">
 				  <div class="thumbnail">
-					<img src="http://placehold.it/260x180" alt="">
+					<img src="http://placehold.it/160x120" alt="">
 					<div class="caption">
 					  <h5>Company Name</h5>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
 					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
-				<li class="span3">
+				<li class="span2">
 				  <div class="thumbnail">
-					<img src="http://placehold.it/260x180" alt="">
+					<img src="http://placehold.it/160x120" alt="">
 					<div class="caption">
 					  <h5>Company Name</h5>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span2">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/160x120" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
 					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
 					</div>
 				  </div>
