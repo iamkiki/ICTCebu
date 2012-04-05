@@ -100,68 +100,72 @@
             <p><a class="btn btn-danger btn-large">Learn more &raquo;</a></p>
           </div>
           <div class="row-fluid">
-            <div class="span4">
-              <h2>Company 1</h2>
-			  <div class="span2 m-right5">
-				  <a href="#" class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-				  </a>
-			  </div>
-              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
-              <p><a class="btn" href="#">View Profile &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Company 2</h2>
-			  <div class="span2 m-right5">
-				  <a href="#" class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-				  </a>
-			  </div>
-              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
-              <p><a class="btn" href="#">View Profile &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Company 3</h2>
-			  <div class="span2 m-right5">
-				  <a href="#" class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-				  </a>
-			  </div>
-              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
-              <p><a class="btn" href="#">View Profile &raquo;</a></p>
-            </div><!--/span-->
+			<ul class="thumbnails">
+				<li class="span3">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/260x180" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/260x180" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/260x180" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+			  </ul>
           </div><!--/row-->
           <div class="row-fluid">
-            <div class="span4">
-              <h2>Company 4</h2>
-			  <div class="span2 m-right5">
-				  <a href="#" class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-				  </a>
-			  </div>
-              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
-              <p><a class="btn" href="#">View Profile &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Company 5</h2>
-			  <div class="span2 m-right5">
-				  <a href="#" class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-				  </a>
-			  </div>
-              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
-              <p><a class="btn" href="#">View Profile &raquo;</a></p>
-            </div><!--/span-->
-            <div class="span4">
-              <h2>Company 6</h2>
-			  <div class="span2 m-right5">
-				  <a href="#" class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-				  </a>
-			  </div>
-              <p>Brownie wypas cookie I love cookie tart. Icing tootsie roll powder cupcake. Tootsie roll chocolate cake sesame snaps donut I love tiramisu. Cupcake ipsum dolor sit amet I love.</p>
-              <p><a class="btn" href="#">View Profile &raquo;</a></p>
-            </div><!--/span-->
+				<ul class="thumbnails">
+				<li class="span3">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/260x180" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/260x180" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+				<li class="span3">
+				  <div class="thumbnail">
+					<img src="http://placehold.it/260x180" alt="">
+					<div class="caption">
+					  <h5>Company Name</h5>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					</div>
+				  </div>
+				</li>
+			  </ul>
           </div><!--/row-->
         </div><!--/span-->
       </div><!--/row-->
