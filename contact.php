@@ -54,8 +54,8 @@
               <li><a href="index.php">Home</a></li>
 			  <li><a href="companies.php">Companies</a></li>
 			  <li><a href="jobs.php">Jobs</a></li>
-              <li class="active"><a href="about.php">About</a></li>
-              <li><a href="contact.php">Contact</a></li>
+              <li><a href="about.php">About</a></li>
+              <li class="active"><a href="contact.php">Contact</a></li>
             </ul>
 			<form class="navbar-search pull-left">
 			  <input type="text" class="search-query" placeholder="Search">
@@ -94,12 +94,7 @@
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span9">
-			<legend>About</legend>
-            <h3>Offering you the BEST Companies and Jobs in the IT and BPO Industry.</h3>
-            <p>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</p>
-			<p>Cupcake ipsum dolor sit amet lemon drops. Marzipan topping topping. Muffin tootsie roll sweet wafer wafer danish jelly beans. Halvah I love candy I love tart oat cake ice cream macaroon. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. Jujubes apple pie applicake cookie applicake I love pudding oat cake sweet roll.</p>
-			<p>Cupcake ipsum dolor sit amet lemon drops. Marzipan topping topping. Muffin tootsie roll sweet wafer wafer danish jelly beans. Halvah I love candy I love tart oat cake ice cream macaroon. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. Jujubes apple pie applicake cookie applicake I love pudding oat cake sweet roll.</p>
-			<p>Cupcake ipsum dolor sit amet lemon drops. Marzipan topping topping. Muffin tootsie roll sweet wafer wafer danish jelly beans. Halvah I love candy I love tart oat cake ice cream macaroon. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. Jujubes apple pie applicake cookie applicake I love pudding oat cake sweet roll.</p>
+			<legend>Contact</legend>
 		</div><!--/span-->
       </div><!--/row-->
       <hr>

@@ -191,6 +191,14 @@ a:hover {
 	float: right;
 }
 
+.n-legend {
+	padding: 0;
+	margin-bottom: 5px;
+	font-size: 19.5px;
+	line-height: 36px;
+	color: #333;
+}
+
 .span12 {
   width: 940px;
 }

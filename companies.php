@@ -95,7 +95,7 @@
         </div><!--/span-->
         <div class="span9">
 		  <div class="row-fluid">
-			<h1 class="d-inline f-left">Companies</h1>
+			<div class="n-legend d-inline f-left">Companies</div>
 			<div class="btn-group d-inline f-left m-left10 m-bottom5 m-top3">
 			  <button class="btn btn-danger">All Categories</button>
 			  <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
@@ -108,6 +108,7 @@
 			    <li><a href="#">Others</a></li>
 			  </ul>
 			</div>
+			<hr>
 		  </div>
           <div class="row-fluid">
 			<ul class="thumbnails">
