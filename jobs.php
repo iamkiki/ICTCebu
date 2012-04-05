@@ -191,6 +191,41 @@
 					<td>Nerubia Web Solutions, Inc.</td>
 					<td>Lahug, Cebu City</td>
 				  </tr>
+				  <tr>
+					<td>April 1</td>
+					<td>Java Developer</td>
+					<td>2 yrs</td>
+					<td>Nerubia Web Solutions, Inc.</td>
+					<td>Lahug, Cebu City</td>
+				  </tr>
+				  <tr>
+					<td>April 1</td>
+					<td>Web Developer</td>
+					<td>1 yr</td>
+					<td>Nerubia Web Solutions, Inc.</td>
+					<td>Lahug, Cebu City</td>
+				  </tr>
+				  <tr>
+					<td>April 1</td>
+					<td>Technical Support Specialist</td>
+					<td>2 yrs</td>
+					<td>Number One Call Center</td>
+					<td>Lahug, Cebu City</td>
+				  </tr>
+				  <tr>
+					<td>April 1</td>
+					<td>Java Developer</td>
+					<td>2 yrs</td>
+					<td>Nerubia Web Solutions, Inc.</td>
+					<td>Lahug, Cebu City</td>
+				  </tr>
+				  <tr>
+					<td>April 1</td>
+					<td>PHP Developer</td>
+					<td>3 yrs</td>
+					<td>Nerubia Web Solutions, Inc.</td>
+					<td>Lahug, Cebu City</td>
+				  </tr>
 				</tbody>
 			</table>
           </div><!--/row-->
