@@ -98,38 +98,38 @@
 			<form class="form-horizontal">
 				<fieldset>
 				  <div class="control-group">
-					<label class="control-label" for="input01">Company Name</label>
+					<label class="control-label" for="input01">Company Name<span class="red">*</span></label>
 					<div class="controls">
 					  <input type="text" class="input-xlarge" id="input01">
 					</div>
 				  </div>
 				  <div class="control-group">
-					<label class="control-label" for="input02">Email Address</label>
+					<label class="control-label" for="input02">Email Address<span class="red">*</span></label>
 					<div class="controls">
 					  <input type="text" class="input-xlarge" id="input02">
 					</div>
 				  </div>
 				  <div class="control-group">
-					<label class="control-label" for="input02">Password</label>
+					<label class="control-label" for="input02">Password<span class="red">*</span></label>
 					<div class="controls">
 					  <input type="password" class="input-medium" id="input02">
 					  <p class="help-block">Must be atleast 6 characters</p>
 					</div>
 				  </div>
 				  <div class="control-group">
-					<label class="control-label" for="input02">Confirm Password</label>
+					<label class="control-label" for="input02">Confirm Password<span class="red">*</span></label>
 					<div class="controls">
 					  <input type="password" class="input-medium" id="input02">
 					</div>
 				  </div>
 				  <div class="control-group">
-					<label class="control-label" for="input02">Contact Person</label>
+					<label class="control-label" for="input02">Contact Person<span class="red">*</span></label>
 					<div class="controls">
 					  <input type="text" class="input-xlarge" id="input02">
 					</div>
 				  </div>
 				  <div class="control-group">
-					<label class="control-label" for="input02">Contact Number</label>
+					<label class="control-label" for="input02">Contact Number<span class="red">*</span></label>
 					<div class="controls">
 					  <input type="text" class="input-medium" id="input02">
 					</div>
@@ -155,7 +155,7 @@
 					</div>
 				  </div>
 				  <div class="control-group">
-					<label class="control-label" for="select01">Category</label>
+					<label class="control-label" for="select01">Category<span class="red">*</span></label>
 					<div class="controls">
 					  <select id="select01">
 						<option>BPO/ Call Centers</option>
@@ -164,6 +164,14 @@
 						<option>Hardware/ Peripherals</option>
 						<option>Others</option>
 					  </select>
+					</div>
+				  </div>
+				  <div class="control-group">
+					<label class="control-label" for="prependedInput">Website</label>
+					<div class="controls">
+					  <div class="input-prepend">
+						<span class="add-on">http://</span><input class="span3" id="prependedInput" size="16" type="text">
+					  </div>
 					</div>
 				  </div>
 				  <div class="control-group">
@@ -180,7 +188,7 @@
 				  </div>
 				  <div class="control-group">
 					  <label class="checkbox">
-						<input type="checkbox" id="optionsCheckbox" value="option1">
+						<input type="checkbox" id="optionsCheckbox inputWarning" value="option1">
 						I Agree with the Terms and Agreements of ICTCebu.com <a href="#">Privacy Policy</a>
 					  </label>
 				  </div>
@@ -203,6 +211,13 @@
 				  </label>
 				  <button type="submit" class="btn btn-danger">Login</button>
 				  <button type="submit" class="btn">Forgot Password</button>
+			</form>
+			<form class="well form-horizontal hidden">
+				  <div class="n-legend">Forgot Password?</div>
+				  <input type="text" class="input-xlarge" placeholder="Email">
+				  <p></p>
+				  <button type="submit" class="btn btn-danger">Submit</button>
+				  <button type="submit" class="btn">Cancel</button>
 			</form>
 			<blockquote>
 			  <p>Cupcake ipsum dolor sit amet lemon drops. Marzipan topping topping. Muffin tootsie roll sweet wafer wafer danish jelly beans. Halvah I love candy I love tart oat cake ice cream macaroon. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. I love pudding oat cake sweet roll.</p>
