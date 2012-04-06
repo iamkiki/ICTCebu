@@ -107,7 +107,7 @@
 					<div class="caption">
 					  <h5>Company Name</h5>
 					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
@@ -117,7 +117,7 @@
 					<div class="caption">
 					  <h5>Company Name</h5>
 					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
@@ -127,7 +127,7 @@
 					<div class="caption">
 					  <h5>Company Name</h5>
 					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
@@ -137,7 +137,7 @@
 					<div class="caption">
 					  <h5>Company Name</h5>
 					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>
@@ -147,7 +147,7 @@
 					<div class="caption">
 					  <h5>Company Name</h5>
 					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="#">View Profile &raquo;</a></p>
+					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
 					</div>
 				  </div>
 				</li>

@@ -200,6 +200,50 @@ a:hover {
 	color: #333;
 }
 
+.social-links {
+	min-height: 30px;
+}
+
+.social-links button {
+	width: 220px;
+	line-height: 30px;
+}
+
+.facebook {
+	background: url(/img/facebook.png) no-repeat;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+.twitter {
+	background: url(/img/twitter.png) no-repeat;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+.linkedin {
+	background: url(/img/linkedin.png) no-repeat;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+.skype {
+	background: url(/img/skype.png) no-repeat;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
+.youtube {
+	background: url(/img/youtube.png) no-repeat;
+	width: 32px;
+	height: 32px;
+	float: left;
+}
+
 .span12 {
   width: 940px;
 }

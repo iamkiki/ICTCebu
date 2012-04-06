@@ -70,120 +70,72 @@
     <div class="container-fluid">
       <div class="row-fluid">
 		<div class="span3">
-          <div class="well">
+          <div class="well sidebar-nav">
 			  <a href="#" class="thumbnail">
 				<img src="http://placehold.it/260x180" alt="">
 			  </a>
+			  <p></p>
+			  <ul class="nav nav-list social-links">
+				  <p><li><button class="btn btn-inverse"><i class="facebook"></i> Connect with Facebook</button></li></p>
+				  <p><li><button class="btn btn-inverse"><i class="twitter"></i> Checkout our Tweets</button></li></p>
+				  <p><li><button class="btn btn-inverse"><i class="linkedin"></i> LinkedIn with Us</button></li></p>
+				  <p><li><button class="btn btn-inverse"><i class="skype"></i> Contact us on Skype</button></li></p>
+				  <p><li><button class="btn btn-inverse"><i class="youtube"></i> Stream our Videos</button></li></p>
+				  <p></p>
+				  <address>
+					<strong>Twitter, Inc.</strong><br>
+					795 Folsom Ave, Suite 600<br>
+					San Francisco, CA 94107<br>
+					<a href="#">www.company.com</a></br>
+				  </address>
+			  </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span6">
 			<legend>Company Name</legend>
-			<form class="form-horizontal">
-				<fieldset>
-				  <div class="control-group">
-					<label class="control-label" for="input01">Company Name<span class="red">*</span></label>
-					<div class="controls">
-					  <input type="text" class="input-xlarge" id="input01">
+			<blockquote>
+			  <p>Company Tagline or slogan here.</p>
+			  <small>Company CEO</small>
+			</blockquote>
+			<dl class="dl-horizontal">
+				<dt>Overview</dt>
+					<dd>A description list is perfect for defining terms.</dd>
+				<dt>Category</dt>
+					<dd>BPO/ Call Centers</dd>
+				<dt>Services</dt>
+					<dd>Cupcake ipsum dolor sit amet lemon drops. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. I love pudding oat cake sweet roll.</dd>
+					<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+			</dl>
+			<div class="span7 columns">
+			  <legend>Portfolio</legend>
+			  <div id="myCarousel" class="carousel slide">
+				<div class="carousel-inner">
+				  <div class="item">
+					<img src="img/bootstrap-mdo-sfmoma-01.jpg" alt="">
+					<div class="carousel-caption">
+					  <h4>First Thumbnail label</h4>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 					</div>
 				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">Email Address<span class="red">*</span></label>
-					<div class="controls">
-					  <input type="text" class="input-xlarge" id="input02">
+				  <div class="item">
+					<img src="img/bootstrap-mdo-sfmoma-02.jpg" alt="">
+					<div class="carousel-caption">
+					  <h4>Second Thumbnail label</h4>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 					</div>
 				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">Password<span class="red">*</span></label>
-					<div class="controls">
-					  <input type="password" class="input-medium" id="input02">
-					  <p class="help-block">Must be atleast 6 characters</p>
+				  <div class="item active">
+					<img src="img/bootstrap-mdo-sfmoma-03.jpg" alt="">
+					<div class="carousel-caption">
+					  <h4>Third Thumbnail label</h4>
+					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
 					</div>
 				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">Confirm Password<span class="red">*</span></label>
-					<div class="controls">
-					  <input type="password" class="input-medium" id="input02">
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">Contact Person<span class="red">*</span></label>
-					<div class="controls">
-					  <input type="text" class="input-xlarge" id="input02">
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">Contact Number<span class="red">*</span></label>
-					<div class="controls">
-					  <input type="text" class="input-medium" id="input02">
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">Address</label>
-					<div class="controls">
-					  <input type="text" class="input-xlarge" id="input02">
-					  <p></p>
-					  <input type="text" class="input-xlarge" id="input02">
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">City</label>
-					<div class="controls">
-					  <input type="text" class="input-medium" id="input02">
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="input02">Zip Code</label>
-					<div class="controls">
-					  <input type="text" class="input-small" id="input02">
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="select01">Category<span class="red">*</span></label>
-					<div class="controls">
-					  <select id="select01">
-						<option>BPO/ Call Centers</option>
-						<option>Web/ Mobile Development</option>
-						<option>Software Applications</option>
-						<option>Hardware/ Peripherals</option>
-						<option>Others</option>
-					  </select>
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="prependedInput">Website</label>
-					<div class="controls">
-					  <div class="input-prepend">
-						<span class="add-on">http://</span><input class="span3" id="prependedInput" size="16" type="text">
-					  </div>
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="fileInput">Company Logo</label>
-					<div class="controls">
-					  <input class="input-file" id="fileInput" type="file">
-					</div>
-				  </div>
-				  <div class="control-group">
-					<label class="control-label" for="textarea">Description/ Services</label>
-					<div class="controls">
-					  <textarea class="input-xlarge" id="textarea" rows="5"></textarea>
-					</div>
-				  </div>
-				  <div class="control-group">
-					  <p></p>
-					  <span class="red">*</span> Required Fields
-					  <p></p><p></p>
-					  <label class="checkbox">
-						<input type="checkbox" id="optionsCheckbox inputWarning" value="option1">
-						I Agree with the Terms and Agreements of ICTCebu.com <a href="#">Privacy Policy</a>
-					  </label>
-				  </div>
-				  <div class="form-actions">
-					<button type="submit" class="btn btn-danger">Submit</button>
-					<button class="btn">Cancel</button>
-				  </div>
-				</fieldset>
-			  </form>
+				</div>
+				<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
+				<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
+			</div>
+        </div>
 		</div><!--/span-->
 		<div class="span3">
             <legend>Job Listings</legend>
