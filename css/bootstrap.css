@@ -1955,7 +1955,7 @@ table .span24 {
 .dropdown-menu .active > a:hover {
   color: #ffffff;
   text-decoration: none;
-  background-color: #0088cc;
+  background-color: #DA4F49;
 }
 .dropdown.open {
   *z-index: 1000;
@@ -3186,7 +3186,7 @@ input[type="submit"].btn.btn-mini {
   background-color: transparent;
 }
 .navbar .nav .active > .dropdown-toggle:hover {
-  color: #ffffff;
+  color: #DA4F49;
 }
 .navbar .nav.pull-right .dropdown-menu,
 .navbar .nav .dropdown-menu.pull-right {
