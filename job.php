@@ -52,8 +52,8 @@
           <div class="nav-collapse">
             <ul class="nav">
               <li><a href="index.php">Home</a></li>
-			  <li class="active"><a href="companies.php">Companies</a></li>
-			  <li><a href="jobs.php">Jobs</a></li>
+			  <li><a href="companies.php">Companies</a></li>
+			  <li class="active"><a href="jobs.php">Jobs</a></li>
               <li><a href="about.php">About</a></li>
               <li><a href="contact.php">Contact</a></li>
             </ul>
@@ -76,83 +76,86 @@
 			  </a>
 			  <p></p>
 			  <ul class="nav nav-list social-links">
-				  <p><li><button class="btn btn-inverse"><i class="facebook"></i> Connect with Facebook</button></li></p>
-				  <p><li><button class="btn btn-inverse"><i class="twitter"></i> Checkout our Tweets</button></li></p>
-				  <p><li><button class="btn btn-inverse"><i class="linkedin"></i> LinkedIn with Us</button></li></p>
-				  <p><li><button class="btn btn-inverse"><i class="skype"></i> Contact us on Skype</button></li></p>
-				  <p><li><button class="btn btn-inverse"><i class="youtube"></i> Stream our Videos</button></li></p>
-				  <p></p>
+				<a href="company.php"><button class="btn btn-danger">View Company Profile</button></a>
+				<p></p>
 				  <address>
 					<strong>Company, Inc.</strong><br>
 					123 Some Ave, Suite 6457<br>
 					Lahug, Ceby City, 6000<br>
 					<a href="#">www.company.com</a></br>
 				  </address>
-			  </ul>
+				  <li class="nav-header">Related Job Listings</li>
+				  <li><a href="job.php">Programmer</a></li>
+				  <li><a href="job.php">Web Developer</a></li>
+				  <li><a href="job.php">Technical Support</a></li>
+				  <li><a href="job.php">Data Encoder</a></li>
+				  <li><a href="job.php">Programmer</a></li>
+				  <li><a href="job.php">Web Developer</a></li>
+				  <li><a href="job.php">Technical Support</a></li>
+				  <li><a href="job.php">Data Encoder</a></li>
+				  <li><a href="job.php">Technical Support</a></li>
+				  <li><a href="job.php">Data Encoder</a></li>
+			 </ul>
           </div><!--/.well -->
         </div><!--/span-->
         <div class="span6">
-			<div class="n-legend d-inline f-left">Company Name</div>
-			<div class="fb-like"></div>
-			<hr>
+			<legend>Job Position <span class="badge badge-error">2yrs</span></legend>
 			<blockquote>
-			  <p>Company Tagline or slogan here.</p>
-			  <small>Company CEO</small>
+			  <p>Job objectives here.</p>
+			  <p>Chocolate cake pudding faworki gummi bears applicake pie croissant. Gummies lemon drops sweet roll sweet roll bear claw carrot cake marzipan chupa chups. Cheesecake applicake tart carrot cake.</p>
 			</blockquote>
 			<dl class="dl-horizontal">
-				<dt>Overview</dt>
-					<dd>A description list is perfect for defining terms.</dd>
+				<dt>Expiration</dt>
+					<dd>Accepting applications until April 22, 2012, Sunday</dd>
 				<dt>Category</dt>
 					<dd>BPO/ Call Centers</dd>
-				<dt>Services</dt>
-					<dd>Cupcake ipsum dolor sit amet lemon drops. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. I love pudding oat cake sweet roll.</dd>
-					<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+				<dt>Requirements</dt>
+					<dd><p></p></dd>
+					<dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
+					<dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
+					<dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
+					<dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
+					<dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
 			</dl>
-			<div class="span7 columns">
-			  <legend>Portfolio</legend>
-			  <div id="myCarousel" class="carousel slide">
-				<div class="carousel-inner">
-				  <div class="item">
-					<img src="img/bootstrap-mdo-sfmoma-01.jpg" alt="">
-					<div class="carousel-caption">
-					  <h4>First Thumbnail label</h4>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+			<legend>Apply for this Job</legend>
+			<form class="form-horizontal">
+				<fieldset>
+				  <div class="control-group">
+					<label class="control-label" for="input01">Name</label>
+					<div class="controls">
+					  <input type="text" class="input-xlarge" id="input01">
 					</div>
 				  </div>
-				  <div class="item">
-					<img src="img/bootstrap-mdo-sfmoma-02.jpg" alt="">
-					<div class="carousel-caption">
-					  <h4>Second Thumbnail label</h4>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				  <div class="control-group">
+					<label class="control-label" for="input02">Email Address</label>
+					<div class="controls">
+					  <input type="text" class="input-xlarge" id="input02">
 					</div>
 				  </div>
-				  <div class="item active">
-					<img src="img/bootstrap-mdo-sfmoma-03.jpg" alt="">
-					<div class="carousel-caption">
-					  <h4>Third Thumbnail label</h4>
-					  <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+				  <div class="control-group">
+					<label class="control-label" for="textarea">Cover Letter</label>
+					<div class="controls">
+					  <textarea class="input-xlarge" id="textarea" rows="8"></textarea>
 					</div>
 				  </div>
-				</div>
-				<a class="left carousel-control" href="#myCarousel" data-slide="prev">&lsaquo;</a>
-				<a class="right carousel-control" href="#myCarousel" data-slide="next">&rsaquo;</a>
-			</div>
-        </div>
+				  <div class="control-group">
+					<label class="control-label" for="fileInput">Attach Resume</label>
+					<div class="controls">
+					  <input class="input-file" id="fileInput" type="file">
+					</div>
+				  </div>
+				  <div class="form-actions">
+					<button type="submit" class="btn btn-danger">Submit</button>
+					<button class="btn">Cancel</button>
+				  </div>
+				</fieldset>
+			</form>
 		</div><!--/span-->
 		<div class="span3">
-            <legend>Job Listings</legend>
-			<ul class="nav nav-pills nav-stacked">
-			  <li><a href="job.php">Programmer</a></li>
-              <li><a href="job.php">Web Developer</a></li>
-              <li><a href="job.php">Technical Support</a></li>
-              <li><a href="job.php">Data Encoder</a></li>
-			  <li><a href="job.php">Programmer</a></li>
-              <li><a href="job.php">Web Developer</a></li>
-              <li><a href="job.php">Technical Support</a></li>
-              <li><a href="job.php">Data Encoder</a></li>
-			  <li><a href="job.php">Technical Support</a></li>
-              <li><a href="job.php">Data Encoder</a></li>
-			 </ul>
+            <legend>Ad Banner?</legend>	
+			<a href="#" class="thumbnail">
+				<img src="/img/long-ad.png" alt="">
+			</a>
         </div><!--/span-->
       </div><!--/row-->
       <hr>

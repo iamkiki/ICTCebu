@@ -80,16 +80,16 @@
 			  <li><a href="#">Others</a></li>
 			  
 			  <li class="nav-header">Hot Jobs</li>
-              <li><a href="#">Programmer</a></li>
-              <li><a href="#">Web Developer</a></li>
-              <li><a href="#">Technical Support</a></li>
-              <li><a href="#">Data Encoder</a></li>
-			  <li><a href="#">Programmer</a></li>
-              <li><a href="#">Web Developer</a></li>
-              <li><a href="#">Technical Support</a></li>
-              <li><a href="#">Data Encoder</a></li>
-			  <li><a href="#">Technical Support</a></li>
-              <li><a href="#">Data Encoder</a></li>
+              <li><a href="job.php">Programmer</a></li>
+              <li><a href="job.php">Web Developer</a></li>
+              <li><a href="job.php">Technical Support</a></li>
+              <li><a href="job.php">Data Encoder</a></li>
+			  <li><a href="job.php">Programmer</a></li>
+              <li><a href="job.php">Web Developer</a></li>
+              <li><a href="job.php">Technical Support</a></li>
+              <li><a href="job.php">Data Encoder</a></li>
+			  <li><a href="job.php">Technical Support</a></li>
+              <li><a href="job.php">Data Encoder</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->

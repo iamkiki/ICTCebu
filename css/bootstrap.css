@@ -168,6 +168,10 @@ a:hover {
   width: 940px;
 }
 
+.p-right5 {
+	padding-right: 5px;
+}
+
 .m-right5{
   margin-right: 5px;
 }
@@ -207,6 +211,14 @@ a:hover {
 .social-links button {
 	width: 220px;
 	line-height: 30px;
+}
+
+.fb-like {
+	background: url(/img/like.png) no-repeat;
+	width: 125px;
+	height: 28px;
+	float: left;
+	margin: 5px 5px 0;
 }
 
 .facebook {
@@ -3710,6 +3722,7 @@ a.thumbnail:hover {
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
+  vertical-align: top;
 }
 .badge:hover {
   color: #ffffff;

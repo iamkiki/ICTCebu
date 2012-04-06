@@ -55,7 +55,7 @@
 			  <li><a href="companies.php">Companies</a></li>
 			  <li><a href="jobs.php">Jobs</a></li>
               <li><a href="about.php">About</a></li>
-              <li class="active"><a href="contact.php">Contact</a></li>
+              <li><a href="contact.php">Contact</a></li>
             </ul>
 			<form class="navbar-search pull-left">
 			  <input type="text" class="search-query" placeholder="Search">
@@ -80,16 +80,16 @@
 			  <li><a href="#">Others</a></li>
 			  
 			  <li class="nav-header">Hot Jobs</li>
-              <li><a href="#">Programmer</a></li>
-              <li><a href="#">Web Developer</a></li>
-              <li><a href="#">Technical Support</a></li>
-              <li><a href="#">Data Encoder</a></li>
-			  <li><a href="#">Programmer</a></li>
-              <li><a href="#">Web Developer</a></li>
-              <li><a href="#">Technical Support</a></li>
-              <li><a href="#">Data Encoder</a></li>
-			  <li><a href="#">Technical Support</a></li>
-              <li><a href="#">Data Encoder</a></li>
+              <li><a href="job.php">Programmer</a></li>
+              <li><a href="job.php">Web Developer</a></li>
+              <li><a href="job.php">Technical Support</a></li>
+              <li><a href="job.php">Data Encoder</a></li>
+			  <li><a href="job.php">Programmer</a></li>
+              <li><a href="job.php">Web Developer</a></li>
+              <li><a href="job.php">Technical Support</a></li>
+              <li><a href="job.php">Data Encoder</a></li>
+			  <li><a href="job.php">Technical Support</a></li>
+              <li><a href="job.php">Data Encoder</a></li>
             </ul>
           </div><!--/.well -->
         </div><!--/span-->
