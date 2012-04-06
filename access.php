@@ -187,6 +187,9 @@
 					</div>
 				  </div>
 				  <div class="control-group">
+					  <p></p>
+					  <span class="red">*</span> Required Fields
+					  <p></p><p></p>
 					  <label class="checkbox">
 						<input type="checkbox" id="optionsCheckbox inputWarning" value="option1">
 						I Agree with the Terms and Agreements of ICTCebu.com <a href="#">Privacy Policy</a>
