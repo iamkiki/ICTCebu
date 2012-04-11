@@ -1,6 +1,6 @@
 <?php if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 
-class Welcome extends CI_Controller {
+class Main extends CI_Controller {
 
 	/**
 	 * Index Page for this controller.
@@ -19,9 +19,17 @@ class Welcome extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('welcome_message');
+		$this->load->view('home');
 	}
+
+        public function about(){
+                $this->load->view('about');
+        }
+
+        public function contact(){
+                $this->load->view('contact');
+        }
 }
 
-/* End of file welcome.php */
-/* Location: ./application/controllers/welcome.php */
+/* End of file main.php */
+/* Location: ./application/controllers/main.php */
