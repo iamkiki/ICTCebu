@@ -1,185 +1,205 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>ICTCebu IT-BPO Company and Jobs Directory</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="">
-    <meta name="author" content="">
+<?php
 
-    <!-- Le styles -->
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <style type="text/css">
-      body {
-        padding-top: 60px;
-        padding-bottom: 40px;
-      }
-      .sidebar-nav {
-        padding: 9px 0;
-      }
-	  .gray {
-		color: gray;
-	  }
-	  .red {
-		color: #DA4F49;
-	  }
-    </style>
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
+/*
+ *---------------------------------------------------------------
+ * APPLICATION ENVIRONMENT
+ *---------------------------------------------------------------
+ *
+ * You can load different configurations depending on your
+ * current environment. Setting the environment also influences
+ * things like logging and error reporting.
+ *
+ * This can be set to anything, but default usage is:
+ *
+ *     development
+ *     testing
+ *     production
+ *
+ * NOTE: If you change these, also change the error_reporting() code below
+ *
+ */
+	define('ENVIRONMENT', 'development');
+/*
+ *---------------------------------------------------------------
+ * ERROR REPORTING
+ *---------------------------------------------------------------
+ *
+ * Different environments will require different levels of error reporting.
+ * By default development will show errors but testing and live will hide them.
+ */
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+if (defined('ENVIRONMENT'))
+{
+	switch (ENVIRONMENT)
+	{
+		case 'development':
+			error_reporting(E_ALL);
+		break;
+	
+		case 'testing':
+		case 'production':
+			error_reporting(0);
+		break;
 
-    <!-- Le fav and touch icons -->
-    <link rel="shortcut icon" href="ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="ico/apple-touch-icon-57-precomposed.png">
-  </head>
+		default:
+			exit('The application environment is not set correctly.');
+	}
+}
 
-  <body>
+/*
+ *---------------------------------------------------------------
+ * SYSTEM FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * This variable must contain the name of your "system" folder.
+ * Include the path if the folder is not in the same  directory
+ * as this file.
+ *
+ */
+	$system_path = 'system';
 
-    <div class="navbar navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </a>
-          <a class="brand" href="#"><span class="red"><strong>ICTCebu</strong></span><span class="gray">.com</span></a>
-          <div class="nav-collapse">
-            <ul class="nav">
-              <li class="active"><a href="index.php">Home</a></li>
-			  <li><a href="companies.php">Companies</a></li>
-			  <li><a href="jobs.php">Jobs</a></li>
-              <li><a href="about.php">About</a></li>
-              <li><a href="contact.php">Contact</a></li>
-            </ul>
-			<form class="navbar-search pull-left">
-			  <input type="text" class="search-query" placeholder="Search">
-			</form>
-			<p class="navbar-text pull-right"><a href="access.php">Register Company</a> | <a href="access.php">Login</a></p>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
-          </div><!--/.nav-collapse -->
-        </div>
-      </div>
-    </div>
+/*
+ *---------------------------------------------------------------
+ * APPLICATION FOLDER NAME
+ *---------------------------------------------------------------
+ *
+ * If you want this front controller to use a different "application"
+ * folder then the default one you can set its name here. The folder
+ * can also be renamed or relocated anywhere on your server.  If
+ * you do, use a full server path. For more info please see the user guide:
+ * http://codeigniter.com/user_guide/general/managing_apps.html
+ *
+ * NO TRAILING SLASH!
+ *
+ */
+	$application_folder = 'application';
 
-    <div class="container-fluid">
-      <div class="row-fluid">
-        <div class="span3">
-          <div class="well sidebar-nav">
-            <ul class="nav nav-list">
-              <li class="nav-header">Browse Categories</li>
-              <li class="active"><a href="#">BPO/ Call Centers</a></li>
-              <li><a href="#">Web/ Mobile Development</a></li>
-              <li><a href="#">Software Applications</a></li>
-              <li><a href="#">Hardware/ Peripherals</a></li>
-			  <li><a href="#">Others</a></li>
-			  
-			  <li class="nav-header">Hot Jobs</li>
-              <li><a href="job.php">Programmer</a></li>
-              <li><a href="job.php">Web Developer</a></li>
-              <li><a href="job.php">Technical Support</a></li>
-              <li><a href="job.php">Data Encoder</a></li>
-			  <li><a href="job.php">Programmer</a></li>
-              <li><a href="job.php">Web Developer</a></li>
-              <li><a href="job.php">Technical Support</a></li>
-              <li><a href="job.php">Data Encoder</a></li>
-			  <li><a href="job.php">Technical Support</a></li>
-              <li><a href="job.php">Data Encoder</a></li>
-            </ul>
-          </div><!--/.well -->
-        </div><!--/span-->
-        <div class="span9">
-          <div class="hero-unit">
-            <h1>Offering you the BEST Companies and Jobs in the IT and BPO Industry.</h1>
-            <p>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</p>
-            <p><a class="btn btn-danger btn-large">Learn more &raquo;</a></p>
-          </div>
-          <div class="row-fluid">
-			<ul class="thumbnails">
-				<li class="span2">
-				  <div class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-					<div class="caption">
-					  <h5>Company Name</h5>
-					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-					</div>
-				  </div>
-				</li>
-				<li class="span2">
-				  <div class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-					<div class="caption">
-					  <h5>Company Name</h5>
-					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-					</div>
-				  </div>
-				</li>
-				<li class="span2">
-				  <div class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-					<div class="caption">
-					  <h5>Company Name</h5>
-					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-					</div>
-				  </div>
-				</li>
-				<li class="span2">
-				  <div class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-					<div class="caption">
-					  <h5>Company Name</h5>
-					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-					</div>
-				  </div>
-				</li>
-				<li class="span2">
-				  <div class="thumbnail">
-					<img src="http://placehold.it/160x120" alt="">
-					<div class="caption">
-					  <h5>Company Name</h5>
-					  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-					  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-					</div>
-				  </div>
-				</li>
-			  </ul>
-          </div><!--/row-->
-        </div><!--/span-->
-      </div><!--/row-->
-	  <div class="view-all-companies"><a class="btn btn-danger" href="companies.php">View All Companies</a></div>
-      <hr>
+/*
+ * --------------------------------------------------------------------
+ * DEFAULT CONTROLLER
+ * --------------------------------------------------------------------
+ *
+ * Normally you will set your default controller in the routes.php file.
+ * You can, however, force a custom routing by hard-coding a
+ * specific controller class/function here.  For most applications, you
+ * WILL NOT set your routing here, but it's an option for those
+ * special instances where you might want to override the standard
+ * routing in a specific front controller that shares a common CI installation.
+ *
+ * IMPORTANT:  If you set the routing here, NO OTHER controller will be
+ * callable. In essence, this preference limits your application to ONE
+ * specific controller.  Leave the function name blank if you need
+ * to call functions dynamically via the URI.
+ *
+ * Un-comment the $routing array below to use this feature
+ *
+ */
+	// The directory name, relative to the "controllers" folder.  Leave blank
+	// if your controller is not in a sub-folder within the "controllers" folder
+	// $routing['directory'] = '';
 
-      <footer>
-        <p>&#169; <?php echo date('Y', time()); ?> ictcebu.com | Email us at <a href="/contact">info@ictcebu.com</a></p>
-      </footer>
+	// The controller class file name.  Example:  Mycontroller
+	// $routing['controller'] = '';
 
-    </div><!--/.fluid-container-->
+	// The controller function you wish to be called.
+	// $routing['function']	= '';
 
-    <!-- Le javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <script src="js/jquery.js"></script>
-    <script src="js/bootstrap-transition.js"></script>
-    <script src="js/bootstrap-alert.js"></script>
-    <script src="js/bootstrap-modal.js"></script>
-    <script src="js/bootstrap-dropdown.js"></script>
-    <script src="js/bootstrap-scrollspy.js"></script>
-    <script src="js/bootstrap-tab.js"></script>
-    <script src="js/bootstrap-tooltip.js"></script>
-    <script src="js/bootstrap-popover.js"></script>
-    <script src="js/bootstrap-button.js"></script>
-    <script src="js/bootstrap-collapse.js"></script>
-    <script src="js/bootstrap-carousel.js"></script>
-    <script src="js/bootstrap-typeahead.js"></script>
 
-  </body>
-</html>
+/*
+ * -------------------------------------------------------------------
+ *  CUSTOM CONFIG VALUES
+ * -------------------------------------------------------------------
+ *
+ * The $assign_to_config array below will be passed dynamically to the
+ * config class when initialized. This allows you to set custom config
+ * items or override any default config values found in the config.php file.
+ * This can be handy as it permits you to share one application between
+ * multiple front controller files, with each file containing different
+ * config values.
+ *
+ * Un-comment the $assign_to_config array below to use this feature
+ *
+ */
+	// $assign_to_config['name_of_config_item'] = 'value of config item';
+
+
+
+// --------------------------------------------------------------------
+// END OF USER CONFIGURABLE SETTINGS.  DO NOT EDIT BELOW THIS LINE
+// --------------------------------------------------------------------
+
+/*
+ * ---------------------------------------------------------------
+ *  Resolve the system path for increased reliability
+ * ---------------------------------------------------------------
+ */
+
+	// Set the current directory correctly for CLI requests
+	if (defined('STDIN'))
+	{
+		chdir(dirname(__FILE__));
+	}
+
+	if (realpath($system_path) !== FALSE)
+	{
+		$system_path = realpath($system_path).'/';
+	}
+
+	// ensure there's a trailing slash
+	$system_path = rtrim($system_path, '/').'/';
+
+	// Is the system path correct?
+	if ( ! is_dir($system_path))
+	{
+		exit("Your system folder path does not appear to be set correctly. Please open the following file and correct this: ".pathinfo(__FILE__, PATHINFO_BASENAME));
+	}
+
+/*
+ * -------------------------------------------------------------------
+ *  Now that we know the path, set the main path constants
+ * -------------------------------------------------------------------
+ */
+	// The name of THIS file
+	define('SELF', pathinfo(__FILE__, PATHINFO_BASENAME));
+
+	// The PHP file extension
+	// this global constant is deprecated.
+	define('EXT', '.php');
+
+	// Path to the system folder
+	define('BASEPATH', str_replace("\\", "/", $system_path));
+
+	// Path to the front controller (this file)
+	define('FCPATH', str_replace(SELF, '', __FILE__));
+
+	// Name of the "system folder"
+	define('SYSDIR', trim(strrchr(trim(BASEPATH, '/'), '/'), '/'));
+
+
+	// The path to the "application" folder
+	if (is_dir($application_folder))
+	{
+		define('APPPATH', $application_folder.'/');
+	}
+	else
+	{
+		if ( ! is_dir(BASEPATH.$application_folder.'/'))
+		{
+			exit("Your application folder path does not appear to be set correctly. Please open the following file and correct this: ".SELF);
+		}
+
+		define('APPPATH', BASEPATH.$application_folder.'/');
+	}
+
+/*
+ * --------------------------------------------------------------------
+ * LOAD THE BOOTSTRAP FILE
+ * --------------------------------------------------------------------
+ *
+ * And away we go...
+ *
+ */
+require_once BASEPATH.'core/CodeIgniter.php';
+
+/* End of file index.php */
+/* Location: ./index.php */
