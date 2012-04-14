@@ -75,10 +75,10 @@ class Access extends CI_Controller {
                     , TRUE
                 )
             );
-//            if (!$this->email->send())
-//            {
-//                show_error($this->email->print_debugger(),400);
-//            }
+            if (!$this->email->send())
+            {
+                show_error($this->email->print_debugger(),400);
+            }
 
             echo json_encode(array('status'=>'success'));
         }catch(Exception $e){

@@ -33,6 +33,36 @@ class Main extends CI_Controller {
         public function contact(){
             $this->load->view('contact');
         }
+
+        public function sendcontact(){
+            $this->b_ajax = true;
+            $s_name = $this->input->post('s_name',TRUE);
+            $s_email = $this->input->post('s_email',TRUE);
+            $s_message = $this->input->post('s_message');
+
+            $a_data = array('s_email'=>$s_email,'s_name'=>$s_name, 's_message'=>$s_message);
+            $this->load->library('email');
+            $this->email->from( sprintf('%s', $a_data['s_email']), 'ICTCebu.com' );
+            $this->email->to('info@ictcebu.com');
+            $this->email->mailtype = 'html';
+            $this->email->subject( 'Contact Form' );
+            $this->email->message(
+                $this->load->view(
+                    'emails/template'
+                    , array(
+                        's_contents' => $this->load->view(
+                            'emails/contact', $a_data, TRUE
+                        )
+                    )
+                    , TRUE
+                )
+            );
+            if (!$this->email->send())
+            {
+                show_error($this->email->print_debugger(),400);
+            }
+            echo json_encode(array('status'=>'success'));
+        }
 }
 
 /* End of file main.php */
