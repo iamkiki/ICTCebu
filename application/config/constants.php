@@ -36,6 +36,17 @@ define('FOPEN_READ_WRITE_CREATE',				'a+b');
 define('FOPEN_WRITE_CREATE_STRICT',				'xb');
 define('FOPEN_READ_WRITE_CREATE_STRICT',		'x+b');
 
+/* DATABASE */
+
+/*for local*/
+define('TBL_ADMINS', 'ictcebu.admins');
+define('TBL_COMPANIES', 'ictcebu.companies');
+define('TBL_JOBS', 'ictcebu.jobs');
+/*for live*/
+//define('TBL_USERS', 'a1766690_1.users');
+//define('TBL_COMPANIES', 'a1766690_1.companies');
+//define('TBL_JOBS', 'a1766690_1.jobs');
+
 
 /* End of file constants.php */
 /* Location: ./application/config/constants.php */

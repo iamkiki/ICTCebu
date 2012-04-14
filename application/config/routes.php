@@ -43,6 +43,7 @@ $route['404_override'] = '';
 $route['home'] = "/main";
 $route['about'] = "/main/about";
 $route['contact'] = "/main/contact";
+$route['logout'] = "/access/logout";
 
 
 /* End of file routes.php */

@@ -48,10 +48,17 @@
 $active_group = 'default';
 $active_record = TRUE;
 
+/*for local*/
 $db['default']['hostname'] = 'localhost';
 $db['default']['username'] = 'root';
-$db['default']['password'] = 'root';
+$db['default']['password'] = '';
 $db['default']['database'] = 'ictcebu';
+/*for live*/
+//$db['default']['hostname'] = 'mysql4.000webhost.com';
+//$db['default']['username'] = 'a1766690_1';
+//$db['default']['password'] = 'cict2011';
+//$db['default']['database'] = 'a1766690_1';
+
 $db['default']['dbdriver'] = 'mysql';
 $db['default']['dbprefix'] = '';
 $db['default']['pconnect'] = TRUE;

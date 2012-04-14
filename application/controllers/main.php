@@ -19,15 +19,19 @@ class Main extends CI_Controller {
 	 */
 	public function index()
 	{
-		$this->load->view('home');
+            if($this->session->userdata('auth')){
+                $this->load->view('user');
+            } else {
+                $this->load->view('home');
+            }
 	}
 
         public function about(){
-                $this->load->view('about');
+            $this->load->view('about');
         }
 
         public function contact(){
-                $this->load->view('contact');
+            $this->load->view('contact');
         }
 }
 

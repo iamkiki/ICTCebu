@@ -165,7 +165,7 @@ a:hover {
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 1095px;
 }
 
 .p-right5 {
@@ -3078,7 +3078,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 940px;
+  width: 1095px;
 }
 .navbar-fixed-top {
   top: 0;

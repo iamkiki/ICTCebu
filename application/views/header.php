@@ -42,7 +42,7 @@
 
     <div class="navbar navbar-fixed-top">
       <div class="navbar-inner">
-        <div class="container-fluid">
+        <div class="container">
           <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
@@ -60,11 +60,26 @@
 			<form class="navbar-search pull-left">
 			  <input type="text" class="search-query" placeholder="Search">
 			</form>
-			<p class="navbar-text pull-right"><a href="/access">Register Company</a> | <a href="access.php">Login</a></p>
+                        <?php if(!$this->session->userdata('auth')){ ?>
+			<p class="navbar-text pull-right"><a href="/access">Register Company</a> | <a href="/access">Login</a></p>
+                        <?php } else { $a_user = $this->session->userdata('auth'); ?>
             <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
+                        <ul class="nav pull-right">
+				<li class="dropdown">
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, <?php echo $a_user->name; ?><b class="caret"></b></a>
+				  <ul class="dropdown-menu">
+					<li><a href="#">Edit Profile</a></li>
+					<li><a href="#">Account Settings</a></li>
+					<li><a href="#">Post Job</a></li>
+					<li class="divider"></li>
+					<li><a href="/logout">Log out</a></li>
+				  </ul>
+				</li>
+			</ul>
+                        <?php } ?>
           </div><!--/.nav-collapse -->
         </div>
       </div>
     </div>
 
-<div class="container-fluid">
+<div class="container">

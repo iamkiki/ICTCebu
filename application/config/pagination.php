@@ -1,0 +1,14 @@
+<?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
+$config['per_page'] = 3;
+$config['num_links'] = 2;
+$config['full_tag_open'] = '<div class="pagination">';
+$config['full_tag_close'] = '</div>';
+$config['first_link'] = FALSE;
+$config['last_link'] = FALSE;
+$config['next_link'] = FALSE;
+$config['prev_link'] = FALSE;
+$config['cur_tag_open'] = '<b>';
+$config['cur_tag_close'] = '</b>';
+$config['num_tag_open'] = '<span>';
+$config['num_tag_close'] = '</span>';
+$config['uri_segment'] = 4;
