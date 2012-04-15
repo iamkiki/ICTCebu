@@ -69,20 +69,13 @@ class m_user extends CI_Model
                'category'       => $a_data['category'] ,
                'person'         => $a_data['person'] ,
                'contact'        => $a_data['contact'] ,
+               'address'        => $_POST['address'] ,
                'city'           => $a_data['city'] ,
                'zip'            => $a_data['zip'] ,
                'description'    => $a_data['description'] ,
                'website'        => $a_data['website'] ,
                'status'         => 0
             );
-
-            if(isset($_POST['address1'])){
-                $s_address = $_POST['address1'];
-                if(isset($_POST['address2'])){
-                    $s_address .= $_POST['address2'];
-                }
-                $a_fields['address'] = $s_address;
-            }
 
             $this->db->insert(TBL_COMPANIES, $a_fields);
             $result = $this->db->insert_id();

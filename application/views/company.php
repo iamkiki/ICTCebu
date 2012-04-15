@@ -6,7 +6,7 @@
                       </a>
                       <p></p>
                       <ul class="nav nav-list social-links">
-                              <p><li><button class="btn btn-inverse"><i class="facebook"></i> Connect with Facebook</button></li></p>
+                              <p><li><button class="btn btn-inverse"><i class="facebook"></i> Our Facebook Page</button></li></p>
                               <p><li><button class="btn btn-inverse"><i class="twitter"></i> Checkout our Tweets</button></li></p>
                               <p><li><button class="btn btn-inverse"><i class="linkedin"></i> LinkedIn with Us</button></li></p>
                               <p><li><button class="btn btn-inverse"><i class="skype"></i> Contact us on Skype</button></li></p>

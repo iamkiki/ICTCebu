@@ -45,6 +45,13 @@ $route['about'] = "/main/about";
 $route['contact'] = "/main/contact";
 $route['logout'] = "/access/logout";
 
+/* dashboard */
+$route['editprofile'] = "/main/editprofile";
+$route['logo'] = "/main/logo";
+$route['account'] = "/main/account";
+$route['listings'] = "/main/listings";
+$route['post'] = "/jobs/post";
+
 
 /* End of file routes.php */
 /* Location: ./application/config/routes.php */

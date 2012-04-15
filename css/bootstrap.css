@@ -7,6 +7,7 @@
  *
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
+
 article,
 aside,
 details,
@@ -194,6 +195,10 @@ a:hover {
 
 .f-right {
 	float: right;
+}
+
+.min600 {
+    min-height: 600px;
 }
 
 .n-legend {
@@ -1497,6 +1502,7 @@ table .span24 {
   height: 14px;
   line-height: 14px;
   vertical-align: text-top;
+  margin-right: 3px;
   background-image: url("../img/glyphicons-halflings.png");
   background-position: 14px 14px;
   background-repeat: no-repeat;

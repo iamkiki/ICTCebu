@@ -1,4 +1,4 @@
-<div class="row-fluid">
+<div class="row-fluid min600">
 <div class="span3">
   <?php $this->load->view('sidebar'); ?>
 </div><!--/span-->

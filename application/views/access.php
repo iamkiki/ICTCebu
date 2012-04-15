@@ -59,9 +59,7 @@
                   <div class="control-group">
                         <label class="control-label" for="address">Address</label>
                         <div class="controls">
-                          <input type="text" class="input-xlarge" id="address1">
-                          <p></p>
-                          <input type="text" class="input-xlarge" id="address2">
+                          <textarea class="input-xlarge" id="description" rows="2"></textarea>
                         </div>
                   </div>
                   <div class="control-group">

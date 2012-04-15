@@ -97,8 +97,7 @@ function init_access()
         var confirm_password = $.trim($('#confirm_password').val());
         var person = $.trim($('#person').val());
         var contact = $.trim($('#contact').val());
-        var address1 = $.trim($('#address1').val());
-        var address2 = $.trim($('#address2').val());
+        var address = $.trim($('#address').val());
         var city = $.trim($('#contact').val());
         var zip = $.trim($('#zip').val());
         var website = $.trim($('#website').val());
@@ -161,8 +160,7 @@ function init_access()
                 'password': password,
                 'person': person,
                 'contact': contact,
-                'address1': address1,
-                'address2': address2,
+                'address': address,
                 'city': city,
                 'zip': zip,
                 'website': website,

@@ -26,6 +26,40 @@ class Main extends CI_Controller {
             }
 	}
 
+        public function editprofile(){
+            if($this->session->userdata('auth')){
+                $this->load->model('m_user');
+                $a_user = $this->session->userdata('auth');
+                $a_data = $this->m_user->load( array('id' => $a_user->id, 'status' => 1) );
+                if($a_data->num_rows > 0){
+                    $this->load->view('user', array('a_data' => $a_data->row()));
+                }
+            } else {
+                $this->load->view('home');
+            }
+        }
+
+        public function logo(){
+            $this->load->view('user');
+        }
+
+        public function account(){
+            if($this->session->userdata('auth')){
+                $this->load->model('m_user');
+                $a_user = $this->session->userdata('auth');
+                $a_data = $this->m_user->load( array('id' => $a_user->id, 'status' => 1) );
+                if($a_data->num_rows > 0){
+                    $this->load->view('user', array('a_data' => $a_data->row()));
+                }
+            } else {
+                $this->load->view('home');
+            }
+        }
+
+        public function listings(){
+            $this->load->view('user');
+        }
+
         public function about(){
             $this->load->view('about');
         }
