@@ -28,9 +28,9 @@ class Main extends CI_Controller {
 
         public function editprofile(){
             if($this->session->userdata('auth')){
-                $this->load->model('m_user');
+                $this->load->model('m_companies');
                 $a_user = $this->session->userdata('auth');
-                $a_data = $this->m_user->load( array('id' => $a_user->id, 'status' => 1) );
+                $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );
                 if($a_data->num_rows > 0){
                     $this->load->view('user', array('a_data' => $a_data->row()));
                 }
@@ -45,9 +45,9 @@ class Main extends CI_Controller {
 
         public function account(){
             if($this->session->userdata('auth')){
-                $this->load->model('m_user');
+                $this->load->model('m_companies');
                 $a_user = $this->session->userdata('auth');
-                $a_data = $this->m_user->load( array('id' => $a_user->id, 'status' => 1) );
+                $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );
                 if($a_data->num_rows > 0){
                     $this->load->view('user', array('a_data' => $a_data->row()));
                 }

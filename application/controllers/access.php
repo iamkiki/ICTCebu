@@ -9,7 +9,7 @@ class Access extends CI_Controller {
 
     public function login(){
         $this->b_ajax = true;
-        $this->load->model('m_user');
+        $this->load->model('m_companies');
 
         #check session, if exists, redirect to event
         if($this->session->userdata('auth')) {
@@ -24,7 +24,7 @@ class Access extends CI_Controller {
                 $s_password = $this->input->post('s_password',TRUE);
 
                 #match email and password, return error msg if not
-                $r_result = $this->m_user->load( array( 'email' => $s_email, 'password' => do_hash($s_password) , 'status' => 1 ) );
+                $r_result = $this->m_companies->load( array( 'email' => $s_email, 'password' => do_hash($s_password) , 'status' => 1 ) );
                 if(!$r_result) {
                         throw new Exception;
                 }
@@ -44,9 +44,9 @@ class Access extends CI_Controller {
         try{
             $this->b_ajax = true;
             $s_email = $this->input->post('s_email',TRUE);
-            $this->load->model('m_user');
+            $this->load->model('m_companies');
 
-            $r_result = $this->m_user->load( array( 'email' => $s_email,'status'=>'1' ) );
+            $r_result = $this->m_companies->load( array( 'email' => $s_email,'status'=>'1' ) );
             if(!$r_result)
                 throw new Exception;
 
@@ -54,7 +54,7 @@ class Access extends CI_Controller {
 
             $s_verification = do_hash($s_email.time());
 
-            $this->m_user->update( $a_user->id, array('verification_key' => $s_verification ));
+            $this->m_companies->update( $a_user->id, array('verification_key' => $s_verification ));
 
             $s_new_password = $this->_generatepassword($a_user->id);
 
@@ -88,7 +88,7 @@ class Access extends CI_Controller {
 
     function _generatepassword($i_id) {
     	$this->b_ajax = true;
-    	$this->load->model('m_user');
+    	$this->load->model('m_companies');
 
         $i_length = 9;
         $s_characters = '0123456789abcdefghijklmnopqrstuvwxyz';
@@ -97,7 +97,7 @@ class Access extends CI_Controller {
             $s_string .= $s_characters[mt_rand(0, strlen($s_characters))];
         }
 
-        $this->m_user->update( $i_id, array('password' => do_hash($s_string) ) );
+        $this->m_companies->update( $i_id, array('password' => do_hash($s_string) ) );
 
         return $s_string;
     }
@@ -113,20 +113,20 @@ class Access extends CI_Controller {
             try{
                 $this->b_ajax = true;
                 $s_email = $this->input->post('email');
-                $this->load->model('m_user');
+                $this->load->model('m_companies');
 
-                $r_result = $this->m_user->load( array( 'email' => $s_email) );
+                $r_result = $this->m_companies->load( array( 'email' => $s_email) );
                 if($r_result)
                     throw new Exception;
 
-                $i_uid = $this->m_user->register($_POST);
+                $i_uid = $this->m_companies->register($_POST);
                 if($i_uid > 0) {
                     $s_verification_key = do_hash($s_email.time());
                     $a_fields = array(
                        'verification_key'  => $s_verification_key
                     );
 
-                    $this->m_user->update($i_uid,$a_fields);
+                    $this->m_companies->update($i_uid,$a_fields);
 
                     $this->_email_verification(
                         array(
@@ -175,13 +175,13 @@ class Access extends CI_Controller {
 
     public function verify( $s_id, $s_hash )
     {
-        $this->load->model('m_user');
-        $r_result = $this->m_user->load( array( 'id' => $s_id, 'verification_key' => $s_hash ) );
+        $this->load->model('m_companies');
+        $r_result = $this->m_companies->load( array( 'id' => $s_id, 'verification_key' => $s_hash ) );
         if ( $r_result )
         {
-            $this->m_user->is_verified = 1;
-            $this->m_user->verification_key = '';
-            $this->m_user->update();
+            $this->m_companies->is_verified = 1;
+            $this->m_companies->verification_key = '';
+            $this->m_companies->update();
 
             $a_result = $r_result->row();
             $this->session->set_userdata('a_user', $a_result);
