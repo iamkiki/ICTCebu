@@ -139,6 +139,8 @@ body {
   line-height: 18px;
   color: #333333;
   background-color: #ffffff;
+  padding-top: 60px;
+  padding-bottom: 40px;
 }
 a {
   color: #DA4F49;
@@ -169,8 +171,18 @@ a:hover {
   width: 1095px;
 }
 
+.sidebar-nav {
+    padding: 9px 0;
+}
+.gray {
+    color: gray;
+}
+.red {
+    color: #DA4F49;
+}
+
 .p-right5 {
-	padding-right: 5px;
+    padding-right: 5px;
 }
 
 .m-right5{

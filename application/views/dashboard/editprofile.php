@@ -6,7 +6,7 @@
     <a class="close" data-dismiss="alert">×</a>
     <strong>Oh snap!</strong> Something went wrong.
 </div>
-<form class="form-horizontal register-form" method="post" enctype="multipart/form-data">
+<form class="form-horizontal editprofile-form" method="post" enctype="multipart/form-data">
         <fieldset>
           <div class="control-group company_name">
                 <label class="control-label" for="company_name">Company Name<span class="red">*</span></label>
@@ -72,7 +72,7 @@
                 </div>
           </div>
           <div class="control-group">
-                <label class="control-label" for="website">Facebook</label>
+                <label class="control-label" for="facebook">Facebook</label>
                 <div class="controls">
                   <div class="input-prepend">
                         <span class="add-on">http://</span><input class="span3" id="facebook" size="16" type="text" value="<?php echo $a_data->facebook; ?>">
@@ -80,7 +80,7 @@
                 </div>
           </div>
           <div class="control-group">
-                <label class="control-label" for="website">Twitter</label>
+                <label class="control-label" for="twitter">Twitter</label>
                 <div class="controls">
                   <div class="input-prepend">
                         <span class="add-on">http://</span><input class="span3" id="twitter" size="16" type="text" value="<?php echo $a_data->twitter; ?>">
@@ -88,7 +88,7 @@
                 </div>
           </div>
           <div class="control-group">
-                <label class="control-label" for="website">LinkedIn</label>
+                <label class="control-label" for="linkedin">LinkedIn</label>
                 <div class="controls">
                   <div class="input-prepend">
                         <span class="add-on">http://</span><input class="span3" id="linkedin" size="16" type="text" value="<?php echo $a_data->linkedin; ?>">
@@ -96,7 +96,7 @@
                 </div>
           </div>
           <div class="control-group">
-                <label class="control-label" for="website">Youtube</label>
+                <label class="control-label" for="youtube">Youtube</label>
                 <div class="controls">
                   <div class="input-prepend">
                         <span class="add-on">http://</span><input class="span3" id="youtube" size="16" type="text" value="<?php echo $a_data->youtube; ?>">

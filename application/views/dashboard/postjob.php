@@ -7,7 +7,7 @@
             <a class="close" data-dismiss="alert">×</a>
             <strong>Oh snap!</strong> The email address is already registered.
         </div>
-        <form class="form-horizontal register-form" method="post" enctype="multipart/form-data">
+        <form class="form-horizontal edit-form" method="post" enctype="multipart/form-data">
                 <fieldset>
                   <div class="control-group company_name">
                         <label class="control-label" for="company_name">Job Position<span class="red">*</span></label>
