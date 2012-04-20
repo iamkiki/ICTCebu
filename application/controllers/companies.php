@@ -7,9 +7,9 @@ class Companies extends CI_Controller {
 		$this->load->view('companies');
 	}
 
-        public function profile(){
-                $this->load->view('company');
-        }
+    public function profile(){
+            $this->load->view('company');
+    }
 }
 
 /* End of file companies.php */

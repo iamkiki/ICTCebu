@@ -1,14 +1,14 @@
 <?php  if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 /**
- * companies model
+ * jobs model
  *
- * @file		m_companies.php
+ * @file		m_jobs.php
  * @version		1.0
  * @created		04/14/2012
  * @date		04/14/2012
  *
  */
-class m_companies extends CI_Model
+class m_jobs extends CI_Model
 {
     /**
      * __construct !important
@@ -16,7 +16,7 @@ class m_companies extends CI_Model
     public function __construct()
     {
         parent::__construct();
-        $a_fields = $this->db->list_fields(TBL_COMPANIES);
+        $a_fields = $this->db->list_fields(TBL_JOBS);
         foreach( $a_fields as $s_field )
         {
                 $this->$s_field = NULL;
@@ -24,7 +24,7 @@ class m_companies extends CI_Model
     }
 
     /**
-     * loads company based on conditions passed
+     * loads job based on conditions passed
      * @scope	public
      * @param	array	filters
      * @return  mixed   array result if true, else boolean false
@@ -35,7 +35,7 @@ class m_companies extends CI_Model
     	{
     		$this->db->where($s_key, $s_value);
     	}
-    	$r_result = $this->db->get( TBL_COMPANIES );
+    	$r_result = $this->db->get( TBL_JOBS );
     	if ( $r_result->num_rows() > 0 )
     	{
     		foreach( $r_result->row_array() as $s_key => $s_value )
@@ -51,33 +51,31 @@ class m_companies extends CI_Model
     }
 
     /**
-     * logs in a user
+     * create job
      * @scope       public
      * @param		array       if an array is passed, the array will be used
      * @return		boolean     TRUE on success, FALSE on error
      */
-    public function register( $a_data = false )
+    public function create( $a_data = false )
     {
         $this->session->sess_destroy();
         if (!$a_data) {
             $result = 0;
         } else {
             $a_fields = array(
+               'company_id'  	=> $a_data['company_id'] ,
+               'title'       	=> $a_data['title'] ,
+               'category'    	=> $a_data['category'] ,
+               'experience'     => $a_data['experience'] ,
+               'location'       => $a_data['location'] ,
+               'requirements'   => $a_data['requirements'] ,
                'email'          => $a_data['email'] ,
-               'password'       => do_hash($a_data['password']) ,
-               'name'           => $a_data['company_name'] ,
-               'category'       => $a_data['category'] ,
-               'person'         => $a_data['person'] ,
-               'contact'        => $a_data['contact'] ,
-               'address'        => $a_data['address'] ,
-               'city'           => $a_data['city'] ,
-               'zip'            => $a_data['zip'] ,
-               'description'    => $a_data['description'] ,
-               'website'        => $a_data['website'] ,
+               'cost'           => $a_data['cost'] ,
+               'expiry_date'    => $a_data['expiry'] ,
                'status'         => 0
             );
 
-            $this->db->insert(TBL_COMPANIES, $a_fields);
+            $this->db->insert(TBL_JOBS, $a_fields);
             $result = $this->db->insert_id();
 
         }
@@ -104,7 +102,7 @@ class m_companies extends CI_Model
         if(count($a_data) && $i_id > 0) {
 
             $this->db->where('id', $i_id);
-            $i_result = $this->db->update(TBL_COMPANIES, $a_data);
+            $i_result = $this->db->update(TBL_JOBS, $a_data);
             
         }
 
@@ -113,14 +111,14 @@ class m_companies extends CI_Model
 
     
     /**
-     * Gets all companies
+     * Gets all jobs
      * @scope	public
      * @param   void
      * @return  array   list of companies
      */
-    function get_companies($i_start = false, $i_limit = false){
+    function get_jobs($i_start = false, $i_limit = false){
 		/* status 2 - inactive */
-        $s_sql = 'SELECT * FROM '.TBL_COMPANIES.' WHERE status != 2';
+        $s_sql = 'SELECT j.*, c.name as company FROM '.TBL_JOBS.' AS j INNER JOIN '.TBL_COMPANIES.' AS c ON c.id = j.company_id WHERE status != 2';
         if ( $i_limit )
 		{
 			$s_sql .= ' LIMIT '.($i_start ? $i_start : 0).','.$i_limit;
@@ -130,8 +128,31 @@ class m_companies extends CI_Model
         
         return $r_query;
     }
+    
+    /**
+     * Gets all jobs by company
+     * @scope	public
+     * @param   void
+     * @return  array   list of companies
+     */
+    function get_listings($i_id, $i_start = false, $i_limit = false){
+		/* status 2 - inactive */
+        $s_sql = 'SELECT * FROM '.TBL_JOBS.' WHERE company_id = '.$i_id.' AND status != 2';
+        if ( $i_limit )
+		{
+			$s_sql .= ' LIMIT '.($i_start ? $i_start : 0).','.$i_limit;
+		}
 
+        $r_query = $this->db->query($s_sql)->result();
+        
+        return $r_query;
+    }
+	
+	function search(){
+		
+	}
+	
 }
 
-/* End of file m_companies.php */
-/* Location: ./application/models/m_companies.php */
+/* End of file m_jobs.php */
+/* Location: ./application/models/m_jobs.php */

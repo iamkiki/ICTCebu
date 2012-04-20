@@ -177,9 +177,6 @@ a:hover {
 .gray {
     color: gray;
 }
-.red {
-    color: #DA4F49;
-}
 
 .p-right5 {
     padding-right: 5px;
@@ -4108,4 +4105,8 @@ a.thumbnail:hover {
 }
 .invisible {
   visibility: hidden;
+}
+
+.red {
+    color: #DA4F49;
 }

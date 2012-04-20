@@ -59,7 +59,7 @@
                                 <option value="5">6</option>
                                 <option value="5">12</option>
                           </select>
-                          <span class="help-inline">months</span>
+                          <span class="help-inline">month(s)</span>
                         </div>
                   </div>
                   <div class="control-group">
