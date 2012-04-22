@@ -9,29 +9,29 @@
         </div>
         <form class="form-horizontal edit-form" method="post" enctype="multipart/form-data">
                 <fieldset>
-                  <div class="control-group company_name">
+                  <div class="control-group position">
                         <label class="control-label" for="company_name">Job Position<span class="red">*</span></label>
                         <div class="controls">
-                          <input type="text" class="input-xlarge" id="company_name">
+                          <input type="text" class="input-xlarge" id="position">
                           <p class="help-block e_company_name red hidden">Job Position is required.</p>
                         </div>
                   </div>
                   <div class="control-group">
-                        <label class="control-label" for="address">Objectives</label>
+                        <label class="control-label" for="objectives">Objectives</label>
                         <div class="controls">
-                          <textarea class="input-xlarge" id="description" rows="3"></textarea>
+                          <textarea class="input-xlarge" id="objectives" rows="3"></textarea>
                         </div>
                   </div>
                   <div class="control-group">
-                        <label class="control-label" for="address">Location</label>
+                        <label class="control-label" for="location">Location</label>
                         <div class="controls">
                           <input type="text" class="input-xlarge" id="location">
                         </div>
                   </div>
                   <div class="control-group">
-                        <label class="control-label" for="zip">Experience</label>
+                        <label class="control-label" for="experience">Experience</label>
                         <div class="controls">
-                          <input type="text" class="input-small" id="zip">
+                          <input type="text" class="input-small" id="experience">
                           <span class="help-inline">0 - 10 yrs (0 for No Experience needed)</span>
                         </div>
                   </div>
@@ -48,9 +48,9 @@
                         </div>
                   </div>
                   <div class="control-group">
-                        <label class="control-label" for="city">Expiry Date<span class="red">*</span></label>
+                        <label class="control-label" for="expiry">Expiry Date<span class="red">*</span></label>
                         <div class="controls">
-                          <select id="category" class="span1">
+                          <select id="expiry" class="span1">
                                 <option value="1">1</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -63,18 +63,18 @@
                         </div>
                   </div>
                   <div class="control-group">
-                        <label class="control-label" for="address">Email<span class="red">*</span></label>
+                        <label class="control-label" for="email">Email<span class="red">*</span></label>
                         <div class="controls">
-                          <input type="text" class="input-xlarge" id="location">
+                          <input type="text" class="input-xlarge" id="email">
                           <span class="help-inline">Applications will be forwarded to this Email.</span>
                         </div>
                   </div>
                   <div class="control-group">
-                        <label class="control-label" for="address">Requirements<span class="red">*</span></label>
+                        <label class="control-label" for="requirements">Requirements<span class="red">*</span></label>
                         <div class="controls">
-                          <input type="text" class="input-xlarge" id="location"><p></p>
-                          <input type="text" class="input-xlarge" id="location"><p></p>
-                          <input type="text" class="input-xlarge" id="location"><p></p>
+                          <input type="text" class="input-xlarge" id="requirements"><p></p>
+                          <input type="text" class="input-xlarge" id="requirements"><p></p>
+                          <input type="text" class="input-xlarge" id="requirements"><p></p>
                         </div>
                   </div>
                   <div class="control-group">

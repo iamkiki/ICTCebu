@@ -130,6 +130,24 @@ class m_companies extends CI_Model
         
         return $r_query;
     }
+    
+     /**
+     * Gets all companies by category
+     * @scope	public
+     * @param   void
+     * @return  array   list of companies
+     */
+    function sort_companies($i_category, $i_start = false, $i_limit = false){
+        $s_sql = 'SELECT * FROM '.TBL_COMPANIES.' WHERE category = '.$i_category.' AND status != 2';
+        if ( $i_limit )
+		{
+			$s_sql .= ' LIMIT '.($i_start ? $i_start : 0).','.$i_limit;
+		}
+
+        $r_query = $this->db->query($s_sql)->result();
+        
+        return $r_query;
+    }
 
 }
 

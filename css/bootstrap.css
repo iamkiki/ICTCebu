@@ -218,15 +218,6 @@ a:hover {
 	color: #333;
 }
 
-.social-links {
-	min-height: 30px;
-}
-
-.social-links button {
-	width: 220px;
-	line-height: 30px;
-}
-
 .fb-like {
 	background: url(/img/like.png) no-repeat;
 	width: 125px;
@@ -4109,4 +4100,14 @@ a.thumbnail:hover {
 
 .red {
     color: #DA4F49;
+}
+
+.social-links {
+	min-height: 30px;
+	padding-left: 7px;
+}
+
+.social-links button {
+	width: 200px;
+	line-height: 30px;
 }

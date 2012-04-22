@@ -18,6 +18,10 @@ class Jobs extends CI_Controller {
             header('Location: /');
         }
     }
+    
+    public function edit($i_job_id){
+    
+    }
 }
 
 /* End of file jobs.php */

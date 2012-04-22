@@ -58,7 +58,6 @@ class m_jobs extends CI_Model
      */
     public function create( $a_data = false )
     {
-        $this->session->sess_destroy();
         if (!$a_data) {
             $result = 0;
         } else {
@@ -114,7 +113,7 @@ class m_jobs extends CI_Model
      * Gets all jobs
      * @scope	public
      * @param   void
-     * @return  array   list of companies
+     * @return  array   list of jobs
      */
     function get_jobs($i_start = false, $i_limit = false){
 		/* status 2 - inactive */
@@ -128,12 +127,31 @@ class m_jobs extends CI_Model
         
         return $r_query;
     }
-    
+	
+	/**
+     * Gets all jobs by category
+     * @scope	public
+     * @param   void
+     * @return  array   list of jobs
+     */
+    function sort_jobs($i_category, $i_start = false, $i_limit = false){
+		/* status 2 - inactive */
+        $s_sql = 'SELECT j.*, c.name as company FROM '.TBL_JOBS.' AS j INNER JOIN '.TBL_COMPANIES.' AS c ON c.id = j.company_id WHERE j.category = '.$i_category.' AND j.status != 2';
+        if ( $i_limit )
+		{
+			$s_sql .= ' LIMIT '.($i_start ? $i_start : 0).','.$i_limit;
+		}
+
+        $r_query = $this->db->query($s_sql)->result();
+        
+        return $r_query;
+    }
+	    
     /**
      * Gets all jobs by company
      * @scope	public
      * @param   void
-     * @return  array   list of companies
+     * @return  array   list of jobs
      */
     function get_listings($i_id, $i_start = false, $i_limit = false){
 		/* status 2 - inactive */

@@ -4,7 +4,7 @@
     </div><!--/span-->
     <div class="span9">
       <div class="hero-unit">
-        <h1>Offering you the BEST Companies and Jobs in the IT and BPO Industry.</h1>
+        <h1>Offering you the BEST Companies and Jobs in the IT, BPO and Call Center Industry in Cebu - the ICT Hub of the Philippines.</h1>
         <p>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</p>
         <p><a class="btn btn-danger btn-large" href="/about">Learn more &raquo;</a></p>
       </div>

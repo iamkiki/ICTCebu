@@ -36,11 +36,12 @@
           <a class="brand" href="/"><span class="red"><strong>ICTCebu</strong></span><span class="gray">.com</span></a>
           <div class="nav-collapse">
             <ul class="nav">
-              <li class="active"><a href="/">Home</a></li>
-              <li><a href="/companies">Companies</a></li>
-              <li><a href="/jobs">Jobs</a></li>
-              <li><a href="/about">About</a></li>
-              <li><a href="/contact">Contact</a></li>
+              <?php $s_uri = $this->uri->segment(1); ?>
+              <li <?php echo $s_uri == '' ? 'class="active"': ''; ?>><a href="/">Home</a></li>
+              <li <?php echo $s_uri == 'companies' ? 'class="active"': ''; ?>><a href="/companies">Companies</a></li>
+              <li <?php echo $s_uri == 'jobs' ? 'class="active"': ''; ?>><a href="/jobs">Jobs</a></li>
+              <li <?php echo $s_uri == 'about' ? 'class="active"': ''; ?>><a href="/about">About</a></li>
+              <li <?php echo $s_uri == 'contact' ? 'class="active"': ''; ?>><a href="/contact">Contact</a></li>
             </ul>
 			<form class="navbar-search pull-left">
 			  <input type="text" class="search-query" placeholder="Search">
