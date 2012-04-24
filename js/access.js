@@ -1,7 +1,3 @@
-$(document).ready(function() {
-   $('#company_name').focus();
- });
-
 $(init_access);
 function init_access()
 {

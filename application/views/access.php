@@ -148,4 +148,6 @@
     </blockquote>
 </div><!--/span-->
 </div>
-      
+<script type="text/javascript">
+     $('#company_name').focus();
+</script>    
