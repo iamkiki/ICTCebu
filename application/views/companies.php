@@ -23,7 +23,7 @@
                 <ul class="thumbnails">
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -33,7 +33,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -43,7 +43,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -53,7 +53,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -63,7 +63,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -77,7 +77,7 @@
                   <ul class="thumbnails">
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -87,7 +87,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -97,7 +97,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -107,7 +107,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
@@ -117,7 +117,7 @@
                         </li>
                         <li class="span2">
                           <div class="thumbnail">
-                                <img src="http://placehold.it/160x120" alt="">
+                                <img src="/img/160x120.gif" alt="">
                                 <div class="caption">
                                   <h5>Company Name</h5>
                                   <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>

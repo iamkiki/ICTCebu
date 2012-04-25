@@ -2,7 +2,7 @@
   <div class="span3">
       <div class="well sidebar-nav">
                       <a href="#" class="thumbnail">
-                            <img src="http://placehold.it/260x180" alt="">
+                            <img src="/img/260x180.gif" alt="">
                       </a>
                       <p></p>
                       <ul class="nav nav-list social-links">

@@ -4,6 +4,7 @@ class Access extends CI_Controller {
 
     public function index()
     {
+        $this->a_outer['a_js'][] = 'access';
         $this->load->view('access');
     }
 

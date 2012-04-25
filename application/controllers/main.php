@@ -2,33 +2,34 @@
 
 class Main extends CI_Controller {
 
-	/**
-	 * Index Page for this controller.
-	 *
-	 * Maps to the following URL
-	 * 		http://example.com/index.php/welcome
-	 *	- or -  
-	 * 		http://example.com/index.php/welcome/index
-	 *	- or -
-	 * Since this controller is set as the default controller in 
-	 * config/routes.php, it's displayed at http://example.com/
-	 *
-	 * So any other public methods not prefixed with an underscore will
-	 * map to /index.php/welcome/<method_name>
-	 * @see http://codeigniter.com/user_guide/general/urls.html
-	 */
-	 
-	public function index()
-	{
-            if($this->session->userdata('auth')){
-                $this->load->view('user');
-            } else {
-                $this->load->view('home');
-            }
-	}
+    /**
+     * Index Page for this controller.
+     *
+     * Maps to the following URL
+     * 		http://example.com/index.php/welcome
+     *	- or -
+     * 		http://example.com/index.php/welcome/index
+     *	- or -
+     * Since this controller is set as the default controller in
+     * config/routes.php, it's displayed at http://example.com/
+     *
+     * So any other public methods not prefixed with an underscore will
+     * map to /index.php/welcome/<method_name>
+     * @see http://codeigniter.com/user_guide/general/urls.html
+     */
+
+    public function index()
+    {
+        if($this->session->userdata('auth')){
+            $this->load->view('user');
+        } else {
+            $this->load->view('home');
+        }
+    }
 
     public function editprofile(){
         if($this->session->userdata('auth')){
+            $this->a_outer['a_js'][] = 'editprofile';
             $this->load->model('m_companies');
             $a_user = $this->session->userdata('auth');
             $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );
@@ -41,11 +42,13 @@ class Main extends CI_Controller {
     }
 
     public function logo(){
+        $this->a_outer['a_js'][] = 'editprofile';
         $this->load->view('user');
     }
 
     public function account(){
         if($this->session->userdata('auth')){
+            $this->a_outer['a_js'][] = 'account';
             $this->load->model('m_companies');
             $a_user = $this->session->userdata('auth');
             $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );

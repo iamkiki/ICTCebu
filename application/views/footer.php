@@ -9,7 +9,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="/js/jquery.js"></script>
-    <script src="/js/access.js"></script>
     <script src="/js/common.js"></script>
     <script src="/js/bootstrap-transition.js"></script>
     <script src="/js/bootstrap-alert.js"></script>
@@ -23,5 +22,16 @@
     <script src="/js/bootstrap-collapse.js"></script>
     <script src="/js/bootstrap-carousel.js"></script>
     <script src="/js/bootstrap-typeahead.js"></script>
+
+    <?php
+    if (isset($a_js))
+    {
+        foreach( $a_js as $s_jsname )
+        {
+            echo '<script type="text/javascript" src="/js/',$s_jsname,'.js" ></script>',"\n\t";
+        }
+    }
+    ?>
+
   </body>
 </html>

@@ -3,16 +3,16 @@
         <img src="http://placehold.it/260x180" alt="">
       </div>
       <hr>
-      <form class="form-horizontal">
+      <form id="form_logo" class="form-horizontal" method="POST" enctype="multipart/form-data">
         <fieldset>
           <div class="control-group">
-            <label class="control-label" for="fileInput">File input</label>
+            <label class="control-label" for="logo">Company Logo</label>
             <div class="controls">
-              <input class="input-file" id="fileInput" type="file">
+              <input class="input-file" name="logo" id="logo" type="file">
             </div>
           </div>
           <div class="form-actions">
-            <button type="submit" class="btn btn-danger">Change Logo</button>
+            <button type="submit" class="btn btn-danger">Upload</button>
             <button class="btn">Cancel</button>
           </div>
         </fieldset>

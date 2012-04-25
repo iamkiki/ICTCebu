@@ -2,15 +2,15 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>ICTCebu IT-BPO Company and Jobs Directory</title>
+    <title>ICTCebu IT, BPO and Call Center Companies and Jobs Directory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
 
     <!-- Le styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">
-    <link href="css/bootstrap-responsive.css" rel="stylesheet">
-
+    <link href="/css/bootstrap-responsive.css" rel="stylesheet">
+    
     <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -49,7 +49,6 @@
                         <?php if(!$this->session->userdata('auth')){ ?>
 			<p class="navbar-text pull-right"><a href="/access">Register Company</a> | <a href="/access">Login</a></p>
                         <?php } else { $a_user = $this->session->userdata('auth'); ?>
-            <!--<p class="navbar-text pull-right">Logged in as <a href="#">username</a></p>-->
                         <ul class="nav pull-right">
 				<li class="dropdown">
 				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, <span class="red"><?php echo $a_user->name; ?></span><b class="caret"></b></a>
