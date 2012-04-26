@@ -175,6 +175,10 @@ a:hover {
   width: 1095px;
 }
 
+.space {
+    height: 20px;
+    width: 100%;
+}
 .sidebar-nav {
     padding: 9px 0;
 }

@@ -50,5 +50,4 @@ function init_account()
 
         return false;
     });
-
 }

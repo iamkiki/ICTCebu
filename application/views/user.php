@@ -1,9 +1,8 @@
 <?php
-    $a_user = $this->session->userdata('auth');
     $s_uri = $this->uri->segment(1);
 ?>
 <div class="row-fluid min600">
-   <!--  <legend><?//php echo $a_user->name; ?></legend> -->
+    <div class="space"></div>
     <div class="span2">
           <div class="tabbable tabs-left">
             <ul class="nav nav-tabs">
@@ -27,6 +26,7 @@
                     case 'post'         : $this->load->view('dashboard/postjob.php'); break;
                     default:
             ?>
+                <legend>You have <?php echo $a_user->views; ?> profile views since <?php echo date('M d, Y', strtotime($a_user->date_added)); ?></legend>
             	<legend>Job Listings</legend>
 				<table class="table">
 				        <thead>

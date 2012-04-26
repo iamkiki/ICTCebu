@@ -21,7 +21,13 @@ class Main extends CI_Controller {
     public function index()
     {
         if($this->session->userdata('auth')){
-            $this->load->view('user');
+            $this->load->model('m_companies');
+            $this->load->model('m_jobs');
+            $a_user = $this->session->userdata('auth');
+            $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );
+            if($a_data->num_rows > 0){
+                $this->load->view('user', array('a_user' => $a_data->row()));
+            }
         } else {
             $this->load->view('home');
         }
@@ -42,8 +48,11 @@ class Main extends CI_Controller {
     }
 
     public function logo(){
-        $this->a_outer['a_js'][] = 'editprofile';
-        $this->load->view('user');
+        $a_user = $this->session->userdata('auth');
+        $this->load->model('m_companies');
+        $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );
+        $this->a_outer['a_js'][] = 'account';
+        $this->load->view('user', array('a_user' => $a_data->row()));
     }
 
     public function account(){
