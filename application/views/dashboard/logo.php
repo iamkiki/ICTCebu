@@ -1,6 +1,6 @@
 <div class="span9">
       <div class="thumbnail">
-        <img src="http://placehold.it/260x180" alt="">
+        <img src="/img/260x180.gif" alt="">
       </div>
       <hr>
       <form id="form_logo" class="form-horizontal" method="POST" enctype="multipart/form-data">
