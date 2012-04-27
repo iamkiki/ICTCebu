@@ -26,7 +26,7 @@
                     case 'post'         : $this->load->view('dashboard/postjob.php'); break;
                     default:
             ?>
-                <legend>You have <?php echo $a_user->views; ?> profile views since <?php echo date('M d, Y', strtotime($a_user->date_added)); ?></legend>
+                <legend>You have <?php echo $a_user->views > 1 ? $a_user->views.' profile views': $a_user->views.' profile view'; ?> since <?php echo date('F d, Y', strtotime($a_user->date_added)); ?></legend>
             	<legend>Job Listings</legend>
 				<table class="table">
 				        <thead>
