@@ -2,7 +2,12 @@
   <div class="span3">
       <div class="well sidebar-nav">
                       <a href="#" class="thumbnail">
-                            <img src="/img/260x180.gif" alt="">
+                      		<?php $s_image = '/img/260x180.gif';
+						            if($a_user->logo != '') {
+						                $a_pathinfo = pathinfo( $a_user->logo );
+						                $s_image = '/uploads/'.$a_pathinfo['filename'].'-profile.'.$a_pathinfo['extension'];
+						            } ?>
+                            <img src="<?php echo $s_image; ?>" alt="">
                       </a>
                       <p></p>
                       <ul class="nav nav-list social-links">

@@ -8,7 +8,17 @@ class Companies extends CI_Controller {
     }
 
     public function profile(){
-        $this->load->view('company');
+    	if($this->session->userdata('auth')){
+            $this->load->model('m_companies');
+            $this->load->model('m_jobs');
+            $a_user = $this->session->userdata('auth');
+            $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );
+            if($a_data->num_rows > 0){
+                $this->load->view('company', array('a_user' => $a_data->row()));
+            }
+        } else {
+            header('Location: /');
+        }
     }
 
     public function update(){
@@ -17,12 +27,12 @@ class Companies extends CI_Controller {
 
         $i_id = $_POST['id'];
         $a_data = $_POST;
-
+		
         unset($a_data['id']);
         unset($a_data['password']);
-        if(isset($_POST['password'])){
+        if($_POST['password'] != ''){
             $a_data['password'] = do_hash($_POST['password']);
-        }
+        } 
 
         $this->m_companies->update($i_id, $a_data);
         
