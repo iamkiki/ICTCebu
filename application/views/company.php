@@ -18,10 +18,10 @@
                               <p><li><button class="btn btn-inverse"><i class="youtube"></i> Stream our Videos</button></li></p>
                               <p></p>
                               <address>
-                                    <strong>Company, Inc.</strong><br>
+                                    <strong><?php echo $a_user->name; ?></strong><br>
                                     123 Some Ave, Suite 6457<br>
                                     Lahug, Ceby City, 6000<br>
-                                    <a href="#">www.company.com</a></br>
+                                    <a href="#"><?php echo $a_user->website ? $a_user->website: ''; ?></a></br>
                               </address>
                       </ul>
       </div><!--/.well -->
@@ -38,7 +38,15 @@
                             <dt>Overview</dt>
                                     <dd>A description list is perfect for defining terms.</dd>
                             <dt>Category</dt>
-                                    <dd>BPO/ Call Centers</dd>
+                                    <dd><?php
+                                     switch($a_user->category){
+                                     		case 1: echo 'BPO/ Call Centers'; break;
+                                     		case 2: echo 'Web/ Mobile Development'; break;
+                                     		case 3: echo 'Software Applications'; break;
+                                     		case 4: echo 'Hardware/ Peripherals'; break;
+                                     		case 5: echo 'Others'; break;
+                                     }
+                                    ?></dd>
                             <dt>Services</dt>
                                     <dd><?php echo $a_user->description ? $a_user->description: ''; ?></dd>
                     </dl>
