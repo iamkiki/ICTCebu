@@ -27,12 +27,12 @@
       </div><!--/.well -->
     </div><!--/span-->
     <div class="span6">
-                    <div class="n-legend d-inline f-left">Company Name</div>
+                    <div class="n-legend d-inline f-left"><?php echo $a_user->name; ?></div>
                     <div class="fb-like"></div>
                     <hr>
                     <blockquote>
-                      <p>Company Tagline or slogan here.</p>
-                      <small>Company CEO</small>
+                      <p><?php echo $a_user->quote ? $a_user->quote: ''; ?></p>
+                      <small><?php echo $a_user->source ? $a_user->source: ''; ?></small>
                     </blockquote>
                     <dl class="dl-horizontal">
                             <dt>Overview</dt>
@@ -40,8 +40,7 @@
                             <dt>Category</dt>
                                     <dd>BPO/ Call Centers</dd>
                             <dt>Services</dt>
-                                    <dd>Cupcake ipsum dolor sit amet lemon drops. Sesame snaps gummi bears tart. Chocolate cake ice cream dessert chocolate cake cake bonbon topping gingerbread. Jelly-o fruitcake gingerbread chocolate apple pie I love ice cream applicake. Lemon drops icing I love I love liquorice danish pastry. Brownie caramels caramels I love dessert lemon drops powder. I love pudding oat cake sweet roll.</dd>
-                                    <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+                                    <dd><?php echo $a_user->description ? $a_user->description: ''; ?></dd>
                     </dl>
     </div>
      <div class="span3">
