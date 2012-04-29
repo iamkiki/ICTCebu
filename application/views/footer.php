@@ -1,3 +1,5 @@
+    </div>
+    
     <hr>
     <footer>
         <p>&#169; <?php echo date('Y', time()); ?> ictcebu.com | Email us at <a href="/contact">info@ictcebu.com</a></p>

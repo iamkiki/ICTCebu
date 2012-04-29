@@ -1,5 +1,4 @@
-<?php $a_user = $this->session->userdata('auth'); ?>
-<legend><?php echo $a_user->name; ?></legend>
+<legend><?php echo $a_data->name; ?></legend>
 <div class="span6 alert alert-success success hidden">
     <a class="close" data-dismiss="alert">×</a>
     <strong>Success!</strong> Your account information has been updated.

@@ -174,6 +174,9 @@ a:hover {
 .navbar-fixed-bottom .container {
   width: 1095px;
 }
+.content {
+    min-height: 600px;
+}
 
 .space {
     height: 20px;
@@ -239,6 +242,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
+        padding-right: 10px;
 }
 
 .twitter {
@@ -246,6 +250,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
+        padding-right: 10px;
 }
 
 .linkedin {
@@ -253,6 +258,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
+        padding-right: 10px;
 }
 
 .skype {
@@ -260,6 +266,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
+        padding-right: 10px;
 }
 
 .youtube {
@@ -267,6 +274,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
+        padding-right: 10px;
 }
 
 .span12 {
@@ -540,6 +548,7 @@ ol.unstyled {
 }
 dl {
   margin-bottom: 18px;
+  margin-left: -30px;
 }
 dt,
 dd {
@@ -551,6 +560,7 @@ dt {
 }
 dd {
   margin-left: 9px;
+  margin-bottom: 8px;
 }
 .dl-horizontal dt {
   float: left;
@@ -3679,7 +3689,7 @@ a.thumbnail:hover {
   padding: 9px;
 }
 .label {
-  padding: 1px 4px 2px;
+  padding: 2px 4px;
   font-size: 10.998px;
   font-weight: bold;
   line-height: 13px;
@@ -4118,4 +4128,9 @@ a.thumbnail:hover {
 .social-links button {
 	width: 200px;
 	line-height: 30px;
+        text-align: left;
+}
+
+.social-links li {
+    padding-bottom: 7px;
 }

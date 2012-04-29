@@ -51,9 +51,9 @@
                         <?php } else { $a_user = $this->session->userdata('auth'); ?>
                         <ul class="nav pull-right">
 				<li class="dropdown">
-				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, <span class="red"><?php echo $a_user->name; ?></span><b class="caret"></b></a>
+				  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Hello, <span class="red"><?php echo $a_user['name']; ?></span><b class="caret"></b></a>
 				  <ul class="dropdown-menu">
-					<li><a href="/companies/profile"><i class="icon-eye-open"></i>View Profile</a></li>
+					<li><a href="/companies/profile/<?php echo $a_user['id']; ?>"><i class="icon-eye-open"></i>View Profile</a></li>
 					<li><a href="/"><i class="icon-home"></i>Go to Dashboard</a></li>
                                         <li><a href="/account"><i class="icon-user"></i>Account Settings</a></li>
 					<li><a href="/post"><i class="icon-plus"></i>Post Job</a></li>
@@ -69,3 +69,4 @@
     </div>
 
 <div class="container">
+    <div class="content">

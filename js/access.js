@@ -1,7 +1,12 @@
+$(document).ready(function() {
+    if($('#company_name').length > 0){
+        $('#company_name').focus();
+    }
+});
+
 $(init_access);
 function init_access()
 {
-
     $('.forgot_btn').click(function(e){
         e.preventDefault();
         $('.login').addClass('hidden');

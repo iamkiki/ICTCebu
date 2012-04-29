@@ -2,27 +2,34 @@
   <div class="span3">
       <div class="well sidebar-nav">
                       <a href="#" class="thumbnail">
-                      		<?php $s_image = '/img/260x180.gif';
-						            if($a_user->logo != '') {
-						                $a_pathinfo = pathinfo( $a_user->logo );
-						                $s_image = '/uploads/'.$a_pathinfo['filename'].'-profile.'.$a_pathinfo['extension'];
-						            } ?>
+                            <?php $s_image = '/img/260x180.gif';
+                            if($a_user->logo != '') {
+                                $a_pathinfo = pathinfo( $a_user->logo );
+                                $s_image = '/uploads/'.$a_pathinfo['filename'].'-profile.'.$a_pathinfo['extension'];
+                            } ?>
                             <img src="<?php echo $s_image; ?>" alt="">
                       </a>
                       <p></p>
                       <ul class="nav nav-list social-links">
-                              <p><li><button class="btn btn-inverse"><i class="facebook"></i> Our Facebook Page</button></li></p>
-                              <p><li><button class="btn btn-inverse"><i class="twitter"></i> Checkout our Tweets</button></li></p>
-                              <p><li><button class="btn btn-inverse"><i class="linkedin"></i> LinkedIn with Us</button></li></p>
-                              <p><li><button class="btn btn-inverse"><i class="skype"></i> Contact us on Skype</button></li></p>
-                              <p><li><button class="btn btn-inverse"><i class="youtube"></i> Stream our Videos</button></li></p>
-                              <p></p>
-                              <address>
-                                    <strong><?php echo $a_user->name; ?></strong><br>
-                                    123 Some Ave, Suite 6457<br>
-                                    Lahug, Ceby City, 6000<br>
-                                    <a href="#"><?php echo $a_user->website ? $a_user->website: ''; ?></a></br>
-                              </address>
+                              <?php if($a_user->facebook){ ?>
+                              <a target="_blank" href="<?php echo 'http://'.$a_user->facebook; ?>"><li>
+                                  <button class="btn btn-inverse"><i class="facebook"></i> Our Facebook Page</button></li></a>
+                              <?php } ?>
+                              <?php if($a_user->twitter){ ?>
+                              <a target="_blank" href="<?php echo 'http://'.$a_user->twitter; ?>"><li>
+                                  <button class="btn btn-inverse"><i class="twitter"></i> Checkout our Tweets</button></li></a>
+                              <?php } ?>
+                              <?php if($a_user->linkedin){ ?>
+                              <a target="_blank" href="<?php echo 'http://'.$a_user->linkedin; ?>"><li>
+                                  <button class="btn btn-inverse"><i class="linkedin"></i> LinkedIn with Us</button></li></a>
+                              <?php } ?>
+                              <?php if($a_user->youtube){ ?>
+                              <a target="_blank" href="<?php echo 'http://'.$a_user->youtube; ?>"><li>
+                                  <button class="btn btn-inverse"><i class="youtube"></i> Stream our Videos</button></li></a>
+                              <?php } ?>
+                              <?php if($a_user->skype){ ?>
+                              <li><button class="btn btn-inverse"><i class="skype"></i> <?php echo $a_user->skype; ?></button></li>
+                              <?php } ?>
                       </ul>
       </div><!--/.well -->
     </div><!--/span-->
@@ -36,21 +43,27 @@
                     </blockquote>
                     <dl class="dl-horizontal">
                             <dt>Overview</dt>
-                                    <dd>A description list is perfect for defining terms.</dd>
+                                    <dd><?php echo $a_user->overview ? $a_user->overview: ''; ?></dd>
                             <dt>Category</dt>
                                     <dd><?php
                                      switch($a_user->category){
-                                     		case 1: echo 'BPO/ Call Centers'; break;
-                                     		case 2: echo 'Web/ Mobile Development'; break;
-                                     		case 3: echo 'Software Applications'; break;
-                                     		case 4: echo 'Hardware/ Peripherals'; break;
-                                     		case 5: echo 'Others'; break;
+                                        case 1: echo 'BPO/ Call Centers'; break;
+                                        case 2: echo 'Web/ Mobile Development'; break;
+                                        case 3: echo 'Software Applications'; break;
+                                        case 4: echo 'Hardware/ Peripherals'; break;
+                                        case 5: echo 'Others'; break;
                                      }
                                     ?></dd>
                             <dt>Services</dt>
                                     <dd><?php echo $a_user->description ? $a_user->description: ''; ?></dd>
+                            <dt>Address</dt>
+                                    <dd><strong><?php echo $a_user->name; ?></strong><br>
+                                        <?php echo $a_user->address ? $a_user->address : ''; ?>
+                                    </dd>
+                            <dt>Website</dt>
+                                   <dd><a href="#"><?php echo $a_user->website ? $a_user->website: ''; ?></a></dd>
                     </dl>
-    </div>
+      </div>             
      <div class="span3">
     <legend>Job Listings</legend>
                 <ul class="nav nav-pills nav-stacked">

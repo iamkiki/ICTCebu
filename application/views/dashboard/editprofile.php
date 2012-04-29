@@ -29,6 +29,12 @@
                 </div>
           </div>
           <div class="control-group">
+                <label class="control-label" for="overview">Overview</label>
+                <div class="controls">
+                  <textarea class="input-xlarge" name="overview" id="overview" rows="4"><?php echo $a_data->overview; ?></textarea>
+                </div>
+          </div>
+          <div class="control-group">
                 <label class="control-label" for="address">Address</label>
                 <div class="controls">
                   <textarea class="input-xlarge" name="address" id="address" rows="2"><?php echo $a_data->address; ?></textarea>
@@ -50,11 +56,11 @@
                 <label class="control-label" for="category">Category<span class="red">*</span></label>
                 <div class="controls">
                   <select id="category" name="category">
-                        <option value="1">BPO/ Call Centers</option>
-                        <option value="2">Web/ Mobile Development</option>
-                        <option value="3">Software Applications</option>
-                        <option value="4">Hardware/ Peripherals</option>
-                        <option value="5">Others</option>
+                        <option value="1" <?php echo $a_data->category == 1 ? 'selected': ''; ?>>BPO/ Call Centers</option>
+                        <option value="2" <?php echo $a_data->category == 2 ? 'selected': ''; ?>>Web/ Mobile Development</option>
+                        <option value="3" <?php echo $a_data->category == 3 ? 'selected': ''; ?>>Software Applications</option>
+                        <option value="4" <?php echo $a_data->category == 4 ? 'selected': ''; ?>>Hardware/ Peripherals</option>
+                        <option value="5" <?php echo $a_data->category == 5 ? 'selected': ''; ?>>Others</option>
                   </select>
                 </div>
           </div>
@@ -105,7 +111,7 @@
                 </div>
           </div>
           <div class="control-group">
-                <label class="control-label" for="description">Description/ Services</label>
+                <label class="control-label" for="description">Services</label>
                 <div class="controls">
                   <textarea class="input-xlarge" name="description" id="description" rows="5"><?php echo $a_data->description; ?></textarea>
                 </div>

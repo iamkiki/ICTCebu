@@ -7,17 +7,16 @@ class Companies extends CI_Controller {
         $this->load->view('companies');
     }
 
-    public function profile(){
-    	if($this->session->userdata('auth')){
+    public function profile($i_id = false){
+    	if($i_id != false){
             $this->load->model('m_companies');
             $this->load->model('m_jobs');
-            $a_user = $this->session->userdata('auth');
-            $a_data = $this->m_companies->load( array('id' => $a_user->id, 'status' => 1) );
+            $a_data = $this->m_companies->load( array('id' => $i_id, 'status' => 1) );
             if($a_data->num_rows > 0){
                 $this->load->view('company', array('a_user' => $a_data->row()));
             }
         } else {
-            header('Location: /');
+            header('Location: /companies');
         }
     }
 

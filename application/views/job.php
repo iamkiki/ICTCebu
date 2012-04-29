@@ -3,7 +3,7 @@
   <?php $this->load->view('sidebar'); ?>
 </div><!--/span-->
 <div class="span6">
-                <legend>Job Position <span class="badge badge-error">2yrs</span></legend>
+                <legend>Job Position <sup><span class="label label-important">2yrs</span></sup></legend>
                 <blockquote>
                   <p>Job objectives here.</p>
                   <p>Chocolate cake pudding faworki gummi bears applicake pie croissant. Gummies lemon drops sweet roll sweet roll bear claw carrot cake marzipan chupa chups. Cheesecake applicake tart carrot cake.</p>

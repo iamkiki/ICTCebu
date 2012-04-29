@@ -1,4 +1,4 @@
-php_value date.timezone "UTC"
+php_value date.timezone "Asia/Manila"
 <IfModule mod_rewrite.c>
 	RewriteEngine On
 	RewriteBase /

@@ -32,7 +32,7 @@ class Access extends CI_Controller {
 
                 $a_user = $r_result->row();
                 #create session
-                $this->session->set_userdata('auth', $a_user);
+                $this->session->set_userdata('auth', array('id' => $a_user->id, 'name' => $a_user->name));
                 
                 echo json_encode(array('status'=>'success'));
             } catch(Exception $e) {
