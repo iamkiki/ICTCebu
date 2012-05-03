@@ -69,10 +69,6 @@ class Jobs extends CI_Controller {
             $this->ckeditor->ToolbarSet = 'Full';
             $a_data['ckeditor'] = $this->data;
             
-            //$a_content = $this->m_contents->load( array('id' => $i_article_id, 'is_active' => 1) );
-            
-            $a_data['o_content'] = '';
-            
             $this->load->view('user', array('a_data' => $a_data));
         } else {
             header('Location: /');
@@ -82,10 +78,14 @@ class Jobs extends CI_Controller {
     public function submit(){
         $this->b_ajax = true;
         $this->load->model('m_jobs');
-
+		
         $a_user = $this->session->userdata('auth');
         $a_data = $_POST;
-        $a_data['company_id'] = $a_user;
+        $a_data['requirements'] = $this->input->post('requirements', TRUE);
+        $a_data['company_id'] = $a_user['id'];
+        $a_data['cost'] = 1400*$_POST['expiry'];
+        $a_data['expiry'] = date('Y-m-d h:i:s', strtotime("+30 days", time()));
+        
         $i_id = $this->m_jobs->create($a_data);
         
         if($i_id){

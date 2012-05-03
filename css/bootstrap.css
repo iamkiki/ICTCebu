@@ -230,11 +230,13 @@ a:hover {
 }
 
 .fb-like {
+/*
 	background: url(/img/like.png) no-repeat;
 	width: 125px;
 	height: 28px;
+*/
 	float: left;
-	margin: 5px 5px 0;
+	margin: 9px 10px 0;
 }
 
 .facebook {

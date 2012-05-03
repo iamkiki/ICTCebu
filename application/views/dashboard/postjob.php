@@ -1,10 +1,12 @@
-<div class="alert alert-success success hidden">
+<div class="span8 alert alert-success success hidden">
     <a class="close" data-dismiss="alert">×</a>
-    <strong>One More Step!</strong> Please check your email to verify your account.
+    <!-- <strong>Success!</strong> First Job Listing is FREE. -->
+    <strong>One More Step!</strong> Please check your email to proceed with the payment, upon completion it will take at most 24 hours for your listing to be viewed publicly. Thank You!
+     
 </div>
 <div class="alert alert-error hidden">
     <a class="close" data-dismiss="alert">×</a>
-    <strong>Oh snap!</strong> The email address is already registered.
+    <strong>Oh snap!</strong> Something went wrong.
 </div>
 <form id="form_post" class="form-horizontal edit-form" method="post" enctype="multipart/form-data">
     <fieldset>
@@ -67,14 +69,15 @@
               <span class="help-inline">month(s) = 30 days/month</span>
             </div>
       </div>
-      <div class="control-group">
+      <div class="control-group email">
             <label class="control-label" for="email">Email<span class="red">*</span></label>
             <div class="controls">
               <input type="text" class="input-xlarge" name="email" id="email">
               <span class="help-inline">Applications will be forwarded to this Email.</span>
+              <span class="help-block e_email red hidden">Invalid email address.</span>
             </div>
       </div>
-      <div class="control-group">
+      <div class="control-group requirements">
             <label class="control-label" for="requirements">Requirements<span class="red">*</span></label>
             <div class="controls">
               <textarea class="input-xlarge" name="requirements" id="requirements" rows="5"></textarea>

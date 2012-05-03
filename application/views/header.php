@@ -6,6 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
+    
+    <meta property="og:title" content="Company Name" />
+	<meta property="og:type" content="company" />
+	<meta property="og:url" content="http://www.ictcebu.com" />
+	<meta property="og:image" content="" />
+	<meta property="og:site_name" content="ICTCebu.com" />
+	<meta property="fb:admins" content="1593410942" />
 
     <!-- Le styles -->
     <link href="/css/bootstrap.css" rel="stylesheet">

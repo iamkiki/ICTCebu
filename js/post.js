@@ -2,20 +2,37 @@ $(init_post);
 function init_post()
 {
     $('#form_post').submit(function() {
-        //alert('test');
-        //e.preventDefault();
+        
         var o_form = $(this);
-        var company_name = $.trim($('#name').val());
+        var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
+        var title = $.trim($('#title').val());
+        var req = $.trim($('#requirements').val());
+        var email = $.trim($('#email').val());
         var error_found = 0;
-        if(company_name == ''){
-            $('.e_company_name').removeClass('hidden');
-            $('.company_name').addClass('error');
+        
+        if(title == ''){
+            $('.e_title').removeClass('hidden');
+            $('.title').addClass('error');
+            $('#title').focus();
+            error_found++;
+        }
+        
+        if(!emailReg.test(email) || email == '')
+        {
+            $('.e_email').removeClass('hidden');
+            $('.email').addClass('error');
+            $('#email').focus();
+            error_found++;
+        }
+        
+        if(req == ''){
+            $('.requirements').addClass('error');
             error_found++;
         }
 
         if( error_found == 0) {
             $.ajax({
-                'url': '/companies/update',
+                'url': '/jobs/submit',
                 'type':'POST',
                 'dataType':'json',
                 'data': o_form.serialize(),
@@ -24,7 +41,7 @@ function init_post()
                     if(data.status == 'success')
                     {
                         $('.success').removeClass('hidden');
-                        $('#name').focus();
+                        $('#title').focus();
                     }
                 }
             });

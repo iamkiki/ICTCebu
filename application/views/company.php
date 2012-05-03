@@ -33,9 +33,18 @@
                       </ul>
       </div><!--/.well -->
     </div><!--/span-->
+    <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
     <div class="span6">
                     <div class="n-legend d-inline f-left"><?php echo $a_user->name; ?></div>
-                    <div class="fb-like"></div>
+                    <div class="fb-like" data-href="http://www.ictcebu.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>
+                    <!-- <div class="fb-like"></div> -->
                     <hr>
                     <?php if($a_user->quote != '' ){ ?>
                     <blockquote>
@@ -56,7 +65,9 @@
                                     ?></dd>
                             <dt>Address</dt>
                                     <dd><strong><?php echo $a_user->name; ?></strong><br>
-                                        <?php echo $a_user->address ? $a_user->address : ''; ?>
+                                        <?php echo $a_user->address ? $a_user->address : ''; ?></br>
+                                        <?php echo $a_user->city ? $a_user->city : ''; ?>
+                                        <?php echo $a_user->zip ? ' '.$a_user->zip : ''; ?>
                                     </dd>
                             <dt>Website</dt>
                                    <dd><a href="#"><?php echo $a_user->website ? $a_user->website: 'None'; ?></a></dd>
