@@ -42,6 +42,7 @@ function init_post()
                     {
                         $('.success').removeClass('hidden');
                         $('#title').focus();
+                        $('#form_post')[0].reset();
                     }
                 }
             });
