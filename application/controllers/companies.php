@@ -26,6 +26,7 @@ class Companies extends CI_Controller {
 
         $i_id = $_POST['id'];
         $a_data = $_POST;
+		$a_data['description'] = $this->input->post('description', TRUE);
 		
         unset($a_data['id']);
         unset($a_data['password']);

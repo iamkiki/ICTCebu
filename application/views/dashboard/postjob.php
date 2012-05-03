@@ -16,12 +16,6 @@
             </div>
       </div>
       <div class="control-group">
-            <label class="control-label" for="objectives">Objectives</label>
-            <div class="controls">
-              <textarea class="input-xlarge" name="objectives" id="objectives" rows="3"></textarea>
-            </div>
-      </div>
-      <div class="control-group">
             <label class="control-label" for="location">Location</label>
             <div class="controls">
               <input type="text" class="input-xlarge" name="location" id="location">
@@ -70,7 +64,7 @@
                     <option value="5">6</option>
                     <option value="5">12</option>
               </select>
-              <span class="help-inline">month(s)</span>
+              <span class="help-inline">month(s) = 30 days/month</span>
             </div>
       </div>
       <div class="control-group">
@@ -83,9 +77,8 @@
       <div class="control-group">
             <label class="control-label" for="requirements">Requirements<span class="red">*</span></label>
             <div class="controls">
-              <input type="text" class="input-xlarge" name="requirements[]" id="requirements"><p></p>
-              <input type="text" class="input-xlarge" name="requirements[]" id="requirements"><p></p>
-              <input type="text" class="input-xlarge" name="requirements[]" id="requirements"><p></p>
+              <textarea class="input-xlarge" name="requirements" id="requirements" rows="5"></textarea>
+              <?php echo display_ckeditor($ckeditor['ckeditor']); ?>
             </div>
       </div>
       <div class="control-group">

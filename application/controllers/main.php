@@ -2,6 +2,56 @@
 
 class Main extends CI_Controller {
 
+    function __construct()
+    {
+        parent::__construct();
+
+        $this->load->helper('url'); //You should autoload this one ;)
+        $this->load->helper('ckeditor');
+		
+        //Ckeditor's configuration
+        $this->data['ckeditor'] = array(
+
+            //ID of the textarea that will be replaced
+            'id'     =>     'description',
+            'path'    =>    base_url().'js/ckeditor',
+
+            //Optionnal values
+            'config' => array(
+                'toolbar'     =>     "Full",     //Using the Full toolbar
+                'width'     =>     "600px",    //Setting a custom width
+                'height'     =>     '300px',    //Setting a custom height
+
+            ),
+
+            //Replacing styles from the "Styles tool"
+            'styles' => array(
+
+                //Creating a new style named "style 1"
+                'style 1' => array (
+                    'name'         =>     'Blue Title',
+                    'element'     =>     'h2',
+                    'styles' => array(
+                        'color'             =>     'Blue',
+                        'font-weight'         =>     'bold'
+                    )
+                ),
+
+                //Creating a new style named "style 2"
+                'style 2' => array (
+                    'name'         =>     'Red Title',
+                    'element'     =>     'h2',
+                    'styles' => array(
+                        'color'             =>     'Red',
+                        'font-weight'         =>     'bold',
+                        'text-decoration'    =>     'underline'
+                    )
+                )                
+            )
+        );
+
+    }
+    
     public function index()
     {   
         if($this->session->userdata('auth')){
@@ -22,9 +72,17 @@ class Main extends CI_Controller {
             $this->a_outer['a_js'][] = 'editprofile';
             $this->load->model('m_companies');
             $a_user = $this->session->userdata('auth');
-            $a_data = $this->m_companies->load( array('id' => $a_user['id'], 'status' => 1) );
-            if($a_data->num_rows > 0){
-                $this->load->view('user', array('a_data' => $a_data->row()));
+            $a_company = $this->m_companies->load( array('id' => $a_user['id'], 'status' => 1) );
+            
+            $this->load->helper('ckeditor', base_url() . 'js/ckeditor/');
+            $this->ckeditor->basePath = base_url(). 'js/ckeditor/';
+            $this->ckeditor->ToolbarSet = 'Full';
+            $a_data['ckeditor'] = $this->data;          
+            
+            if($a_company->num_rows > 0){
+            	$a_data['info'] = $a_company->row();
+            	//$a_data['content'] = $a_data['info']->description; 
+                $this->load->view('user', array('a_data' => $a_data));
             }
         } else {
             $this->load->view('home');

@@ -19,17 +19,20 @@
         <div class="tab-content">
             <?php
                 switch($s_uri){
-                    case 'editprofile'  : $this->load->view('dashboard/editprofile.php'); break;
+                    case 'editprofile'  : $this->load->view('dashboard/editprofile.php', $a_data); break;
                     case 'logo'         : $this->load->view('dashboard/logo.php'); break;
                     case 'account'      : $this->load->view('dashboard/account.php'); break;
                     /* case 'listings'     : $this->load->view('dashboard/listings.php'); break; */
-                    case 'post'         : $this->load->view('dashboard/postjob.php'); break;
+                    case 'post'         : $this->load->view('dashboard/postjob.php', $a_data); break;
                     default:
             ?>
-                <legend>You have <?php echo $a_user->views > 1 ? $a_user->views.' profile views': $a_user->views.' profile view'; ?> since <?php echo date('F d, Y', strtotime($a_user->date_added)); ?></legend>
-            	<legend>Job Listings</legend>
-				<table class="table">
+                <h4>You have <?php echo $a_user->views > 1 ? $a_user->views.' profile views': $a_user->views.' profile view'; ?> since <?php echo date('F d, Y', strtotime($a_user->date_added)); ?></h4>
+                <p></p>
+				<table class="table table-striped table-bordered table-condensed">
 				        <thead>
+				          <tr>
+				            <th colspan="6">Job Listings</th>
+				          </tr>
 				          <tr>
 				                <th>Date</th>
 				                <th>Expiry Date</th>

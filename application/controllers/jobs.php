@@ -8,18 +8,18 @@ class Jobs extends CI_Controller {
 
         $this->load->helper('url'); //You should autoload this one ;)
         $this->load->helper('ckeditor');
-
+		
         //Ckeditor's configuration
         $this->data['ckeditor'] = array(
 
             //ID of the textarea that will be replaced
-            'id'     =>     'content',
-            'path'    =>    base_url().'scripts/ckeditor',
+            'id'     =>     'requirements',
+            'path'    =>    base_url().'js/ckeditor',
 
             //Optionnal values
             'config' => array(
                 'toolbar'     =>     "Full",     //Using the Full toolbar
-                'width'     =>     "500px",    //Setting a custom width
+                'width'     =>     "600px",    //Setting a custom width
                 'height'     =>     '300px',    //Setting a custom height
 
             ),
@@ -64,14 +64,14 @@ class Jobs extends CI_Controller {
     public function post(){
         if($this->session->userdata('auth')){
             $this->a_outer['a_js'][] = 'post';
-            $this->load->helper('ckeditor',base_url() . 'scripts/ckeditor/');
-            $this->ckeditor->basePath = base_url(). 'scripts/ckeditor/';
+            $this->load->helper('ckeditor', base_url() . 'js/ckeditor/');
+            $this->ckeditor->basePath = base_url(). 'js/ckeditor/';
             $this->ckeditor->ToolbarSet = 'Full';
             $a_data['ckeditor'] = $this->data;
             
-            $a_content = $this->m_contents->load( array('id' => $i_article_id, 'is_active' => 1) );
+            //$a_content = $this->m_contents->load( array('id' => $i_article_id, 'is_active' => 1) );
             
-            $a_data['o_content'] = $a_content->row();
+            $a_data['o_content'] = '';
             
             $this->load->view('user', array('a_data' => $a_data));
         } else {

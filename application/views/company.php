@@ -37,13 +37,13 @@
                     <div class="n-legend d-inline f-left"><?php echo $a_user->name; ?></div>
                     <div class="fb-like"></div>
                     <hr>
+                    <?php if($a_user->quote != '' ){ ?>
                     <blockquote>
-                      <p><?php echo $a_user->quote ? $a_user->quote: ''; ?></p>
+                      <p><?php echo $a_user->quote; ?></p>
                       <small><?php echo $a_user->source ? $a_user->source: ''; ?></small>
                     </blockquote>
+                    <?php } ?>
                     <dl class="dl-horizontal">
-                            <dt>Overview</dt>
-                                    <dd><?php echo $a_user->overview ? $a_user->overview: ''; ?></dd>
                             <dt>Category</dt>
                                     <dd><?php
                                      switch($a_user->category){
@@ -54,15 +54,16 @@
                                         case 5: echo 'Others'; break;
                                      }
                                     ?></dd>
-                            <dt>Services</dt>
-                                    <dd><?php echo $a_user->description ? $a_user->description: ''; ?></dd>
                             <dt>Address</dt>
                                     <dd><strong><?php echo $a_user->name; ?></strong><br>
                                         <?php echo $a_user->address ? $a_user->address : ''; ?>
                                     </dd>
                             <dt>Website</dt>
-                                   <dd><a href="#"><?php echo $a_user->website ? $a_user->website: ''; ?></a></dd>
+                                   <dd><a href="#"><?php echo $a_user->website ? $a_user->website: 'None'; ?></a></dd>
                     </dl>
+                    <p></p>	
+                    <h4>Description/Services</h4>
+                    <div><?php echo $a_user->description ? $a_user->description: ''; ?></div>	
       </div>             
      <div class="span3">
     <legend>Job Listings</legend>
