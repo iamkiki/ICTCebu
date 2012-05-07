@@ -18,6 +18,12 @@ define('FILE_WRITE_MODE', 0666);
 define('DIR_READ_MODE', 0755);
 define('DIR_WRITE_MODE', 0777);
 
+/* GLOBAL VARIABLES */
+
+define('PRICE', 1400);
+
+
+
 /*
 |--------------------------------------------------------------------------
 | File Stream Modes

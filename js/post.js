@@ -6,7 +6,6 @@ function init_post()
         var o_form = $(this);
         var emailReg = /^([\w-\.]+@([\w-]+\.)+[\w-]{2,4})?$/;
         var title = $.trim($('#title').val());
-        var req = $.trim($('#requirements').val());
         var email = $.trim($('#email').val());
         var error_found = 0;
         
@@ -22,11 +21,6 @@ function init_post()
             $('.e_email').removeClass('hidden');
             $('.email').addClass('error');
             $('#email').focus();
-            error_found++;
-        }
-        
-        if(req == ''){
-            $('.requirements').addClass('error');
             error_found++;
         }
 

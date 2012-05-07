@@ -78,7 +78,7 @@
             </div>
       </div>
       <div class="control-group requirements">
-            <label class="control-label" for="requirements">Requirements<span class="red">*</span></label>
+            <label class="control-label" for="requirements">Requirements</label>
             <div class="controls">
               <textarea class="input-xlarge" name="requirements" id="requirements" rows="5"></textarea>
               <?php echo display_ckeditor($ckeditor['ckeditor']); ?>

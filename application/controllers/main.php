@@ -55,12 +55,24 @@ class Main extends CI_Controller {
     public function index()
     {   
         if($this->session->userdata('auth')){
+        	var_dump($_GET['per_page']); exit();
+        	$i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
+        
             $this->load->model('m_companies');
-            //$this->load->model('m_jobs');
+            $this->load->model('m_jobs');
             $a_user = $this->session->userdata('auth');
-            $a_data = $this->m_companies->load( array('id' => $a_user['id'], 'status' => 1) );
-            if($a_data->num_rows > 0){
-                $this->load->view('user', array('a_user' => $a_data->row()));
+            $a_company = $this->m_companies->load( array('id' => $a_user['id'], 'status' => 1) );
+            $a_jobs = $this->m_jobs->get_listings( $a_user['id'], $i_page, 10 );
+            $i_total = count($this->m_jobs->get_listings( $a_user['id'] ));
+            
+            $a_data = array(
+	            'a_user' 		=> $a_company->num_rows > 0 ? $a_company->row(): array(),
+	            'a_jobs'		=> $a_jobs,
+	            's_pagination'  => $this->paginate( '/main', $i_total )
+	        );
+            
+            if($a_company->num_rows > 0){
+                $this->load->view('user', $a_data);
             }
         } else {
             $this->load->view('home');

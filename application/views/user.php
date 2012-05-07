@@ -31,8 +31,9 @@
 				<table class="table table-striped table-bordered table-condensed">
 				        <thead>
 				          <tr>
-				            <th colspan="6">Job Listings</th>
+				            <th colspan="6"> <?php echo count($a_jobs) > 0 ? 'Job Listings': 'No Job Listings'; ?></th>
 				          </tr>
+				          <?php if(count($a_jobs) > 0){ ?>
 				          <tr>
 				                <th>Date</th>
 				                <th>Expiry Date</th>
@@ -41,90 +42,24 @@
 				                <th>Applications</th>
 				                <th>Manage</th>
 				          </tr>
+				          <?php } ?>
 				        </thead>
-				        <tbody>
+				        <tbody> 
+				        <?php if(count($a_jobs) > 0){
+				        foreach($a_jobs as $o_job){ ?>
 				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Web Developer</td>
-				                <td>1 yr</td>
-				                <td>None</td>
+				                <td><?php echo date('F j, Y', strtotime($o_job->date_added)); ?></td>
+				                <td><?php echo date('F j, Y', strtotime($o_job->expiry_date)); ?></td>
+				                <td><?php echo $o_job->title; ?></td>
+				                <td style="text-align:center;"><?php echo $o_job->experience; ?></td>
+				                <td style="text-align:center;">None</td>
 				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
 				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Technical Support Specialist</td>
-				                <td>2 yrs</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Java Developer</td>
-				                <td>2 yrs</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Web Developer</td>
-				                <td>1 yr</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Technical Support Specialist</td>
-				                <td>2 yrs</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Java Developer</td>
-				                <td>2 yrs</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Web Developer</td>
-				                <td>1 yr</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Technical Support Specialist</td>
-				                <td>2 yrs</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>Java Developer</td>
-				                <td>2 yrs</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
-				          <tr>
-				                <td>April 1</td>
-				                <td>April 30</td>
-				                <td>PHP Developer</td>
-				                <td>3 yrs</td>
-				                <td>1</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
-				          </tr>
+				        <?php } } ?>
 				        </tbody>
 				</table>
+				<?php echo isset($s_pagination) ? $s_pagination: ''; ?>
+<!--
 				<div class="pagination f-right">
 				  <ul>
 				        <li><a href="#">&larr;</a></li>
@@ -136,6 +71,7 @@
 				        <li><a href="#">&rarr;</a></li>
 				  </ul>
 				</div>
+-->
              <?php } ?>
         </div>
     </div><!--/span-->

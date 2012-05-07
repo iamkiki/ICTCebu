@@ -55,15 +55,15 @@ class CI_Controller {
 		log_message('debug', "Controller Class Initialized");
 	}
 
-        public function _output($output)
+    public function _output($output)
 	{
 		if ( !isset($this->a_outer) )
 		{
 			$this->a_outer = array();
 		}
 
-                $header = $this->load->view('header', $this->a_outer, true);
-                $footer = $this->load->view('footer', $this->a_outer, true);
+        $header = $this->load->view('header', $this->a_outer, true);
+        $footer = $this->load->view('footer', $this->a_outer, true);
 
 		if(!isset($this->b_ajax)){
 		    echo $header
@@ -74,11 +74,11 @@ class CI_Controller {
 
 	public function paginate( $s_url, $i_total = 0 )
 	{
-                $this->config->set_item('total_rows', $i_total);
+        $this->config->set_item('total_rows', $i_total);
 		$this->config->set_item('base_url', $s_url);
 		$this->pagination->initialize($this->config->config);
 		return $this->pagination->create_links();
-        }
+    }
 
 	public static function &get_instance()
 	{
