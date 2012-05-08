@@ -1,7 +1,8 @@
 <div class="span8 alert alert-success success hidden">
     <a class="close" data-dismiss="alert">×</a>
     <!-- <strong>Success!</strong> First Job Listing is FREE. -->
-    <strong>One More Step!</strong> Please check your email to proceed with the payment, upon completion it will take at most 24 hours for your listing to be viewed publicly. Thank You!
+    <strong>One More Step!</strong> Please check your email to proceed with the payment, upon completion it will take at most 24 hours for your listing to be viewed publicly. Thank You!<p></p>
+    You can view and update your job listings here. <a href="/" style="color:green"><strong>Click me!</strong></a>
      
 </div>
 <div class="alert alert-error hidden">

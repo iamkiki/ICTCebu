@@ -43,7 +43,7 @@
 	}(document, 'script', 'facebook-jssdk'));</script>
     <div class="span6">
                     <div class="n-legend d-inline f-left"><?php echo $a_user->name; ?></div>
-                    <div class="fb-like" data-href="http://www.ictcebu.com" data-send="false" data-layout="button_count" data-width="450" data-show-faces="false" data-action="recommend"></div>
+                    <div class="fb-like" data-href="http://www.ictcebu.com" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-action="recommend"></div>
                     <!-- <div class="fb-like"></div> -->
                     <hr>
                     <?php if($a_user->quote != '' ){ ?>
@@ -72,24 +72,21 @@
                             <dt>Website</dt>
                                    <dd><a href="#"><?php echo $a_user->website ? $a_user->website: 'None'; ?></a></dd>
                     </dl>
-                    <p></p>	
                     <h4>Description/Services</h4>
+                    <p></p>
                     <div><?php echo $a_user->description ? $a_user->description: ''; ?></div>	
       </div>             
      <div class="span3">
     <legend>Job Listings</legend>
                 <ul class="nav nav-pills nav-stacked">
-                  <li><a href="job.php">Programmer</a></li>
-      <li><a href="job.php">Web Developer</a></li>
-      <li><a href="job.php">Technical Support</a></li>
-      <li><a href="job.php">Data Encoder</a></li>
-                  <li><a href="job.php">Programmer</a></li>
-      <li><a href="job.php">Web Developer</a></li>
-      <li><a href="job.php">Technical Support</a></li>
-      <li><a href="job.php">Data Encoder</a></li>
-                  <li><a href="job.php">Technical Support</a></li>
-      <li><a href="job.php">Data Encoder</a></li>
-                 </ul>
+                    <?php $i_ctr = 0; 
+                    foreach($a_jobs as $o_job){ 
+                        if($i_ctr < 15 ) { ?>
+                            <li><a href="/jobs/view/<?php echo $o_job->id; ?>"><?php echo $o_job->title; ?></a></li>
+                    <?php }
+                    $i_ctr++;
+                    } ?>
+                </ul>
     </div><!--/span-->
 </div>
       

@@ -54,11 +54,23 @@ class Jobs extends CI_Controller {
     
     public function index()
     {
-    $this->load->view('jobs');
+        $this->load->view('jobs');
     }
 
-    public function view(){
-        $this->load->view('job');
+    public function view($i_id){
+        $this->load->model('m_jobs');
+        $this->load->model('m_companies');
+        $a_job = $this->m_jobs->load( array('id' => $i_id) );
+        if($a_job->num_rows > 0){
+            $a_company = $this->m_companies->load( array('id' => $a_job->row()->company_id) );
+            $a_data = array(
+                'o_job'     => $a_job->row(),
+                'o_company' => $a_company->row()
+            );
+            $this->load->view('job', $a_data);
+        } else {
+            header('Location: /jobs');
+        }
     }
 
     public function post(){

@@ -31,7 +31,7 @@
 				<table class="table table-striped table-bordered table-condensed">
 				        <thead>
 				          <tr>
-				            <th colspan="6"> <?php echo count($a_jobs) > 0 ? 'Job Listings': 'No Job Listings'; ?></th>
+				            <th colspan="6"> <?php echo count($a_jobs) > 0 ? 'Job Listings  <span class="red" style="font-size: 11px; float:right;">Legend: <i class="icon-pencil"></i>Edit <i class="icon-play-circle"></i>View</span>': 'No Job Listings'; ?></th>
 				          </tr>
 				          <?php if(count($a_jobs) > 0){ ?>
 				          <tr>
@@ -53,7 +53,10 @@
 				                <td><?php echo $o_job->title; ?></td>
 				                <td style="text-align:center;"><?php echo $o_job->experience; ?></td>
 				                <td style="text-align:center;">None</td>
-				                <td><a href="#"><i class="icon-pencil"></i>Edit Job</a></td>
+				                <td style="text-align:center;">
+                                                    <a href="#"><i class="icon-pencil"></i></a>
+                                                    <a href="/jobs/view/<?php echo $o_job->id; ?>" style="padding-left:5px;"><i class="icon-play-circle"></i></a>
+                                                </td>
 				          </tr>
 				        <?php } } ?>
 				        </tbody>

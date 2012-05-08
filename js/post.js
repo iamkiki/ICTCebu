@@ -35,8 +35,7 @@ function init_post()
                     if(data.status == 'success')
                     {
                         $('.success').removeClass('hidden');
-                        $('#title').focus();
-                        $('#form_post')[0].reset();
+                        $('#form_post').hide();
                     }
                 }
             });

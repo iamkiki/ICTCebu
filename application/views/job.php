@@ -1,25 +1,52 @@
 <div class="row-fluid">
-<div class="span3">
-  <?php $this->load->view('sidebar'); ?>
-</div><!--/span-->
+    <div class="span3">
+      <div class="well sidebar-nav">
+                      <a href="#" class="thumbnail">
+                            <?php $s_image = '/img/260x180.gif';
+                            if($o_company->logo != '') {
+                                $a_pathinfo = pathinfo( $o_company->logo );
+                                $s_image = '/uploads/'.$a_pathinfo['filename'].'-profile.'.$a_pathinfo['extension'];
+                            } ?>
+                            <img src="<?php echo $s_image; ?>" alt="">
+                      </a>
+                      <p></p>
+                      <ul class="nav nav-list">
+                            <li class="nav-header">Related Jobs</li>
+                            <li><a href="/job">Programmer</a></li>
+                            <li><a href="/job">Web Developer</a></li>
+                            <li><a href="/job">Technical Support</a></li>
+                            <li><a href="/job">Data Encoder</a></li>
+                            <li><a href="/job">Programmer</a></li>
+                            <li><a href="/job">Web Developer</a></li>
+                            <li><a href="/job">Technical Support</a></li>
+                            <li><a href="/job">Data Encoder</a></li>
+                            <li><a href="/job">Technical Support</a></li>
+                            <li><a href="/job">Data Encoder</a></li>
+                      </ul>
+      </div><!--/.well -->
+    </div><!--/span-->
 <div class="span6">
-                <legend>Job Position <sup><span class="label label-important">2yrs</span></sup></legend>
-                <blockquote>
-                  <p>Job objectives here.</p>
-                  <p>Chocolate cake pudding faworki gummi bears applicake pie croissant. Gummies lemon drops sweet roll sweet roll bear claw carrot cake marzipan chupa chups. Cheesecake applicake tart carrot cake.</p>
-                </blockquote>
+                <legend><?php echo $o_job->title.'  '; ?><sup><span class="label label-important">2yrs</span></sup></legend>
                 <dl class="dl-horizontal">
+                        <dt>Company</dt>
+                                <dd><a href="/companies/profile/<?php echo $o_job->company_id; ?>"><?php echo $o_company->name; ?></a></dd>
+                        <dt>Location</dt>
+                                <dd><?php echo $o_job->location != '' ? $o_job->location: $o_company->address.', '.$o_company->city; ?></dd>
                         <dt>Expiration</dt>
-                                <dd>Accepting applications until April 22, 2012, Sunday</dd>
+                                <dd>Accepting applications until <?php echo date('F j, Y', strtotime($o_job->expiry_date)); ?></dd>
                         <dt>Category</dt>
-                                <dd>BPO/ Call Centers</dd>
+                                <dd><?php
+                                     switch($o_job->category){
+                                        case 1: echo 'BPO/ Call Centers'; break;
+                                        case 2: echo 'Web/ Mobile Development'; break;
+                                        case 3: echo 'Software Applications'; break;
+                                        case 4: echo 'Hardware/ Peripherals'; break;
+                                        case 5: echo 'Others'; break;
+                                     }
+                                    ?></dd>
                         <dt>Requirements</dt>
                                 <dd><p></p></dd>
-                                <dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
-                                <dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
-                                <dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
-                                <dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
-                                <dd><i class="icon-ok-sign p-right5"></i>Donec id elit non mi porta gravida at eget metus.</dd>
+                                <dd><?php echo $o_job->requirements; ?></dd>
                 </dl>
                 <legend>Apply for this Job</legend>
                 <form class="form-horizontal">
