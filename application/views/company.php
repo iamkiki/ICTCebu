@@ -1,6 +1,34 @@
 <div class="row-fluid">
-  <div class="span3">
-      <div class="well sidebar-nav">
+   <div class="span3">
+        <div class="well">
+            <a href="#" class="thumbnail">
+                <img src="/img/map.png" alt="" style="height:170px;">
+            </a>
+        </div>
+        <div class="well sidebar-nav">
+            <ul class="nav nav-list">
+                <li class="nav-header">Company Job Openings</li>
+                <?php $i_ctr = 0; 
+                foreach($a_jobs as $o_job){ 
+                    if($i_ctr < 20 ) { ?>
+                        <li><a href="/jobs/view/<?php echo $o_job->id; ?>"><?php echo $o_job->title; ?></a></li>
+                <?php }
+                $i_ctr++;
+                } ?>
+            </ul>
+        </div>
+    </div><!--/span-->
+   <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));</script>
+  <div class="span9">
+      <div class="well" style="min-height: 180px;">
+                      <div class="span3">
                       <a href="#" class="thumbnail">
                             <?php $s_image = '/img/260x180.gif';
                             if($a_user->logo != '') {
@@ -9,84 +37,91 @@
                             } ?>
                             <img src="<?php echo $s_image; ?>" alt="">
                       </a>
-                      <p></p>
-                      <ul class="nav nav-list social-links">
+                      </div>
+                      <div class="span7">
+                        <div class="company-title"><?php echo $a_user->name; ?></div>
+                        <div class="category-title">
+                        <?php
+                                switch($a_user->category){
+                                case 1: echo 'BPO/ Call Centers'; break;
+                                case 2: echo 'Web/ Mobile Development'; break;
+                                case 3: echo 'Software Applications'; break;
+                                case 4: echo 'Hardware/ Peripherals'; break;
+                                case 5: echo 'Others'; break;
+                                }
+                            ?>
+                        <?php echo $a_user->address ? ' | '.$a_user->address.', ' : ' | '; ?>
+                        <?php echo $a_user->city ? $a_user->city : ''; ?>
+                        <br>
+                        <?php echo $a_user->website ? '<a href="#">'.$a_user->website.'</a><br>': ''; ?>
+                            <div class="linkedshare">
+                                <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
+                                <script type="IN/Share" data-url="http://www.ictcebu.com" data-counter="right"></script>
+                            </div>
+                            <div class="fb-like" data-href="http://www.ictcebu.com" data-send="false" data-layout="button_count" data-width="100" data-show-faces="false" data-action="recommend"></div>
+                        </div>
+                        <div class="social-links">
                               <?php if($a_user->facebook){ ?>
-                              <a target="_blank" href="<?php echo 'http://'.$a_user->facebook; ?>"><li>
-                                  <button class="btn btn-inverse"><i class="facebook"></i> Our Facebook Page</button></li></a>
+                                <a target="_blank" href="<?php echo 'http://'.$a_user->facebook; ?>">
+                                <i class="facebook"></i></a>
+                              <?php } ?>
+                              <?php if($a_user->google){ ?>
+                                <a target="_blank" href="<?php echo 'http://'.$a_user->google; ?>">
+                                <i class="google"></i></a>
                               <?php } ?>
                               <?php if($a_user->twitter){ ?>
-                              <a target="_blank" href="<?php echo 'http://'.$a_user->twitter; ?>"><li>
-                                  <button class="btn btn-inverse"><i class="twitter"></i> Checkout our Tweets</button></li></a>
+                                <a target="_blank" href="<?php echo 'http://'.$a_user->twitter; ?>">
+                                <i class="twitter"></i></a>
                               <?php } ?>
                               <?php if($a_user->linkedin){ ?>
-                              <a target="_blank" href="<?php echo 'http://'.$a_user->linkedin; ?>"><li>
-                                  <button class="btn btn-inverse"><i class="linkedin"></i> LinkedIn with Us</button></li></a>
+                                <a target="_blank" href="<?php echo 'http://'.$a_user->linkedin; ?>">
+                                <i class="linkedin"></i></a>
                               <?php } ?>
                               <?php if($a_user->youtube){ ?>
-                              <a target="_blank" href="<?php echo 'http://'.$a_user->youtube; ?>"><li>
-                                  <button class="btn btn-inverse"><i class="youtube"></i> Stream our Videos</button></li></a>
+                                <a target="_blank" href="<?php echo 'http://'.$a_user->youtube; ?>">
+                                <i class="youtube"></i></a>
                               <?php } ?>
-                              <?php if($a_user->skype){ ?>
-                              <li><button class="btn btn-inverse"><i class="skype"></i> <?php echo $a_user->skype; ?></button></li>
-                              <?php } ?>
-                      </ul>
+                        </div>
+                        <a href="#contact" class="f-right"><button class="btn btn-warning"><i class="icon-envelope icon-white"></i> Contact Company</button></a>
+                      </div>
       </div><!--/.well -->
-    </div><!--/span-->
-    <div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-    <div class="span6">
-                    <div class="n-legend d-inline f-left"><?php echo $a_user->name; ?></div>
-                    <div class="fb-like" data-href="http://www.ictcebu.com" data-send="false" data-layout="button_count" data-width="150" data-show-faces="false" data-action="recommend"></div>
-                    <!-- <div class="fb-like"></div> -->
-                    <hr>
-                    <?php if($a_user->quote != '' ){ ?>
-                    <blockquote>
-                      <p><?php echo $a_user->quote; ?></p>
-                      <small><?php echo $a_user->source ? $a_user->source: ''; ?></small>
-                    </blockquote>
-                    <?php } ?>
-                    <dl class="dl-horizontal">
-                            <dt>Category</dt>
-                                    <dd><?php
-                                     switch($a_user->category){
-                                        case 1: echo 'BPO/ Call Centers'; break;
-                                        case 2: echo 'Web/ Mobile Development'; break;
-                                        case 3: echo 'Software Applications'; break;
-                                        case 4: echo 'Hardware/ Peripherals'; break;
-                                        case 5: echo 'Others'; break;
-                                     }
-                                    ?></dd>
-                            <dt>Address</dt>
-                                    <dd><strong><?php echo $a_user->name; ?></strong><br>
-                                        <?php echo $a_user->address ? $a_user->address : ''; ?></br>
-                                        <?php echo $a_user->city ? $a_user->city : ''; ?>
-                                        <?php echo $a_user->zip ? ' '.$a_user->zip : ''; ?>
-                                    </dd>
-                            <dt>Website</dt>
-                                   <dd><a href="#"><?php echo $a_user->website ? $a_user->website: 'None'; ?></a></dd>
-                    </dl>
-                    <h4>Description/Services</h4>
-                    <p></p>
-                    <div><?php echo $a_user->description ? $a_user->description: ''; ?></div>	
-      </div>             
-     <div class="span3">
-    <legend>Job Listings</legend>
-                <ul class="nav nav-pills nav-stacked">
-                    <?php $i_ctr = 0; 
-                    foreach($a_jobs as $o_job){ 
-                        if($i_ctr < 15 ) { ?>
-                            <li><a href="/jobs/view/<?php echo $o_job->id; ?>"><?php echo $o_job->title; ?></a></li>
-                    <?php }
-                    $i_ctr++;
-                    } ?>
-                </ul>
+        
+        <!-- <div class="fb-like"></div> -->
+        <div class="company-details">Overview</div>
+        <hr>
+        <div><?php echo $a_user->description ? $a_user->description: ''; ?></div>
+        
+        <div class="company-details">Services</div>
+        <hr>
+        <div><?php echo $a_user->services ? $a_user->services: ''; ?></div>
+        <div class="space"></div>
+        <div id="contact" class="company-details">Contact Company</div>
+        <hr>
+        <form class="form-horizontal">
+                <fieldset>
+                <div class="control-group">
+                        <label class="control-label" for="input01">Name</label>
+                        <div class="controls">
+                        <input type="text" class="input-xlarge" id="input01">
+                        </div>
+                </div>
+                <div class="control-group">
+                        <label class="control-label" for="input02">Email Address</label>
+                        <div class="controls">
+                        <input type="text" class="input-xlarge" id="input02">
+                        </div>
+                </div>
+                <div class="control-group">
+                        <label class="control-label" for="textarea">Message</label>
+                        <div class="controls">
+                        <textarea class="input-xlarge" id="textarea" rows="8"></textarea>
+                        </div>
+                </div>
+                <div class="form-actions">
+                        <button type="submit" class="btn btn-danger">Submit</button>
+                        <button class="btn">Cancel</button>
+                </div>
+                </fieldset>
+        </form>
     </div><!--/span-->
 </div>
-      

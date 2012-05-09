@@ -18,6 +18,14 @@ class Companies extends CI_Controller {
                     'a_jobs'    => $a_jobs->num_rows() > 0 ? $a_jobs->result(): array(),
                     'a_user'    => $a_data->row()
                 );
+                if($this->session->userdata('auth')){
+                    $a_session = $this->session->userdata('auth');
+                    if($a_session['id'] != $a_data['a_user']->id){
+                        $this->m_companies->update($i_id, array('views' => ($a_data['a_user']->views+1)));
+                    }
+                } else {
+                    $this->m_companies->update($i_id, array('views' => ($a_data['a_user']->views+1)));
+                }
                 $this->load->view('company', $a_data);
             }
         } else {

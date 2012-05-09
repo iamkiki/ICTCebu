@@ -29,7 +29,7 @@ function init_post()
                 'url': '/jobs/submit',
                 'type':'POST',
                 'dataType':'json',
-                'data': o_form.serialize(),
+                'data': {form: o_form.serialize(), content: CKEDITOR.instances.content.getData()},
                 success: function(data)
                 {
                     if(data.status == 'success')

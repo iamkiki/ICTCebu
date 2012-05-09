@@ -35,8 +35,8 @@
                 <label class="control-label" for="password">Change Password</label>
                 <div class="controls">
                   <input type="password" class="input-medium" name="password" id="password">
-                  <p class="help-inline e_password red hidden">Must be atleast 6 characters</p>
-                  <p class="help-block">Leave empty if you don't want to update password.</p>
+                  <p class="help-block e_password red hidden">Must be atleast 6 characters</p>
+                  <p class="help-inline">Leave empty if you don't want to update password.</p>
                 </div>
           </div>
           <div class="control-group confirm_password">

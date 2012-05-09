@@ -26,7 +26,7 @@
                     case 'post'         : $this->load->view('dashboard/postjob.php', $a_data); break;
                     default:
             ?>
-                <h4>You have <?php echo $a_user->views > 1 ? $a_user->views.' profile views': $a_user->views.' profile view'; ?> since <?php echo date('F d, Y', strtotime($a_user->date_added)); ?></h4>
+                <h4>You have <?php echo $a_user->views > 1 ? $a_user->views.' profile views': $a_user->views.' profile view'; ?> from other users since <?php echo date('F d, Y', strtotime($a_user->date_added)); ?></h4>
                 <p></p>
 				<table class="table table-striped table-bordered table-condensed">
 				        <thead>

@@ -16,18 +16,6 @@
                   <p class="help-block e_company_name red hidden">Company name is required.</p>
                 </div>
           </div>
-          <div class="control-group quote">
-                <label class="control-label" for="description">Tagline/Slogan</label>
-                <div class="controls">
-                  <textarea class="input-xlarge" name="quote" id="quote" rows="2"><?php echo $info->quote; ?></textarea>
-                </div>
-          </div>
-          <div class="control-group source">
-                <label class="control-label" for="source">Source</label>
-                <div class="controls">
-                  <input type="text" class="input-xlarge" name="source" id="source" value="<?php echo $info->source; ?>">
-                </div>
-          </div>
           <div class="control-group">
                 <label class="control-label" for="address">Address</label>
                 <div class="controls">
@@ -97,6 +85,14 @@
                 </div>
           </div>
           <div class="control-group">
+                <label class="control-label" for="google">Google</label>
+                <div class="controls">
+                  <div class="input-prepend">
+                        <span class="add-on">http://</span><input class="span3" name="google" id="google" size="16" type="text" value="<?php echo $info->google; ?>">
+                  </div>
+                </div>
+          </div>
+          <div class="control-group">
                 <label class="control-label" for="youtube">Youtube</label>
                 <div class="controls">
                   <div class="input-prepend">
@@ -104,8 +100,15 @@
                   </div>
                 </div>
           </div>
+          <div class="control-group services">
+                <label class="control-label" for="services">Services</label>
+                <div class="controls">
+                  <textarea class="input-xlarge span7" name="services" id="services" rows="3"><?php echo $info->services; ?></textarea>
+                  <p class="help-block">Products or skills that your company offer, you can enter keywords separated by comma.</p>
+                </div>
+          </div>
           <div class="control-group">
-                <label class="control-label" for="description">Description/Services</label>
+                <label class="control-label" for="description">Overview</label>
                 <div class="controls">
                   <textarea class="input-xlarge" name="description" id="description" rows="5"><?php echo $info->description; ?></textarea>
                   <?php echo display_ckeditor($ckeditor['ckeditor']); ?>

@@ -178,6 +178,34 @@ a:hover {
     min-height: 600px;
 }
 
+.company-title {
+    padding: 10px 0 5px 20px;
+    float: left;
+    font-size: 22px;
+    line-height: 24px;
+    width: 100%;
+}
+
+.job-title {
+    padding: 10px 0 20px 20px;
+    float: left;
+    font-size: 22px;
+    line-height: 24px;
+    width: 100%;
+}
+
+.category-title {
+    padding-left: 20px;
+    color: gray;
+}
+
+.company-details {
+    font-size: 18px;
+    margin-bottom: -10px;
+    color: gray;
+    padding-top: 10px;
+}
+
 .space {
     height: 20px;
     width: 100%;
@@ -187,6 +215,14 @@ a:hover {
 }
 .gray {
     color: gray;
+}
+
+.p-left10 {
+    padding-left: 10px;
+}
+
+.p-left15 {
+    padding-left: 15px;
 }
 
 .p-right5 {
@@ -236,7 +272,7 @@ a:hover {
 	height: 28px;
 */
 	float: left;
-	margin: 9px 10px 0;
+	margin: 15px 10px 0 5px;
 }
 
 .facebook {
@@ -244,7 +280,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
-        padding-right: 10px;
+        padding-right: 5px;
 }
 
 .twitter {
@@ -252,7 +288,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
-        padding-right: 10px;
+        padding-right: 5px;
 }
 
 .linkedin {
@@ -260,7 +296,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
-        padding-right: 10px;
+        padding-right: 5px;
 }
 
 .skype {
@@ -268,7 +304,7 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
-        padding-right: 10px;
+        padding-right: 5px;
 }
 
 .youtube {
@@ -276,7 +312,15 @@ a:hover {
 	width: 32px;
 	height: 32px;
 	float: left;
-        padding-right: 10px;
+        padding-right: 5px;
+}
+
+.google {
+	background: url(/img/google.png) no-repeat;
+	width: 32px;
+	height: 32px;
+	float: left;
+        padding-right: 5px;
 }
 
 .span12 {
@@ -562,7 +606,7 @@ dt {
 }
 dd {
   margin-left: 9px;
-  margin-bottom: 8px;
+/*  margin-bottom: 8px;*/
 }
 .dl-horizontal dt {
   float: left;
@@ -4123,8 +4167,21 @@ a.thumbnail:hover {
 }
 
 .social-links {
-	min-height: 30px;
-	padding-left: 7px;
+	padding-left: 20px;
+        padding-top: 8px;
+        float: left;
+        width: 100%;
+}
+
+.linkedshare{
+    padding-top: 15px;
+    float: left;
+}
+
+.tweetshare {
+    float: left;
+    padding-top: 5px;
+    margin-left: 5px;
 }
 
 .social-links button {

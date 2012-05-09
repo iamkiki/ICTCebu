@@ -92,10 +92,10 @@ class Jobs extends CI_Controller {
         $this->load->model('m_jobs');
 		
         $a_user = $this->session->userdata('auth');
-        $a_data = $_POST;
-        $a_data['requirements'] = $this->input->post('requirements', TRUE);
+        $a_data = $_POST['form'];
+        $a_data['requirements'] = $this->input->post('content', TRUE);
         $a_data['company_id'] = $a_user['id'];
-        $a_data['cost'] = 1400*$_POST['expiry'];
+        $a_data['cost'] = 1400*$a_data['expiry'];
         $a_data['expiry'] = date('Y-m-d h:i:s', strtotime("+30 days", time()));
         
         $i_id = $this->m_jobs->create($a_data);
