@@ -1,7 +1,7 @@
 <?php
     $s_uri = $this->uri->segment(1);
 ?>
-<div class="row-fluid min600">
+<div class="row-fluid min600 bg-white">
     <div class="space"></div>
     <div class="span2">
           <div class="tabbable tabs-left">

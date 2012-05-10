@@ -27,7 +27,7 @@
 	  fjs.parentNode.insertBefore(js, fjs);
 	}(document, 'script', 'facebook-jssdk'));</script>
   <div class="span9">
-      <div class="well" style="min-height: 180px;">
+      <div>
                       <div class="span3">
                       <a href="#" class="thumbnail">
                             <?php $s_image = '/img/260x180.gif';
@@ -85,19 +85,19 @@
                         <a href="#contact" class="f-right"><button class="btn btn-warning"><i class="icon-envelope icon-white"></i> Contact Company</button></a>
                       </div>
       </div><!--/.well -->
-        
+        <div class="clearfix"></div>
         <!-- <div class="fb-like"></div> -->
         <div class="company-details">Overview</div>
         <hr>
-        <div><?php echo $a_user->description ? $a_user->description: ''; ?></div>
+        <div class="well"><?php echo $a_user->description ? $a_user->description: ''; ?></div>
         
         <div class="company-details">Services</div>
         <hr>
-        <div><?php echo $a_user->services ? $a_user->services: ''; ?></div>
+        <div class="well"><?php echo $a_user->services ? $a_user->services: ''; ?></div>
         <div class="space"></div>
         <div id="contact" class="company-details">Contact Company</div>
         <hr>
-        <form class="form-horizontal">
+        <form class="form-horizontal well">
                 <fieldset>
                 <div class="control-group">
                         <label class="control-label" for="input01">Name</label>

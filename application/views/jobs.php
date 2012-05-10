@@ -2,7 +2,7 @@
 <div class="span3">
   <?php $this->load->view('sidebar'); ?>
 </div><!--/span-->
-<div class="span9">
+<div class="span8">
           <div class="row-fluid">
                 <div class="n-legend d-inline f-left">Jobs</div>
                 <div class="btn-group d-inline f-left m-left10 m-bottom5 m-top3">
@@ -19,7 +19,7 @@
                 </div>
                 <hr>
           </div>
-  <div class="row-fluid">
+  <div class="row-fluid well">
                 <table class="table">
                         <thead>
                           <tr>
@@ -138,18 +138,19 @@
                           </tr>
                         </tbody>
                 </table>
+      <div class="pagination f-right">
+            <ul>
+                    <li><a href="#">&larr;</a></li>
+                    <li class="active">
+                    <a href="#">1</a>
+                    </li>
+                    <li><a href="#">2</a></li>
+                    <li><a href="#">3</a></li>
+                    <li><a href="#">&rarr;</a></li>
+            </ul>
+        </div>
   </div><!--/row-->
 </div><!--/span-->
 </div><!--/row-->
-<div class="pagination f-right">
-      <ul>
-            <li><a href="#">&larr;</a></li>
-            <li class="active">
-              <a href="#">1</a>
-            </li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">&rarr;</a></li>
-      </ul>
-</div>
+
      
