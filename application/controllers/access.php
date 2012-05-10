@@ -185,7 +185,7 @@ class Access extends CI_Controller {
             $this->m_companies->update();
 
             $a_result = $r_result->row();
-            $this->session->set_userdata('a_user', $a_result);
+            $this->session->set_userdata('auth', array('id' => $a_result->id, 'name' => $a_result->name));
 
             $this->load->view('verification-success');
         } else {
