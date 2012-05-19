@@ -1,12 +1,6 @@
 <div class="row-fluid">
     <div class="span3">
-            <a href="#" class="thumbnail">
-                    <img src="/img/long-ad.png" alt="">
-            </a>
-    </div><!--/span-->
-    <div class="span9">
-      <div class="well" style="min-height: 180px;">
-                      <div class="span3">
+            <div class="well">
                       <a href="#" class="thumbnail">
                             <?php $s_image = '/img/260x180.gif';
                             if($o_company->logo != '') {
@@ -16,29 +10,33 @@
                             <img src="<?php echo $s_image; ?>" alt="">
                       </a>
                       </div>
-                      <div class="span7">
-                        <div class="job-title"><?php echo $o_job->title.'  '; ?><sup><span class="label label-important">2yrs</span></sup></div>
-                         <dl class="dl-horizontal">
-                            <dt>Company</dt>
-                                    <dd><a href="/companies/profile/<?php echo $o_job->company_id; ?>"><?php echo $o_company->name; ?></a></dd>
-                            <dt>Location</dt>
-                                    <dd><?php echo $o_job->location != '' ? $o_job->location: $o_company->address.', '.$o_company->city; ?></dd>
-                            <dt>Expiration</dt>
-                                    <dd>Accepting applications until <?php echo date('F j, Y', strtotime($o_job->expiry_date)); ?></dd>
-                            <dt>Category</dt>
-                                    <dd><?php
-                                        switch($o_job->category){
-                                            case 1: echo 'BPO/ Call Centers'; break;
-                                            case 2: echo 'Web/ Mobile Development'; break;
-                                            case 3: echo 'Software Applications'; break;
-                                            case 4: echo 'Hardware/ Peripherals'; break;
-                                            case 5: echo 'Others'; break;
-                                        }
-                                        ?></dd>
-                        </dl>
-                        <a href="#apply" class="f-right"><button class="btn btn-warning"><i class="icon-check icon-white"></i> Apply now</button></a>
-                      </div>
-      </div><!--/.well -->
+            <a href="#" class="thumbnail">
+                    <img src="/img/long-ad.png" alt="">
+            </a>
+    </div><!--/span-->
+    <div class="span9">
+        <div class="span8">
+        <div class="job-title"><?php echo $o_job->title.'  '; ?><sup><span class="label label-important">2yrs</span></sup></div>
+            <dl class="dl-horizontal">
+            <dt>Company</dt>
+                    <dd><a href="/companies/profile/<?php echo $o_job->company_id; ?>"><?php echo $o_company->name; ?></a></dd>
+            <dt>Location</dt>
+                    <dd><?php echo $o_job->location != '' ? $o_job->location: $o_company->address.', '.$o_company->city; ?></dd>
+            <dt>Expiration</dt>
+                    <dd>Accepting applications until <?php echo date('F j, Y', strtotime($o_job->expiry_date)); ?></dd>
+            <dt>Category</dt>
+                    <dd><?php
+                        switch($o_job->category){
+                            case 1: echo 'BPO/ Call Centers'; break;
+                            case 2: echo 'Web/ Mobile Development'; break;
+                            case 3: echo 'Software Applications'; break;
+                            case 4: echo 'Hardware/ Peripherals'; break;
+                            case 5: echo 'Others'; break;
+                        }
+                        ?></dd>
+        </dl>
+        <a href="#apply" class="f-right"><button class="btn btn-warning"><i class="icon-check icon-white"></i> Apply now</button></a>
+        </div>
       
         <div class="company-details">Requirements</div>
         <hr>

@@ -1,8 +1,22 @@
 <div class="row-fluid">
-   <div class="span3">
+   <div id="fb-root"></div>
+	<script>(function(d, s, id) {
+	  var js, fjs = d.getElementsByTagName(s)[0];
+	  if (d.getElementById(id)) return;
+	  js = d.createElement(s); js.id = id;
+	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+	  fjs.parentNode.insertBefore(js, fjs);
+	}(document, 'script', 'facebook-jssdk'));
+       </script>
+  <div class="span3">
         <div class="well">
             <a href="#" class="thumbnail">
-                <img src="/img/map.png" alt="" style="height:170px;">
+                <?php $s_image = '/img/260x180.gif';
+                if($a_user->logo != '') {
+                    $a_pathinfo = pathinfo( $a_user->logo );
+                    $s_image = '/uploads/'.$a_pathinfo['filename'].'-profile.'.$a_pathinfo['extension'];
+                } ?>
+                <img src="<?php echo $s_image; ?>" alt="">
             </a>
         </div>
         <div class="well sidebar-nav">
@@ -17,28 +31,15 @@
                 } ?>
             </ul>
         </div>
-    </div><!--/span-->
-   <div id="fb-root"></div>
-	<script>(function(d, s, id) {
-	  var js, fjs = d.getElementsByTagName(s)[0];
-	  if (d.getElementById(id)) return;
-	  js = d.createElement(s); js.id = id;
-	  js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
-	  fjs.parentNode.insertBefore(js, fjs);
-	}(document, 'script', 'facebook-jssdk'));</script>
-  <div class="span9">
-      <div>
-                      <div class="span3">
-                      <a href="#" class="thumbnail">
-                            <?php $s_image = '/img/260x180.gif';
-                            if($a_user->logo != '') {
-                                $a_pathinfo = pathinfo( $a_user->logo );
-                                $s_image = '/uploads/'.$a_pathinfo['filename'].'-profile.'.$a_pathinfo['extension'];
-                            } ?>
-                            <img src="<?php echo $s_image; ?>" alt="">
-                      </a>
-                      </div>
-                      <div class="span7">
+        <div class="well">
+            <a href="#" class="thumbnail">
+                <img src="/img/map.png" alt="" style="height:170px;">
+            </a>
+        </div>
+    </div><!--/span-->    
+        
+  <div class="span8">
+                <div>
                         <div class="company-title"><?php echo $a_user->name; ?></div>
                         <div class="category-title">
                         <?php
@@ -83,8 +84,7 @@
                               <?php } ?>
                         </div>
                         <a href="#contact" class="f-right"><button class="btn btn-warning"><i class="icon-envelope icon-white"></i> Contact Company</button></a>
-                      </div>
-      </div><!--/.well -->
+                </div>
         <div class="clearfix"></div>
         <!-- <div class="fb-like"></div> -->
         <div class="company-details">Overview</div>

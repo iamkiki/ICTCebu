@@ -212,6 +212,12 @@ a:hover {
     color: gray;
 }
 
+.contact-button {
+    padding-left: 20px;
+    padding-top: 10px;
+    float: left;
+}
+
 .company-details {
     font-size: 18px;
     margin-bottom: -10px;

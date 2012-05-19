@@ -13,7 +13,7 @@ class Companies extends CI_Controller {
             $this->load->model('m_jobs');
             $a_data = $this->m_companies->load( array('id' => $i_id, 'status' => 1) );
             $a_jobs = $this->m_jobs->load( array('company_id' => $i_id) );
-            if($a_data->num_rows > 0){
+            if($a_data && $a_data->num_rows > 0){
                 $a_data = array(
                     'a_jobs'    => $a_jobs->num_rows() > 0 ? $a_jobs->result(): array(),
                     'a_user'    => $a_data->row()
