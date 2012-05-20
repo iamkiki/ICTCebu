@@ -12,8 +12,8 @@
                         <li><a href="#">All Categories</a></li>
                         <li><a href="#">BPO/ Call Centers</a></li>
                         <li><a href="#">Web/ Mobile Development</a></li>
-        <li><a href="#">Software Applications</a></li>
-        <li><a href="#">Hardware/ Peripherals</a></li>
+                        <li><a href="#">Software Applications</a></li>
+                        <li><a href="#">Hardware/ Peripherals</a></li>
                     <li><a href="#">Others</a></li>
                   </ul>
                 </div>
@@ -31,124 +31,19 @@
                           </tr>
                         </thead>
                         <tbody>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Web Developer</td>
-                                <td>1 yr</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Technical Support Specialist</td>
-                                <td>2 yrs</td>
-                                <td>Number One Call Center</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Java Developer</td>
-                                <td>2 yrs</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Web Developer</td>
-                                <td>1 yr</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Technical Support Specialist</td>
-                                <td>2 yrs</td>
-                                <td>Number One Call Center</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Java Developer</td>
-                                <td>2 yrs</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Web Developer</td>
-                                <td>1 yr</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Technical Support Specialist</td>
-                                <td>2 yrs</td>
-                                <td>Number One Call Center</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Java Developer</td>
-                                <td>2 yrs</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>PHP Developer</td>
-                                <td>3 yrs</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Java Developer</td>
-                                <td>2 yrs</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Web Developer</td>
-                                <td>1 yr</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Technical Support Specialist</td>
-                                <td>2 yrs</td>
-                                <td>Number One Call Center</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>Java Developer</td>
-                                <td>2 yrs</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
-                          <tr>
-                                <td>April 1</td>
-                                <td>PHP Developer</td>
-                                <td>3 yrs</td>
-                                <td>Nerubia Web Solutions, Inc.</td>
-                                <td>Lahug, Cebu City</td>
-                          </tr>
+                        <?php if(count($a_jobs) > 0){
+                                foreach($a_jobs as $o_job){ ?>
+                                    <tr>
+                                        <td><?php echo date('F j, Y', strtotime($o_job->date_added)); ?></td>
+                                        <td><?php echo $o_job->title; ?></td>
+                                        <td><?php echo $o_job->experience; ?></td>
+                                        <td><?php echo $o_job->company; ?></td>
+                                        <td><?php echo $o_job->location ? $o_job->location: 'Cebu City'; ?></td>
+                                    </tr>
+                           <?php } } ?>
                         </tbody>
                 </table>
-      <div class="pagination f-right">
-            <ul>
-                    <li><a href="#">&larr;</a></li>
-                    <li class="active">
-                    <a href="#">1</a>
-                    </li>
-                    <li><a href="#">2</a></li>
-                    <li><a href="#">3</a></li>
-                    <li><a href="#">&rarr;</a></li>
-            </ul>
-        </div>
+      <?php echo isset($s_pagination) ? $s_pagination: ''; ?>
   </div><!--/row-->
 </div><!--/span-->
 </div><!--/row-->
