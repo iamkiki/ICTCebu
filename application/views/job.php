@@ -15,7 +15,7 @@
             </a>
     </div><!--/span-->
     <div class="span9">
-        <div class="span8">
+        <div class="span9">
         <div class="job-title"><?php echo $o_job->title.'  '; ?><sup><span class="label label-important">2yrs</span></sup></div>
             <dl class="dl-horizontal">
             <dt>Company</dt>
@@ -37,7 +37,7 @@
         </dl>
         <a href="#apply" class="f-right"><button class="btn btn-warning"><i class="icon-check icon-white"></i> Apply now</button></a>
         </div>
-      
+        <div class="clearfix"></div>
         <div class="company-details">Requirements</div>
         <hr>
         <div><?php echo $o_job->requirements; ?></div>
