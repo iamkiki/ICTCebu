@@ -21,6 +21,7 @@
           </div>
   <div class="row-fluid well">
                 <table class="table">
+                		<?php if(count($a_jobs) > 0){ ?>
                         <thead>
                           <tr>
                                 <th>Date</th>
@@ -31,8 +32,7 @@
                           </tr>
                         </thead>
                         <tbody>
-                        <?php if(count($a_jobs) > 0){
-                                foreach($a_jobs as $o_job){ ?>
+                        <?php foreach($a_jobs as $o_job){ ?>
                                     <tr>
                                         <td><?php echo date('F j, Y', strtotime($o_job->date_added)); ?></td>
                                         <td><?php echo $o_job->title; ?></td>
@@ -40,7 +40,9 @@
                                         <td><?php echo $o_job->company; ?></td>
                                         <td><?php echo $o_job->location ? $o_job->location: 'Cebu City'; ?></td>
                                     </tr>
-                           <?php } } ?>
+                           <?php } } else { ?>
+                           		<tr>No job listings yet.</tr>
+                           <?php } ?>
                         </tbody>
                 </table>
       <?php echo isset($s_pagination) ? $s_pagination: ''; ?>

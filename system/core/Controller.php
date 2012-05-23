@@ -72,10 +72,11 @@ class CI_Controller {
 		}
 	}
 
-	public function paginate( $s_url, $i_total = 0 )
+	public function paginate( $s_url, $i_total = 0, $i_page = 10 )
 	{
         $this->config->set_item('total_rows', $i_total);
 		$this->config->set_item('base_url', $s_url);
+		$this->config->set_item('per_page', $i_page);
 		$this->pagination->initialize($this->config->config);
 		return $this->pagination->create_links();
     }

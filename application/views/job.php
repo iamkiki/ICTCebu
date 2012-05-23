@@ -1,4 +1,5 @@
 <div class="row-fluid">
+	<div id="fb-root"></div>
     <div class="span3">
             <div class="well">
                       <a href="#" class="thumbnail">
@@ -14,8 +15,7 @@
                     <img src="/img/long-ad.png" alt="">
             </a>
     </div><!--/span-->
-    <div class="span9">
-        <div class="span9">
+    <div class="span8">
         <div class="job-title"><?php echo $o_job->title.'  '; ?><sup><span class="label label-important">2yrs</span></sup></div>
             <dl class="dl-horizontal">
             <dt>Company</dt>
@@ -36,15 +36,14 @@
                         ?></dd>
         </dl>
         <a href="#apply" class="f-right"><button class="btn btn-warning"><i class="icon-check icon-white"></i> Apply now</button></a>
-        </div>
         <div class="clearfix"></div>
         <div class="company-details">Requirements</div>
         <hr>
-        <div><?php echo $o_job->requirements; ?></div>
+        <div class="well"><?php echo $o_job->requirements; ?></div>
         
         <div id="apply" class="company-details">Apply for this Job</div>
         <hr>
-        <form class="form-horizontal">
+        <form class="form-horizontal well">
                 <fieldset>
                 <div class="control-group">
                         <label class="control-label" for="input01">Name</label>

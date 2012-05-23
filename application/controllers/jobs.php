@@ -63,7 +63,7 @@ class Jobs extends CI_Controller {
         
         $a_data = array(
                 'a_jobs'        => $a_jobs,
-                's_pagination'  => $this->paginate( '/jobs?', $i_total )
+                's_pagination'  => $this->paginate( '/jobs?', $i_total, 15 )
             );
             
         $this->load->view('jobs', $a_data);
