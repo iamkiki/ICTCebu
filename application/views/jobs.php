@@ -33,7 +33,7 @@
                         </thead>
                         <tbody>
                         <?php foreach($a_jobs as $o_job){ ?>
-                                    <tr>
+                                    <tr onclick="location.href = '/jobs/view/<?php echo $o_job->id; ?>';">
                                         <td><?php echo date('F j, Y', strtotime($o_job->date_added)); ?></td>
                                         <td><?php echo $o_job->title; ?></td>
                                         <td><?php echo $o_job->experience; ?></td>
