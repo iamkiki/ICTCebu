@@ -19,9 +19,9 @@
                 </div>
                 <hr>
           </div>
+  <?php if(count($a_jobs) > 0){ ?>
   <div class="row-fluid well">
                 <table class="table">
-                		<?php if(count($a_jobs) > 0){ ?>
                         <thead>
                           <tr>
                                 <th>Date</th>
@@ -40,13 +40,14 @@
                                         <td><?php echo $o_job->company; ?></td>
                                         <td><?php echo $o_job->location ? $o_job->location: 'Cebu City'; ?></td>
                                     </tr>
-                           <?php } } else { ?>
-                           		<tr><b>No job listings yet.<b></tr>
                            <?php } ?>
                         </tbody>
                 </table>
       <?php echo isset($s_pagination) ? $s_pagination: ''; ?>
   </div><!--/row-->
+  <?php } else { ?>
+		<div class="alert"><strong>Oops!</strong> No Listings under this category yet.</div>
+  <?php } ?>
 </div><!--/span-->
 </div><!--/row-->
 

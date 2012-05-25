@@ -54,12 +54,14 @@ class Main extends CI_Controller {
     
     public function index()
     {   
+    	
+    	$this->load->model('m_companies');
+        $this->load->model('m_jobs');
+    	
         if($this->session->userdata('auth')){
         	
             $i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
             
-            $this->load->model('m_companies');
-            $this->load->model('m_jobs');
             $a_user = $this->session->userdata('auth');
             $a_company = $this->m_companies->load( array('id' => $a_user['id'], 'status' => 1) );
             $a_jobs = $this->m_jobs->get_listings( $a_user['id'], $i_page, 10 );
@@ -75,7 +77,8 @@ class Main extends CI_Controller {
                 $this->load->view('user', $a_data);
             }
         } else {
-            $this->load->view('home');
+        	
+            $this->load->view('home', $a_data);
         }
     }
 
