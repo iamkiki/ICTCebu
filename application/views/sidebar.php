@@ -1,5 +1,6 @@
 <?php 
 $s_segment = $this->uri->segment(1); 
+$s_segment = $s_segment != 'companies' && $s_segment != 'jobs' ? 'companies': $s_segment;
 $i_category = $this->uri->segment(3);
 ?>
 <div class="well sidebar-nav">
