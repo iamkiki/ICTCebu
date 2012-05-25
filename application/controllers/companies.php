@@ -3,8 +3,19 @@
 class Companies extends CI_Controller {
 
     public function index()
-    {
-        $this->load->view('companies');
+    {	
+    	$i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
+        
+        $this->load->model('m_companies');
+        $a_companies = $this->m_companies->get_companies( $i_page, 15 );
+        $i_total = count($this->m_companies->get_companies());
+        
+        $a_data = array(
+                'a_companies'   => $a_companies,
+                's_pagination'  => $this->paginate( '/companies?', $i_total, 15 )
+            );
+            
+        $this->load->view('companies', $a_data);
     }
 
     public function profile($i_id = false){

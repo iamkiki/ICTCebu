@@ -57,7 +57,6 @@ class Jobs extends CI_Controller {
         $i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
         
         $this->load->model('m_jobs');
-        $this->load->model('m_companies');
         $a_jobs = $this->m_jobs->get_jobs( $i_page, 15 );
         $i_total = count($this->m_jobs->get_jobs());
         
