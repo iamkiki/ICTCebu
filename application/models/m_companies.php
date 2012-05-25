@@ -113,6 +113,20 @@ class m_companies extends CI_Model
 
     
     /**
+     * Gets 5 companies for home featured based on views
+     * @scope	public
+     * @param   void
+     * @return  array   list of companies
+     */
+    function get_featured(){
+        $s_sql = 'SELECT * FROM '.TBL_COMPANIES.' WHERE status = 1 ORDER BY views DESC LIMIT 5';
+
+        $r_query = $this->db->query($s_sql)->result();
+        
+        return $r_query;
+    }
+    
+    /**
      * Gets all companies
      * @scope	public
      * @param   void

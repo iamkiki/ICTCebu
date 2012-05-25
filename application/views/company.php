@@ -19,6 +19,7 @@
                 <img src="<?php echo $s_image; ?>" alt="">
             </a>
         </div>
+        <?php if(count($a_jobs) > 0){ ?>
         <div class="well sidebar-nav">
             <ul class="nav nav-list">
                 <li class="nav-header">Company Job Openings</li>
@@ -31,6 +32,7 @@
                 } ?>
             </ul>
         </div>
+        <?php } ?>
         <div class="well">
             <a href="#" class="thumbnail">
                 <img src="/img/map.png" alt="" style="height:170px;">

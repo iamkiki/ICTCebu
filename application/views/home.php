@@ -10,56 +10,18 @@
       </div>
       <div class="row-fluid">
                     <ul class="thumbnails">
+                    		<?php foreach($a_companies as $o_company){ ?>
                             <li class="span2">
-                              <div class="thumbnail">
-                                    <img src="/img/160x120.gif" alt="">
-                                    <div class="caption">
-                                      <h5>Company Name</h5>
-                                      <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                      <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                    </div>
-                              </div>
-                            </li>
-                            <li class="span2">
-                              <div class="thumbnail">
-                                    <img src="/img/160x120.gif" alt="">
-                                    <div class="caption">
-                                      <h5>Company Name</h5>
-                                      <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                      <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                    </div>
-                              </div>
-                            </li>
-                            <li class="span2">
-                              <div class="thumbnail">
-                                    <img src="/img/160x120.gif" alt="">
-                                    <div class="caption">
-                                      <h5>Company Name</h5>
-                                      <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                      <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                    </div>
-                              </div>
-                            </li>
-                            <li class="span2">
-                              <div class="thumbnail">
-                                    <img src="/img/160x120.gif" alt="">
-                                    <div class="caption">
-                                      <h5>Company Name</h5>
-                                      <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                      <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                    </div>
-                              </div>
-                            </li>
-                            <li class="span2">
-                              <div class="thumbnail">
-                                    <img src="/img/160x120.gif" alt="">
-                                    <div class="caption">
-                                      <h5>Company Name</h5>
-                                      <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                      <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                    </div>
-                              </div>
-                            </li>
+	                          <div class="thumbnail">
+	                                <img src="<?php echo $o_company->logo ? '/uploads/'.$o_company->logo : '/img/160x120.gif'; ?>" alt="" style="min-height: 110px;">
+	                                <div class="caption">
+	                                  <h5><?php echo $o_company->name; ?></h5>
+	                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+	                                  <p><a class="btn" href="/companies/profile/<?php echo $o_company->id; ?>">View Profile &raquo;</a></p>
+	                                </div>
+	                          </div>
+	                        </li>
+	                        <?php } ?>
                       </ul>
       </div><!--/row-->
     </div><!--/span-->

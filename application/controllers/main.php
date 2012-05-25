@@ -77,7 +77,13 @@ class Main extends CI_Controller {
                 $this->load->view('user', $a_data);
             }
         } else {
-            $this->load->view('home');
+        	
+        	$a_companies = $this->m_companies->get_featured(); 
+        	$a_data = array(
+        		'a_companies' => $a_companies
+        	);
+        	
+            $this->load->view('home', $a_data);
         }
     }
 
