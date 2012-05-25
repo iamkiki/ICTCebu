@@ -5,7 +5,12 @@ class Access extends CI_Controller {
     public function index()
     {
         $this->a_outer['a_js'][] = 'access';
-        $this->load->view('access');
+        $this->load->model('m_jobs');
+    	$a_hot_jobs = $this->m_jobs->hot_jobs();
+    	$a_data = array(
+    		'a_hot_jobs'	=> $a_hot_jobs
+    	);
+        $this->load->view('access', $a_data);
     }
 
     public function login(){

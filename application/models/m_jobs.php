@@ -107,7 +107,21 @@ class m_jobs extends CI_Model
 
         return $i_result;
     }
+	
+	/**
+     * Gets hot jobs (10) Newly Added Jobs
+     * @scope	public
+     * @param   void
+     * @return  array   list of jobs
+     */
+    function hot_jobs(){
+		/* status 2 - inactive */
+        $s_sql = 'SELECT title, id FROM '.TBL_JOBS.' WHERE status = 1 ORDER BY date_added DESC LIMIT 10';
 
+        $r_query = $this->db->query($s_sql)->result();
+        
+        return $r_query;
+    }
     
     /**
      * Gets all jobs

@@ -13,15 +13,8 @@ $i_category = $this->uri->segment(3);
       <li <?php echo $i_category == 5 ? 'class="active"': ''; ?>><a href="/<?php echo $s_segment; ?>/sort/5">Others</a></li>
 
       <li class="nav-header">Hot Jobs</li>
-      <li><a href="/job">Programmer</a></li>
-      <li><a href="/job">Web Developer</a></li>
-      <li><a href="/job">Technical Support</a></li>
-      <li><a href="/job">Data Encoder</a></li>
-      <li><a href="/job">Programmer</a></li>
-      <li><a href="/job">Web Developer</a></li>
-      <li><a href="/job">Technical Support</a></li>
-      <li><a href="/job">Data Encoder</a></li>
-      <li><a href="/job">Technical Support</a></li>
-      <li><a href="/job">Data Encoder</a></li>
+      <?php foreach($a_hot_jobs as $o_job){ ?>
+      	<li><a href="/jobs/view/<?php echo $o_job->id; ?>"><?php echo $o_job->title; ?></a></li>
+      <?php } ?>
     </ul>
 </div><!--/.well -->

@@ -7,11 +7,15 @@ class Companies extends CI_Controller {
     	$i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
         
         $this->load->model('m_companies');
+        $this->load->model('m_jobs');
+        
         $a_companies = $this->m_companies->get_companies( $i_page, 10 );
+        $a_jobs = $this->m_jobs->hot_jobs();
         $i_total = count($this->m_companies->get_companies());
         
         $a_data = array(
                 'a_companies'   => $a_companies,
+                'a_hot_jobs'	=> $a_jobs,
                 's_pagination'  => $this->paginate( '/companies?', $i_total, 10 )
             );
             
@@ -22,11 +26,15 @@ class Companies extends CI_Controller {
     	$i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
         
         $this->load->model('m_companies');
+        $this->load->model('m_jobs');
+        
         $a_companies = $this->m_companies->sort_companies( $i_category, $i_page, 10 );
+        $a_jobs = $this->m_jobs->hot_jobs();
         $i_total = count($this->m_companies->sort_companies($i_category));
         
         $a_data = array(
                 'a_companies'   => $a_companies,
+                'a_hot_jobs'	=> $a_jobs,
                 's_pagination'  => $this->paginate( '/companies/sort?', $i_total, 10 )
             );
             

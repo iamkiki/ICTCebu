@@ -58,10 +58,12 @@ class Jobs extends CI_Controller {
         
         $this->load->model('m_jobs');
         $a_jobs = $this->m_jobs->get_jobs( $i_page, 15 );
+        $a_hot_jobs = $this->m_jobs->hot_jobs();
         $i_total = count($this->m_jobs->get_jobs());
         
         $a_data = array(
                 'a_jobs'        => $a_jobs,
+                'a_hot_jobs'	=> $a_hot_jobs,
                 's_pagination'  => $this->paginate( '/jobs?', $i_total, 15 )
             );
             
@@ -72,12 +74,13 @@ class Jobs extends CI_Controller {
     	$i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
         
         $this->load->model('m_jobs');
-        $this->load->model('m_companies');
         $a_jobs = $this->m_jobs->sort_jobs( $i_category, $i_page, 15 );
+        $a_hot_jobs = $this->m_jobs->hot_jobs();
         $i_total = count($this->m_jobs->sort_jobs($i_category));
         
         $a_data = array(
                 'a_jobs'        => $a_jobs,
+                'a_hot_jobs'	=> $a_hot_jobs,
                 's_pagination'  => $this->paginate( '/jobs/sort?', $i_total, 15 )
             );
             

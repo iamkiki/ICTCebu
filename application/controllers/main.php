@@ -79,8 +79,10 @@ class Main extends CI_Controller {
         } else {
         	
         	$a_companies = $this->m_companies->get_featured(); 
+        	$a_hot_jobs = $this->m_jobs->hot_jobs();
         	$a_data = array(
-        		'a_companies' => $a_companies
+        		'a_companies' => $a_companies,
+        		'a_hot_jobs'	=> $a_hot_jobs
         	);
         	
             $this->load->view('home', $a_data);
@@ -135,12 +137,22 @@ class Main extends CI_Controller {
         $this->load->view('user');
     }
 
-    public function about(){
-        $this->load->view('about');
+    public function about(){ 
+    	$this->load->model('m_jobs');
+    	$a_hot_jobs = $this->m_jobs->hot_jobs();
+    	$a_data = array(
+    		'a_hot_jobs'	=> $a_hot_jobs
+    	);
+        $this->load->view('about', $a_data);
     }
 
     public function contact(){
-        $this->load->view('contact');
+    	$this->load->model('m_jobs');
+    	$a_hot_jobs = $this->m_jobs->hot_jobs();
+    	$a_data = array(
+    		'a_hot_jobs'	=> $a_hot_jobs
+    	);
+        $this->load->view('contact', $a_data);
     }
 
     public function sendcontact(){
