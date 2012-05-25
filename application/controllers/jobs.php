@@ -68,6 +68,22 @@ class Jobs extends CI_Controller {
             
         $this->load->view('jobs', $a_data);
     }
+    
+    public function sort($i_category){
+    	$i_page = isset($_GET['per_page']) ? $_GET['per_page']: false;
+        
+        $this->load->model('m_jobs');
+        $this->load->model('m_companies');
+        $a_jobs = $this->m_jobs->sort_jobs( $i_category, $i_page, 15 );
+        $i_total = count($this->m_jobs->sort_jobs($i_category));
+        
+        $a_data = array(
+                'a_jobs'        => $a_jobs,
+                's_pagination'  => $this->paginate( '/jobs/sort?', $i_total, 15 )
+            );
+            
+        $this->load->view('jobs', $a_data);
+    }
 
     public function view($i_id){
         $this->load->model('m_jobs');

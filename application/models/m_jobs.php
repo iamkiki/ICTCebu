@@ -136,7 +136,7 @@ class m_jobs extends CI_Model
      */
     function sort_jobs($i_category, $i_start = false, $i_limit = false){
 		/* status 2 - inactive */
-        $s_sql = 'SELECT j.*, c.name as company FROM '.TBL_JOBS.' AS j INNER JOIN '.TBL_COMPANIES.' AS c ON c.id = j.company_id WHERE j.category = '.$i_category.' AND j.status != 2';
+        $s_sql = 'SELECT j.*, c.name as company FROM '.TBL_JOBS.' AS j INNER JOIN '.TBL_COMPANIES.' AS c ON c.id = j.company_id WHERE j.category = '.$i_category.' AND j.status = 1';
         if ( $i_limit )
 		{
 			$s_sql .= ' LIMIT '.($i_start ? $i_start : 0).','.$i_limit;

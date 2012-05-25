@@ -1393,6 +1393,11 @@ table {
 .table th {
   font-weight: bold;
 }
+
+.table tr {
+  cursor: pointer;
+}
+
 .table thead th {
   vertical-align: bottom;
 }

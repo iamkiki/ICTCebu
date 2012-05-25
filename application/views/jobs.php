@@ -9,12 +9,12 @@
                   <button class="btn btn-danger">All Categories</button>
                   <button class="btn btn-danger dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
                   <ul class="dropdown-menu">
-                        <li><a href="#">All Categories</a></li>
-                        <li><a href="#">BPO/ Call Centers</a></li>
-                        <li><a href="#">Web/ Mobile Development</a></li>
-                        <li><a href="#">Software Applications</a></li>
-                        <li><a href="#">Hardware/ Peripherals</a></li>
-                    <li><a href="#">Others</a></li>
+                        <li><a href="/jobs">All Categories</a></li>
+                        <li><a href="/jobs/sort/1">BPO/ Call Centers</a></li>
+                        <li><a href="/jobs/sort/2">Web/ Mobile Development</a></li>
+                        <li><a href="/jobs/sort/3">Software Applications</a></li>
+                        <li><a href="/jobs/sort/4">Hardware/ Peripherals</a></li>
+                    <li><a href="/jobs/sort/5">Others</a></li>
                   </ul>
                 </div>
                 <hr>
@@ -41,7 +41,7 @@
                                         <td><?php echo $o_job->location ? $o_job->location: 'Cebu City'; ?></td>
                                     </tr>
                            <?php } } else { ?>
-                           		<tr>No job listings yet.</tr>
+                           		<tr><b>No job listings yet.<b></tr>
                            <?php } ?>
                         </tbody>
                 </table>
