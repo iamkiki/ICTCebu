@@ -77,8 +77,7 @@ class Main extends CI_Controller {
                 $this->load->view('user', $a_data);
             }
         } else {
-        	
-            $this->load->view('home', $a_data);
+            $this->load->view('home');
         }
     }
 
