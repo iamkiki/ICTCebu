@@ -70,7 +70,8 @@ class m_jobs extends CI_Model
                'requirements'   => $a_data['requirements'] ,
                'email'          => $a_data['email'] ,
                'cost'           => $a_data['cost'] ,
-               'expiry_date'    => $a_data['expiry'] ,
+               'expiry'			=> $a_data['expiry'] ,
+               'expiry_date'    => $a_data['expiry_date'] ,
                'status'         => 0
             );
 

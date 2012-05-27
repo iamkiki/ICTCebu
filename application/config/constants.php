@@ -20,7 +20,7 @@ define('DIR_WRITE_MODE', 0777);
 
 /* GLOBAL VARIABLES */
 
-define('PRICE', 1400);
+define('PRICE', 1000);
 
 
 

@@ -13,14 +13,14 @@ class Main extends CI_Controller {
         $this->data['ckeditor'] = array(
 
             //ID of the textarea that will be replaced
-            'id'     =>     'description',
-            'path'    =>    base_url().'js/ckeditor',
+            'id'     	=>     'description',
+            'path'    	=>    base_url().'js/ckeditor',
 
             //Optionnal values
             'config' => array(
-                'toolbar'     =>     "Full",     //Using the Full toolbar
-                'width'     =>     "600px",    //Setting a custom width
-                'height'     =>     '300px',    //Setting a custom height
+                'toolbar'     	=>     "Basic",     //Using the Full toolbar
+                'width'     	=>     "600px",    //Setting a custom width
+                'height'     	=>     '300px',    //Setting a custom height
 
             ),
 
@@ -98,7 +98,7 @@ class Main extends CI_Controller {
             
             $this->load->helper('ckeditor', base_url() . 'js/ckeditor/');
             $this->ckeditor->basePath = base_url(). 'js/ckeditor/';
-            $this->ckeditor->ToolbarSet = 'Full';
+            $this->ckeditor->ToolbarSet = 'Basic';
             $a_data['ckeditor'] = $this->data;          
             
             if($a_company->num_rows > 0){

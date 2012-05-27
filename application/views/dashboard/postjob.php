@@ -40,17 +40,17 @@
             <label class="control-label" for="experience">Experience</label>
             <div class="controls">
               <select id="experience" class="span1" name="experience">
-                    <option value="1">0</option>
-                    <option value="2">1</option>
-                    <option value="3">2</option>
-                    <option value="4">3</option>
-                    <option value="5">4</option>
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
                     <option value="5">5</option>
-                    <option value="5">6</option>
-                    <option value="5">7</option>
-                    <option value="5">8</option>
-                    <option value="5">9</option>
-                    <option value="5">10</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
               </select>
               <span class="help-inline">(0 for No Experience needed)</span>
             </div>

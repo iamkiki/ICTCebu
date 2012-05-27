@@ -11,19 +11,20 @@
               <li class="<?php echo $s_uri == 'logo' ? 'active' : ''; ?>"><a href="/logo"><i class="icon-picture"></i>Company Logo</a></li>
               <li class="<?php echo $s_uri == 'account' ? 'active' : ''; ?>"><a href="/account"><i class="icon-user"></i>Account Settings</a></li>
 <!--               <li class="<?//php echo $s_uri == 'listings' ? 'active' : ''; ?>"><a href="/listings"><i class="icon-list-alt"></i>Job Listings</a></li> -->
-              <li class="<?php echo $s_uri == 'post' ? 'active' : ''; ?>"><a href="/post"><i class="icon-plus"></i>Post Job</a></li>
+              <li class="<?php echo $s_uri == 'post' || $s_uri == 'jobs' ? 'active' : ''; ?>"><a href="/post"><i class="icon-plus"></i>Post Job</a></li>
             </ul>
           </div> <!-- /tabbable -->
     </div>
     <div class="span9">
         <div class="tab-content">
-            <?php
+            <?php 
                 switch($s_uri){
                     case 'editprofile'  : $this->load->view('dashboard/editprofile.php', $a_data); break;
                     case 'logo'         : $this->load->view('dashboard/logo.php'); break;
                     case 'account'      : $this->load->view('dashboard/account.php'); break;
                     /* case 'listings'     : $this->load->view('dashboard/listings.php'); break; */
                     case 'post'         : $this->load->view('dashboard/postjob.php', $a_data); break;
+                    case 'jobs'         : $this->load->view('dashboard/editjob.php', $a_data); break;
                     default:
             ?>
                 <h4>You have <?php echo $a_user->views > 1 ? $a_user->views.' profile views': $a_user->views.' profile view'; ?> from other users since <?php echo date('F d, Y', strtotime($a_user->date_added)); ?></h4>
