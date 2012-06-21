@@ -12,8 +12,8 @@
                         <li><a href="/companies">All Categories</a></li>
                         <li><a href="/companies/sort/1">BPO/ Call Centers</a></li>
                         <li><a href="/companies/sort/2">Web/ Mobile Development</a></li>
-				        <li><a href="/companies/sort/3">Software Applications</a></li>
-				        <li><a href="/companies/sort/4">Hardware/ Peripherals</a></li>
+                        <li><a href="/companies/sort/3">Software Applications</a></li>
+                        <li><a href="/companies/sort/4">Hardware/ Peripherals</a></li>
                     	<li><a href="/companies/sort/5">Others</a></li>
                   </ul>
                 </div>
@@ -28,7 +28,15 @@
                                 <img src="<?php echo $o_company->logo ? '/uploads/'.$o_company->logo : '/img/160x120.gif'; ?>" alt="" style="min-height: 110px;">
                                 <div class="caption">
                                   <h5><?php echo $o_company->name; ?></h5>
-                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+                                  <p> <?php
+                                        switch($o_company->category){
+                                        case 1: echo 'BPO/ Call Centers'; break;
+                                        case 2: echo 'Web/ Mobile Development'; break;
+                                        case 3: echo 'Software Applications'; break;
+                                        case 4: echo 'Hardware/ Peripherals'; break;
+                                        case 5: echo 'Others'; break;
+                                        }
+                                    ?></p>
                                   <p><a class="btn" href="/companies/profile/<?php echo $o_company->id; ?>">View Profile &raquo;</a></p>
                                 </div>
                           </div>

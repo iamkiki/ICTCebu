@@ -2,14 +2,14 @@
 <div class="span3">
   <?php $this->load->view('sidebar'); ?>
 </div><!--/span-->
-<div class="span8">
+<div class="span9">
                 <div class="n-legend d-inline f-left">Contact</div>
                 <hr>
                 <div class="alert alert-success success hidden">
                     <a class="close" data-dismiss="alert">×</a>
                     <strong>Thank You!</strong> We will get back to you as soon as we can.
                 </div>
-                <form class="form-horizontal well">
+                <form class="form-horizontal unit">
                         <fieldset>
                           <div class="control-group">
                                 <label class="control-label" for="name">Name</label>
@@ -36,5 +36,6 @@
                           </div>
                         </fieldset>
                   </form>
+                  <div class="unit-down">&nbsp;</div>
         </div><!--/span-->
 </div><!--/row-->

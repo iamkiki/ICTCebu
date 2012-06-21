@@ -24,7 +24,7 @@ function init_post()
             error_found++;
         }
 
-        if( error_found == 0) {
+        if( error_found == 0) { alert('test');
             $.ajax({
                 'url': '/jobs/submit',
                 'type':'POST',

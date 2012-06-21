@@ -1,8 +1,5 @@
 <div class="row-fluid">
-<div class="span3">
-  <?php $this->load->view('sidebar'); ?>
-</div><!--/span-->
-<div class="span5">
+<div class="span8">
         <legend>Register Company for Free</legend>
         <div class="alert alert-success success hidden">
             <a class="close" data-dismiss="alert">×</a>

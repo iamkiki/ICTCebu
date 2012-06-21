@@ -1,15 +1,15 @@
 <?php
     $s_uri = $this->uri->segment(1);
 ?>
-<div class="row-fluid min600 bg-white">
+<div class="row-fluid min600 unit1">
     <div class="space"></div>
     <div class="span2">
           <div class="tabbable tabs-left">
             <ul class="nav nav-tabs">
               <li class="<?php echo $s_uri == '' ? 'active' : ''; ?>"><a href="/"><i class="icon-home"></i>Home</a></li>
               <li class="<?php echo $s_uri == 'editprofile' ? 'active' : ''; ?>"><a href="/editprofile"><i class="icon-edit"></i>Edit Profile</a></li>
-              <li class="<?php echo $s_uri == 'logo' ? 'active' : ''; ?>"><a href="/logo"><i class="icon-picture"></i>Company Logo</a></li>
-              <li class="<?php echo $s_uri == 'account' ? 'active' : ''; ?>"><a href="/account"><i class="icon-user"></i>Account Settings</a></li>
+              <li class="<?php echo $s_uri == 'logo' ? 'active' : ''; ?>"><a href="/logo"><i class="icon-picture"></i>Logo</a></li>
+              <li class="<?php echo $s_uri == 'account' ? 'active' : ''; ?>"><a href="/account"><i class="icon-user"></i>Account</a></li>
 <!--               <li class="<?//php echo $s_uri == 'listings' ? 'active' : ''; ?>"><a href="/listings"><i class="icon-list-alt"></i>Job Listings</a></li> -->
               <li class="<?php echo $s_uri == 'post' || $s_uri == 'jobs' ? 'active' : ''; ?>"><a href="/post"><i class="icon-plus"></i>Post Job</a></li>
             </ul>
@@ -80,3 +80,4 @@
         </div>
     </div><!--/span-->
 </div><!--/row-->
+<div class="unit1-down">&nbsp;</div>

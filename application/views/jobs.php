@@ -2,7 +2,7 @@
 <div class="span3">
   <?php $this->load->view('sidebar'); ?>
 </div><!--/span-->
-<div class="span8">
+<div class="span9">
           <div class="row-fluid">
                 <div class="n-legend d-inline f-left">Jobs</div>
                 <div class="btn-group d-inline f-left m-left10 m-bottom5 m-top3">
@@ -20,7 +20,7 @@
                 <hr>
           </div>
   <?php if(count($a_jobs) > 0){ ?>
-  <div class="row-fluid well">
+  <div class="unit">
                 <table class="table">
                         <thead>
                           <tr>
@@ -36,7 +36,7 @@
                                     <tr onclick="location.href = '/jobs/view/<?php echo $o_job->id; ?>';">
                                         <td><?php echo date('F j, Y', strtotime($o_job->date_added)); ?></td>
                                         <td><?php echo $o_job->title; ?></td>
-                                        <td><?php echo $o_job->experience; ?></td>
+                                        <td style="text-align: center;"><?php echo $o_job->experience; ?></td>
                                         <td><?php echo $o_job->company; ?></td>
                                         <td><?php echo $o_job->location ? $o_job->location: 'Cebu City'; ?></td>
                                     </tr>
@@ -45,6 +45,7 @@
                 </table>
       <?php echo isset($s_pagination) ? $s_pagination: ''; ?>
   </div><!--/row-->
+  <div class="unit-down">&nbsp;</div>
   <?php } else { ?>
 		<div class="alert"><strong>Oops!</strong> No Listings under this category yet.</div>
   <?php } ?>

@@ -40,7 +40,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="/"><span class="red"><strong>ICTCebu</strong></span><span class="gray">.com</span></a>
+          <a class="brand" href="/"><div class="logo"></div></a>
           <div class="nav-collapse">
             <ul class="nav">
               <?php $s_uri = $this->uri->segment(1); ?>

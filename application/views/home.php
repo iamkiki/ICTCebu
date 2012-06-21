@@ -3,11 +3,13 @@
       <?php $this->load->view('sidebar'); ?>
     </div><!--/span-->
     <div class="span9">
-      <div class="hero-unit">
+      <div class="unit">
         <h1>Offering you the BEST Companies and Jobs in the IT, BPO and Call Center Industry in Cebu - the ICT Hub of the Philippines.</h1>
-        <p>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</p>
-        <p><a class="btn btn-danger btn-large" href="/about">Learn more &raquo;</a></p>
+        <p><i>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</i></p>
+        <p><a class="btn btn-danger btn-large m-top15" href="/about">Learn more &raquo;</a></p>
+        
       </div>
+      <div class="unit-down">&nbsp;</div>
       <div class="row-fluid">
                     <ul class="thumbnails">
                     		<?php foreach($a_companies as $o_company){ ?>
@@ -16,7 +18,15 @@
 	                                <img src="<?php echo $o_company->logo ? '/uploads/'.$o_company->logo : '/img/160x120.gif'; ?>" alt="" style="min-height: 110px;">
 	                                <div class="caption">
 	                                  <h5><?php echo $o_company->name; ?></h5>
-	                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
+                                          <p> <?php
+                                                switch($o_company->category){
+                                                case 1: echo 'BPO/ Call Centers'; break;
+                                                case 2: echo 'Web/ Mobile Development'; break;
+                                                case 3: echo 'Software Applications'; break;
+                                                case 4: echo 'Hardware/ Peripherals'; break;
+                                                case 5: echo 'Others'; break;
+                                                }
+                                            ?></p>
 	                                  <p><a class="btn" href="/companies/profile/<?php echo $o_company->id; ?>">View Profile &raquo;</a></p>
 	                                </div>
 	                          </div>

@@ -117,7 +117,7 @@ class Jobs extends CI_Controller {
         }
     }
     
-    public function submit( $i_id = false ){
+    public function submit(){
         $this->b_ajax = true;
         $this->load->model('m_jobs');
 		
@@ -128,19 +128,10 @@ class Jobs extends CI_Controller {
         $a_data['cost'] = PRICE*$a_data['expiry'];
         $i_expiry = $a_data['expiry'] * 30;
         $a_data['expiry_date'] = date('Y-m-d h:i:s', strtotime("+".$i_expiry, time()));
-        var_dump($a_data); exit();
         
-        if($i_id != false){
-        	
-        } else {
-        	$i_id = $this->m_jobs->create($a_data);
-        }
+        $i_id = $this->m_jobs->create($a_data);
         
-        if($i_id){
-           echo json_encode(array('status' => 'success', 'id' => $i_id));
-        } else {
-           echo json_encode(array('status' => 'error'));
-        }
+        echo json_encode(array('status' => 'success', 'id' => $i_id));
     }
 
     public function edit($i_job_id){
