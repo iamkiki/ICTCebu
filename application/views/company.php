@@ -145,31 +145,37 @@
         <div class="space"></div>
         <div id="contact" class="company-details">Contact Company</div>
         <hr>
-        <form id="contact_company" class="form-horizontal unit">
-                <fieldset>
+         <form class="form-horizontal unit">
+             <div class="alert alert-success success hidden">
+                <a class="close" data-dismiss="alert">×</a>
+                <strong>Thank You!</strong> We will get back to you as soon as we can.
+            </div>
+            <fieldset>
+                <input type="hidden" class="input-xlarge" id="hdn_id" value="<?php echo $a_user->id; ?>">
                 <div class="control-group">
-                        <label class="control-label" for="input01">Name</label>
-                        <div class="controls">
-                        <input type="text" class="input-xlarge" id="input01">
-                        </div>
+                    <label class="control-label" for="name">Name</label>
+                    <div class="controls">
+                        <input type="text" class="input-xlarge" id="name">
+                    </div>
+                </div>
+                <div class="control-group email">
+                    <label class="control-label" for="email">Email Address</label>
+                    <div class="controls">
+                        <input type="text" class="input-xlarge" id="email">
+                        <span class="help-inline hidden">Invalid email address.</span>
+                    </div>
                 </div>
                 <div class="control-group">
-                        <label class="control-label" for="input02">Email Address</label>
-                        <div class="controls">
-                        <input type="text" class="input-xlarge" id="input02">
-                        </div>
-                </div>
-                <div class="control-group">
-                        <label class="control-label" for="textarea">Message</label>
-                        <div class="controls">
-                        <textarea class="input-xlarge" id="textarea" rows="8"></textarea>
-                        </div>
+                    <label class="control-label" for="textarea">Message</label>
+                    <div class="controls">
+                        <textarea class="input-xlarge" id="message" rows="8"></textarea>
+                    </div>
                 </div>
                 <div class="form-actions">
-                        <button type="submit" class="btn btn-danger">Submit</button>
-                        <button class="btn">Cancel</button>
+                    <button type="submit" class="btn btn-danger" id="contact_company">Submit</button>
+                    <button class="btn">Cancel</button>
                 </div>
-                </fieldset>
+            </fieldset>
         </form>
         <div class="unit-down">&nbsp;</div>
     </div><!--/span-->

@@ -86,6 +86,42 @@ class Companies extends CI_Controller {
         header('Location: /companies/profile/'.$i_id);
         //echo json_encode(array('status' => 'success'));
     }
+    
+    public function contact( $i_id ){
+        $this->b_ajax = true;
+        $this->load->model('m_companies');
+        
+        $a_company = $this->m_companies->load(array( 'id' => $i_id))->result();
+        $o_company = $a_company[0];
+        
+        $s_name = $this->input->post('s_name',TRUE);
+        $s_email = $this->input->post('s_email',TRUE);
+        $s_message = $this->input->post('s_message');
+
+        $a_data = array('s_email' => $s_email,'s_name' => $s_name, 's_message' => $s_message, 's_company' => $o_company->name);
+        $this->load->library('email');
+        $this->email->from( sprintf('%s', $a_data['s_email']), S_EMAIL_FROM );
+        $this->email->to($o_company->email);
+        $this->email->cc($a_data['s_email']); 
+        $this->email->mailtype = 'html';
+        $this->email->subject( 'You have a message.' );
+        $this->email->message(
+            $this->load->view(
+                'emails/template'
+                , array(
+                    's_contents' => $this->load->view(
+                        'emails/user/contact', $a_data, TRUE
+                    )
+                )
+                , TRUE
+            )
+        );
+        if (!$this->email->send())
+        {
+            show_error($this->email->print_debugger(),400);
+        }
+        echo json_encode(array('status'=>'success'));
+    }
 
     public function upload($i_id){
         $this->b_ajax = true;

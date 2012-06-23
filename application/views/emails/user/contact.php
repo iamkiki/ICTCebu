@@ -1,9 +1,8 @@
-Hi,
+Hi <?php echo $s_company; ?>,
 
-Welcome to ictCebu.com, the IT, BPO and Call Center Companies and Jobs Directory in Cebu.
+Name: <?php echo $s_name != '' ? $s_name: 'Anonymous'; ?>
+Message: <?php echo $s_message; ?>
 
-Please click on the following link to verify your account.
-<?php echo sprintf('<a href="%s">%s</a>','http://'.$_SERVER['SERVER_NAME'].'/access/verify/'.$i_uid.'/'.$s_hash, 'http://'.$_SERVER['SERVER_NAME'].'/access/verify/'.$i_uid.'/'.$s_hash); ?>
 
 Thanks,
 ictCebu.com

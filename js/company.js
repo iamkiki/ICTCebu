@@ -7,6 +7,7 @@ function init_company()
         var s_email = $.trim($('#email').val());
         var s_name = $('#name').val();
         var s_message = $('#message').val();
+        var i_id = $('#hdn_id').val();
 
         if(!emailReg.test(s_email) || s_email == '')
         {
@@ -18,7 +19,7 @@ function init_company()
         {
             var post_var = {'s_email':s_email, 's_name':s_name, 's_message': s_message };
             $.ajax({
-                'url': '/companies/contact',
+                'url': '/companies/contact/'+i_id,
                 'type':'POST',
                 'dataType':'json',
                 'data': post_var,
