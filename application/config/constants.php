@@ -21,7 +21,7 @@ define('DIR_WRITE_MODE', 0777);
 /* GLOBAL VARIABLES */
 
 define('PRICE', 1000);
-
+define('S_EMAIL_FROM',  'ictCebu - IT, BPO and Call Center Companies and Jobs');
 
 
 /*

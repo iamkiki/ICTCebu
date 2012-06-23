@@ -172,7 +172,7 @@ a:hover {
 .container,
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 1000px;
+  width: 1045px;
 }
 .content {
     min-height: 640px;
@@ -3068,7 +3068,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .brand {
   float: left;
   display: block;
-  padding: 5px 20px;
+  padding: 8px 20px 0;
   margin-left: -20px;
   font-size: 25px;
   font-weight: 200;
@@ -3183,7 +3183,7 @@ input[type="submit"].btn.btn-mini {
 }
 .navbar-fixed-top .container,
 .navbar-fixed-bottom .container {
-  width: 1000px;
+  width: 1045px;
 }
 .navbar-fixed-top {
   top: 0;
@@ -3727,7 +3727,7 @@ input[type="submit"].btn.btn-mini {
   margin-bottom: 0;
 }
 .thumbnails {
-  margin-left: -20px;
+  margin-left: -10px;
   list-style: none;
   *zoom: 1;
 }
@@ -3741,7 +3741,7 @@ input[type="submit"].btn.btn-mini {
 }
 .thumbnails > li {
   float: left;
-  margin: 0 0 18px 20px;
+  margin: 0 0 18px 10px;
 }
 .thumbnail {
   display: block;
@@ -3769,7 +3769,7 @@ a.thumbnail:hover {
   margin-right: auto;
 }
 .thumbnail .caption {
-  padding: 9px;
+  padding: 9px 3px 0;
   background-color: white;
   text-align: center;
 }
@@ -4166,7 +4166,7 @@ a.thumbnail:hover {
 }
 
 .unit {
-  padding: 20px;
+  padding: 25px 25px 5px;
   margin-bottom: 0px;
   background-color: #ffffff;
 }

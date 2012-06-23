@@ -1,4 +1,4 @@
-Hi <?php echo $s_name; ?>,
+Hi,
 
 Welcome to ictCebu.com, the IT, BPO and Call Center Companies and Jobs Directory in Cebu.
 

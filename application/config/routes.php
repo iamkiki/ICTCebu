@@ -50,7 +50,7 @@ $route['editprofile'] = "/main/editprofile";
 $route['logo'] = "/main/logo";
 $route['account'] = "/main/account";
 $route['listings'] = "/main/listings";
-$route['post'] = "/jobs/post";
+//$route['post'] = "/jobs/post";
 
 
 /* End of file routes.php */

@@ -6,6 +6,7 @@
       <div class="unit">
         <h1>Offering you the BEST Companies and Jobs in the IT, BPO and Call Center Industry in Cebu - the ICT Hub of the Philippines.</h1>
         <p><i>"ICT" is used as a general term for all kinds of technologies which enables users to create, access and manipulate information. ICT is a combination of information technology and communications technology.</i></p>
+        <p><b>Be a part of our growing list of awesome companies here in Cebu. Register your company for free and for the beta period, you can also post job openings for free.</b></p>
         <p><a class="btn btn-danger btn-large m-top15" href="/about">Learn more &raquo;</a></p>
         
       </div>
@@ -18,7 +19,7 @@
 	                                <img src="<?php echo $o_company->logo ? '/uploads/'.$o_company->logo : '/img/160x120.gif'; ?>" alt="" style="min-height: 110px;">
 	                                <div class="caption">
 	                                  <h5><?php echo $o_company->name; ?></h5>
-                                          <p> <?php
+                                          <p style="font-size: 10px;"> <?php
                                                 switch($o_company->category){
                                                 case 1: echo 'BPO/ Call Centers'; break;
                                                 case 2: echo 'Web/ Mobile Development'; break;

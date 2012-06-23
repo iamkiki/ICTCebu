@@ -1,6 +1,7 @@
 <?php
     $s_uri = $this->uri->segment(1);
-?>
+    $i_segments = $this->uri->total_segments();
+?>  
 <div class="row-fluid min600 unit1">
     <div class="space"></div>
     <div class="span2">
@@ -11,7 +12,7 @@
               <li class="<?php echo $s_uri == 'logo' ? 'active' : ''; ?>"><a href="/logo"><i class="icon-picture"></i>Logo</a></li>
               <li class="<?php echo $s_uri == 'account' ? 'active' : ''; ?>"><a href="/account"><i class="icon-user"></i>Account</a></li>
 <!--               <li class="<?//php echo $s_uri == 'listings' ? 'active' : ''; ?>"><a href="/listings"><i class="icon-list-alt"></i>Job Listings</a></li> -->
-              <li class="<?php echo $s_uri == 'post' || $s_uri == 'jobs' ? 'active' : ''; ?>"><a href="/post"><i class="icon-plus"></i>Post Job</a></li>
+              <li class="<?php echo $s_uri == 'jobs' ? 'active' : ''; ?>"><a href="/jobs/post"><i class="icon-plus"></i><?php echo $i_segments > 2 ? 'Edit': 'Post'; ?> Job</a></li>
             </ul>
           </div> <!-- /tabbable -->
     </div>
@@ -23,8 +24,13 @@
                     case 'logo'         : $this->load->view('dashboard/logo.php'); break;
                     case 'account'      : $this->load->view('dashboard/account.php'); break;
                     /* case 'listings'     : $this->load->view('dashboard/listings.php'); break; */
-                    case 'post'         : $this->load->view('dashboard/postjob.php', $a_data); break;
-                    case 'jobs'         : $this->load->view('dashboard/editjob.php', $a_data); break;
+                    case 'jobs'         : 
+                        if($i_segments > 2){
+                            $this->load->view('dashboard/editjob.php', $a_data); break;
+                        } else {
+                            $this->load->view('dashboard/postjob.php', $a_data); break;
+                        }
+                        
                     default:
             ?>
                 <h4>You have <?php echo $a_user->views > 1 ? $a_user->views.' profile views': $a_user->views.' profile view'; ?> from other users since <?php echo date('F d, Y', strtotime($a_user->date_added)); ?></h4>
@@ -55,7 +61,7 @@
 				                <td style="text-align:center;"><?php echo $o_job->experience; ?></td>
 				                <td style="text-align:center;">None</td>
 				                <td style="text-align:center;">
-                                                    <a href="#"><i class="icon-pencil"></i></a>
+                                                    <a href="/jobs/edit/<?php echo $o_job->id; ?>"><i class="icon-pencil"></i></a>
                                                     <a href="/jobs/view/<?php echo $o_job->id; ?>" style="padding-left:5px;"><i class="icon-play-circle"></i></a>
                                                 </td>
 				          </tr>
@@ -63,19 +69,6 @@
 				        </tbody>
 				</table>
 				<?php echo isset($s_pagination) ? $s_pagination: ''; ?>
-<!--
-				<div class="pagination f-right">
-				  <ul>
-				        <li><a href="#">&larr;</a></li>
-				        <li class="active">
-				          <a href="#">1</a>
-				        </li>
-				        <li><a href="#">2</a></li>
-				        <li><a href="#">3</a></li>
-				        <li><a href="#">&rarr;</a></li>
-				  </ul>
-				</div>
--->
              <?php } ?>
         </div>
     </div><!--/span-->

@@ -45,6 +45,7 @@ class Companies extends CI_Controller {
     	if($i_id != false){
             $this->load->model('m_companies');
             $this->load->model('m_jobs');
+            $this->a_outer['a_js'][] = 'company';
             $a_data = $this->m_companies->load( array('id' => $i_id, 'status' => 1) );
             $a_jobs = $this->m_jobs->load( array('company_id' => $i_id) );
             if($a_data && $a_data->num_rows() > 0){
@@ -68,12 +69,12 @@ class Companies extends CI_Controller {
     }
 
     public function update(){
-        $this->b_ajax = true;
+        //$this->b_ajax = true;
         $this->load->model('m_companies');
 
         $i_id = $_POST['id'];
         $a_data = $_POST;
-		$a_data['description'] = $this->input->post('description', TRUE);
+        //$a_data['description'] = $this->input->post('description', TRUE);
 		
         unset($a_data['id']);
         unset($a_data['password']);
@@ -82,8 +83,8 @@ class Companies extends CI_Controller {
         } 
 
         $this->m_companies->update($i_id, $a_data);
-        
-        echo json_encode(array('status' => 'success'));
+        header('Location: /companies/profile/'.$i_id);
+        //echo json_encode(array('status' => 'success'));
     }
 
     public function upload($i_id){

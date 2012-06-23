@@ -10,7 +10,7 @@
     <strong>Oh snap!</strong> Something went wrong.
 </div>
 <input type="hidden" id="job_id" value="<?php echo $o_job->id; ?>">
-<form id="form_post" class="form-horizontal edit-form" method="post" enctype="multipart/form-data">
+<form id="form_post" class="form-horizontal edit-form" method="post" action="/jobs/submit/<?php echo $o_job->id; ?>">
     <fieldset>
       <div class="control-group title">
             <label class="control-label" for="title">Job Position<span class="red">*</span></label>
@@ -92,7 +92,7 @@
               <p></p>
       </div>
       <div class="form-actions">
-            <button type="submit" class="btn btn-danger">Submit</button>
+            <button type="submit" class="btn btn-danger" id="post_job">Submit</button>
             <button class="btn cancel_btn">Cancel</button>
       </div>
     </fieldset>

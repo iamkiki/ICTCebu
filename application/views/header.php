@@ -2,12 +2,12 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <title>ICTCebu IT, BPO and Call Center Companies and Jobs Directory</title>
+    <title>ictCebu IT, BPO and Call Center Companies and Jobs Directory</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
     
-    <meta property="og:title" content="Company Name" />
+        <meta property="og:title" content="Company Name" />
 	<meta property="og:type" content="company" />
 	<meta property="og:url" content="http://www.ictcebu.com" />
 	<meta property="og:image" content="" />

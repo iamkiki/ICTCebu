@@ -54,7 +54,6 @@ class Main extends CI_Controller {
     
     public function index()
     {   
-    	
     	$this->load->model('m_companies');
         $this->load->model('m_jobs');
     	

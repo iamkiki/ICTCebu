@@ -103,7 +103,7 @@
                           <p></p><p></p>
                           <label class="checkbox">
                                 <input type="checkbox" id="agree" value="1">
-                                I Agree with the Terms and Agreements of ICTCebu.com <a href="#">Privacy Policy</a>
+                                I Agree with the Terms and Agreements of ictCebu.com <a href="#">Privacy Policy</a>
                                 <p class="help-block e_agree red hidden">You must agree with the terms and agreement in order to continue.</p>
                           </label>
                   </div>

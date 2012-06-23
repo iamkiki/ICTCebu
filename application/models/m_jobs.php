@@ -70,7 +70,6 @@ class m_jobs extends CI_Model
                'requirements'   => $a_data['requirements'] ,
                'email'          => $a_data['email'] ,
                'cost'           => $a_data['cost'] ,
-               'expiry'			=> $a_data['expiry'] ,
                'expiry_date'    => $a_data['expiry_date'] ,
                'status'         => 0
             );
@@ -117,7 +116,7 @@ class m_jobs extends CI_Model
      */
     function hot_jobs(){
 		/* status 2 - inactive */
-        $s_sql = 'SELECT title, id FROM '.TBL_JOBS.' WHERE status = 1 ORDER BY date_added DESC LIMIT 10';
+        $s_sql = 'SELECT title, id FROM '.TBL_JOBS.' WHERE status = 1 ORDER BY date_added DESC LIMIT 15';
 
         $r_query = $this->db->query($s_sql)->result();
         

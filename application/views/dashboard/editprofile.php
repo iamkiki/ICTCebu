@@ -6,7 +6,7 @@
     <a class="close" data-dismiss="alert">×</a>
     <strong>Oh snap!</strong> Something went wrong.
 </div>
-<form id="form_editprofile" class="form-horizontal" method="POST">
+<form id="form_editprofile" class="form-horizontal" method="POST" action="/companies/update">
         <fieldset>
           <input type="hidden" name="id" id="id" value="<?php echo $info->id; ?>">
           <div class="control-group company_name">
@@ -120,7 +120,7 @@
                   <p></p>
           </div>
           <div class="form-actions">
-                <button type="submit" class="btn btn-danger">Submit</button>
+                <button type="submit" class="btn btn-danger" id="edit_profile">Submit</button>
                 <button class="btn cancel_btn">Cancel</button>
           </div>
         </fieldset>

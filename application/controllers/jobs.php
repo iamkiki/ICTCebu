@@ -117,39 +117,46 @@ class Jobs extends CI_Controller {
         }
     }
     
-    public function submit(){
-        $this->b_ajax = true;
+    public function submit($i_id = false){
         $this->load->model('m_jobs');
-		
+	
         $a_user = $this->session->userdata('auth');
-        $a_data = $_POST['form'];
-        $a_data['requirements'] = $this->input->post('content', TRUE);
+        $a_data = $_POST;
         $a_data['company_id'] = $a_user['id'];
         $a_data['cost'] = PRICE*$a_data['expiry'];
         $i_expiry = $a_data['expiry'] * 30;
         $a_data['expiry_date'] = date('Y-m-d h:i:s', strtotime("+".$i_expiry, time()));
         
-        $i_id = $this->m_jobs->create($a_data);
+        if($i_id){
+            $this->m_jobs->update($i_id, $a_data);
+        } else {
+            $i_id = $this->m_jobs->create($a_data);
+        }
         
-        echo json_encode(array('status' => 'success', 'id' => $i_id));
+        header('Location: /jobs/view/'.$i_id);
     }
 
     public function edit($i_job_id){
-    	$this->load->model('m_jobs');
-        $this->load->model('m_companies');
-        $this->a_outer['a_js'][] = 'post';
-        $this->load->helper('ckeditor', base_url() . 'js/ckeditor/');
-        $this->ckeditor->basePath = base_url(). 'js/ckeditor/';
-        $this->ckeditor->ToolbarSet = 'Basic';
-        $a_job = $this->m_jobs->load( array('id' => $i_job_id) );
-        if($a_job->num_rows > 0){
-            $a_company = $this->m_companies->load( array('id' => $a_job->row()->company_id) );
-            $a_data = array(
-                'o_job'     => $a_job->row(),
-                'o_company' => $a_company->row(),
-                'ckeditor'	=> $this->data
-            );
-            $this->load->view('user', array('a_data' => $a_data));
+        if($this->session->userdata('auth')){
+            $this->load->model('m_jobs');
+            $this->load->model('m_companies');
+            $this->a_outer['a_js'][] = 'post';
+            $this->load->helper('ckeditor', base_url() . 'js/ckeditor/');
+            $this->ckeditor->basePath = base_url(). 'js/ckeditor/';
+            $this->ckeditor->ToolbarSet = 'Basic';
+            $a_user = $this->session->userdata('auth');
+            $a_job = $this->m_jobs->load( array('id' => $i_job_id, 'company_id' => $a_user['id']) );
+            if($a_job->num_rows > 0){
+                $a_company = $this->m_companies->load( array('id' => $a_job->row()->company_id) );
+                $a_data = array(
+                    'o_job'     => $a_job->row(),
+                    'o_company' => $a_company->row(),
+                    'ckeditor'	=> $this->data
+                );
+                $this->load->view('user', array('a_data' => $a_data));
+            } else {
+                header('Location: /');
+            }
         } else {
             header('Location: /');
         }

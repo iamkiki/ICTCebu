@@ -9,7 +9,7 @@
 </script>
 <div class="row-fluid">
     <div class="hidden-phone">
-    <div class="span11 unit-black">
+    <div class="span12 unit-black">
         <div class="f-left">
             <a href="#" class="thumbnail">
                 <?php $s_image = '/img/260x180.gif';
@@ -35,7 +35,7 @@
             <?php echo $a_user->address ? ' | '.$a_user->address.', ' : ' | '; ?>
             <?php echo $a_user->city ? $a_user->city : ''; ?>
             <br>
-            <?php echo $a_user->website ? '<a href="#">'.$a_user->website.'</a><br>': ''; ?>
+            <?php echo $a_user->website ? '<a href="http://'.$a_user->website.'" target="_blank">'.$a_user->website.'</a><br>': ''; ?>
                 <div class="linkedshare">
                     <script src="//platform.linkedin.com/in.js" type="text/javascript"></script>
                     <script type="IN/Share" data-url="http://www.ictcebu.com" data-counter="right"></script>
@@ -145,7 +145,7 @@
         <div class="space"></div>
         <div id="contact" class="company-details">Contact Company</div>
         <hr>
-        <form class="form-horizontal unit">
+        <form id="contact_company" class="form-horizontal unit">
                 <fieldset>
                 <div class="control-group">
                         <label class="control-label" for="input01">Name</label>
@@ -187,6 +187,10 @@
                 } ?>
             </ul>
         </div>
+        <?php } else { ?>
+            <a href="#" class="thumbnail" style="margin: -25px -20px 0 20px;">
+                    <img src="/img/long-ad.png" alt="">
+            </a>
         <?php } ?>
     </div><!--/span-->    
 </div>

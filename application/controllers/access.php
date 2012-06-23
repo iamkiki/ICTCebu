@@ -66,7 +66,7 @@ class Access extends CI_Controller {
 
             $a_data = array('s_email'=>$s_email,'s_name'=>$a_user->name, 's_password' => $s_new_password);
             $this->load->library('email');
-            $this->email->from('info@ictcebu.com', 'ICTCebu.com');
+            $this->email->from('info@ictcebu.com', S_EMAIL_FROM);
             $this->email->to( sprintf('%s', $a_data['s_email']) );
             $this->email->mailtype = 'html';
             $this->email->subject( 'Reset Password' );
@@ -158,10 +158,10 @@ class Access extends CI_Controller {
             );
         }
         $this->load->library('email');
-        $this->email->from('info@ictcebu.com', 'ICTCebu.com');
+        $this->email->from('info@ictcebu.com', S_EMAIL_FROM);
         $this->email->to( sprintf('%s', $a_data['s_email']) );
         $this->email->mailtype = 'html';
-        $this->email->subject( 'ICTCebu Email Verification' );
+        $this->email->subject( 'ictCebu Email Verification' );
         $this->email->message(
             $this->load->view(
                     'emails/template'
@@ -173,10 +173,10 @@ class Access extends CI_Controller {
                     , TRUE
             )
         );
-//        if (!$this->email->send())
-//        {
-//            show_error($this->email->print_debugger(),400);
-//        }
+        if (!$this->email->send())
+        {
+            show_error($this->email->print_debugger(),400);
+        }
     }
 
     public function verify( $s_id, $s_hash )

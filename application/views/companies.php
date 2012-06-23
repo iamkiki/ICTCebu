@@ -28,7 +28,7 @@
                                 <img src="<?php echo $o_company->logo ? '/uploads/'.$o_company->logo : '/img/160x120.gif'; ?>" alt="" style="min-height: 110px;">
                                 <div class="caption">
                                   <h5><?php echo $o_company->name; ?></h5>
-                                  <p> <?php
+                                  <p style="font-size: 10px;"> <?php
                                         switch($o_company->category){
                                         case 1: echo 'BPO/ Call Centers'; break;
                                         case 2: echo 'Web/ Mobile Development'; break;
@@ -47,75 +47,8 @@
                   		<div class="alert"><strong>Oops!</strong> No Companies under this category yet.</div>
                   <?php } ?>
   </div><!--/row-->
-  <!--
-<div class="row-fluid">
-                  <ul class="thumbnails">
-                        <li class="span2">
-                          <div class="thumbnail">
-                                <img src="/img/160x120.gif" alt="">
-                                <div class="caption">
-                                  <h5>Company Name</h5>
-                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                </div>
-                          </div>
-                        </li>
-                        <li class="span2">
-                          <div class="thumbnail">
-                                <img src="/img/160x120.gif" alt="">
-                                <div class="caption">
-                                  <h5>Company Name</h5>
-                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                </div>
-                          </div>
-                        </li>
-                        <li class="span2">
-                          <div class="thumbnail">
-                                <img src="/img/160x120.gif" alt="">
-                                <div class="caption">
-                                  <h5>Company Name</h5>
-                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                </div>
-                          </div>
-                        </li>
-                        <li class="span2">
-                          <div class="thumbnail">
-                                <img src="/img/160x120.gif" alt="">
-                                <div class="caption">
-                                  <h5>Company Name</h5>
-                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                </div>
-                          </div>
-                        </li>
-                        <li class="span2">
-                          <div class="thumbnail">
-                                <img src="/img/160x120.gif" alt="">
-                                <div class="caption">
-                                  <h5>Company Name</h5>
-                                  <p>I love pastry powder pudding apple pie bear claw donut carrot cake. </p>
-                                  <p><a class="btn" href="company.php">View Profile &raquo;</a></p>
-                                </div>
-                          </div>
-                        </li>
-                  </ul>
-  </div><!--/row-->
 </div><!--/span-->
 </div><!--/row-->
-<!--
-  <div class="pagination f-right">
-          <ul>
-                <li><a href="#">&larr;</a></li>
-                <li class="active">
-                  <a href="#">1</a>
-                </li>
-                <li><a href="#">2</a></li>
-                <li><a href="#">3</a></li>
-                <li><a href="#">&rarr;</a></li>
-          </ul>
-  </div>
--->
+
 <?php echo isset($s_pagination) ? $s_pagination: ''; ?>
       

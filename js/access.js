@@ -106,7 +106,14 @@ function init_access()
         var category = $('#category').val();
 
         var error_found = 0;
-      
+        $('.e_agree').addClass('hidden');
+        $('.company_name').removeClass('error');
+        $('.email').removeClass('error');
+        $('.password').removeClass('error');
+        $('.confirm_password').removeClass('error');
+        $('.person').removeClass('error');
+        $('.contact').removeClass('error');
+        
         if($('#agree').is(":checked") == false){
             $('.e_agree').removeClass('hidden');
             error_found++;
@@ -187,6 +194,7 @@ function init_access()
                         $('#address1').val('');
                         $('#address2').val('');
                         $('#contact').val('');
+                        $('#city').val('');
                         $('#zip').val('');
                         $('#website').val('');
                         $('#description').val('');
