@@ -27,7 +27,7 @@
                           <div class="thumbnail">
                                 <img src="<?php echo $o_company->logo ? '/uploads/'.$o_company->logo : '/img/160x120.gif'; ?>" alt="" style="min-height: 110px;">
                                 <div class="caption">
-                                  <h5><?php echo $o_company->name; ?></h5>
+                                  <h5 style="min-height: 36px;"><?php echo $o_company->name; ?></h5>
                                   <p style="font-size: 10px;"> <?php
                                         switch($o_company->category){
                                         case 1: echo 'BPO/ Call Centers'; break;
